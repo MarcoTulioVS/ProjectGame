@@ -4,13 +4,35 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-	// Use this for initialization
+	Rigidbody2D rb;
+
+	[SerializeField]
+	private float speed;
+	Vector3 movement;
+
 	void Start () {
-		
+		rb = GetComponent<Rigidbody2D> ();	
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
 		
+	}
+
+	void FixedUpdate(){
+
+		Move ();
+
+	}
+
+	void Move(){
+
+		float moveX = Input.GetAxis ("Horizontal");
+		float moveY = Input.GetAxis ("Vertical");
+
+		movement = new Vector3 (moveX, moveY, 0);
+
+		rb.velocity = movement * speed;
+
 	}
 }
