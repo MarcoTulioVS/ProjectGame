@@ -16,6 +16,10 @@ public class Player : MonoBehaviour {
 
 	public GameObject player;
 
+	public Transform pointCollider;
+	public float radius;
+	public LayerMask enemyLayer;
+
 	void Awake(){
 	
 		instance = this;
@@ -37,6 +41,7 @@ public class Player : MonoBehaviour {
 	void FixedUpdate(){
 
 		Move ();
+		Scare ();
 
 	}
 
@@ -51,10 +56,32 @@ public class Player : MonoBehaviour {
 
 	}
 
+	void Scare(){
+
+		if (Input.GetButtonDown ("Fire1")) {
+		
+			Collider2D hit = Physics2D.OverlapCircle (pointCollider.position, radius,enemyLayer);
+
+			if (hit != null) {
+			
+				Debug.Log ("Acertou");
+			
+			}
+				
+		}
+
+	}
+
+	void OnDrawGizmos(){
+
+		Gizmos.DrawWireSphere (pointCollider.position, radius);
+
+	}
 
 	void OnTriggerEnter2D(Collider2D col){
 
 		//Layer 8 = enemies
+		//Ao colidir com o inimigo o fantasma o possui
 		if (col.gameObject.layer == 8) {
 
 			activeObject = true;
@@ -64,4 +91,6 @@ public class Player : MonoBehaviour {
 		}
 
 	}
+
+
 }
