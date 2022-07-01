@@ -20,6 +20,9 @@ public class Player : MonoBehaviour {
 	public float radius;
 	public LayerMask enemyLayer;
 
+	public Animator anim;
+	bool isScaring;
+
 	void Awake(){
 	
 		instance = this;
@@ -48,6 +51,17 @@ public class Player : MonoBehaviour {
 	void Move(){
 
 		float moveX = Input.GetAxis ("Horizontal");
+
+		if (moveX == 0 && !isScaring) {
+			
+			anim.SetInteger ("transition", 0);
+		}
+
+		if ((moveX > 0 || moveX<0) && !isScaring ) {
+			
+			anim.SetInteger ("transition", 1);
+		}
+
 		float moveY = Input.GetAxis ("Vertical");
 
 		movement = new Vector3 (moveX, moveY, 0);
@@ -59,7 +73,9 @@ public class Player : MonoBehaviour {
 	void Scare(){
 
 		if (Input.GetButtonDown ("Fire1")) {
-		
+
+			isScaring = true;
+			anim.SetInteger ("transition", 2);
 			Collider2D hit = Physics2D.OverlapCircle (pointCollider.position, radius,enemyLayer);
 
 			if (hit != null) {
@@ -67,8 +83,10 @@ public class Player : MonoBehaviour {
 				Debug.Log ("Acertou");
 			
 			}
-				
+
+			StartCoroutine ("resetScare");
 		}
+
 
 	}
 
@@ -90,6 +108,13 @@ public class Player : MonoBehaviour {
 		
 		}
 
+	}
+
+	IEnumerator resetScare(){
+	
+		yield return new WaitForSeconds (0.583f);
+		isScaring = false;
+	
 	}
 
 

@@ -211,6 +211,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
+  anim: {fileID: 1104422828}
 --- !u!1 &406993913
 GameObject:
   m_ObjectHideFlags: 0
