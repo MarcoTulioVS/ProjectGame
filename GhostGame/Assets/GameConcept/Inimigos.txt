@@ -1,0 +1,56 @@
+---Inimigos---
+
+1 - Saliva
+
+Função: Gruda bombas nas paredes com sua saliva.
+Objetos: Blocos mais fragéis que se destacarão no cenario. 
+
+2 - Vapt-Vupt
+
+Função: Cospe um portal. Ao entrar nesse portal o personagem sairá em outro da memsa cor.
+
+3 - Colorado
+
+Função: Cospe uma gosma de alguma cor(definir).
+Objetos: Em portais. Ao cospir uma cor em um portal, a cor do portal muda com relação a cor do cuspe kkkk. 
+
+4 - Pedrinha
+
+Função: Serve para pesar objetos. Possui um peso mais leve.
+Objetos: Ao coloca-los em cima de botões ele ira exercer um peso sobre o objeto. Caso o objeto esteja com peso suficiente ele irá acionar 
+algum mecanismo.
+
+5 - Pedrada
+
+Função: Serve para pesar objetos. Possui um peso maior.
+Objetos: Ao coloca-los em cima de botões ele ira exercer um peso sobre o objeto. Caso o objeto esteja com peso suficiente ele irá acionar 
+algum mecanismo.
+
+6 - Rato
+
+Função: Serve para passar em lugares estreitos.
+
+7 - Górgona
+
+Função: Petrifica os inimigos.
+Ex: Petrifica um inimigo para que ele fique em cima de um botão. Podera ter um tempo de paralisia ou não.(Petrificação).
+
+8 - Gosma 
+
+Função: Lança uma bola amarela de gosma.
+Objetos: Gruda nas paredes. Ex: pode servir para alcançar lugares altos.
+
+9 - Pulinho
+
+Função: Pula muito alto.
+Utilizado para chegar em lugares muito alto.
+
+10 - Botolho
+
+Função: E um botão em formato de olho.
+Serve para ativar mecanismos.
+
+11 - Martin
+
+Função: Deixa as coisas com gravidade de marte.
+Serve para ficar de cabeça pra baixo em certos momentos, e assim alcançar lugares "impossiveis".

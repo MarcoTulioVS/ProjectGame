@@ -1,0 +1,30 @@
+--Resumo do game--
+
+--Historia :  
+--------------------------------------------------------------------------------------------------
+As dimensões dos monstros foram afetadas trazendo eles para uma unica dimensão.
+O vilão do jogo(ainda sem nome), foi responsavel por isso.
+Agora o jogador deverá controlar um fantasma que deverá levar os monstros de volta para casa.
+Com a "ajuda" de um outro monstro que diz saber como consertar as coisas.
+Esse monstro é o vilão que enganará o personagem principal(fantasma) e dirá para ele que ao jogar os monstros nos portais
+eles voltarão para casa.
+Mas isso não é verdade. O portal arranca as almas dos monstros e a alma fora do corpo deles se funde ao vilão, dando a ele 
+mais força para se tornar supremo.
+Após encontrar todos os monstros no jogo e leva-los aos portais se inicia logo depois a luta contra o vilão na sua forma
+suprema.
+O jogador deverá derrota-lo e acabar o jogo.
+---------------------------------------------------------------------------------------------------
+
+
+O jogador controla um fantasma que consegue possuir monstros e objetos.
+Cada monstro e objeto terá sua utilidade especifica.
+
+Por exemplo, um monstro que consegue grudar bombas na parede com sua saliva.
+Ou utilizar objetos como blocos para move-los ate botões e acionar algum mecanismo.
+
+Gênero : Plataforma puzzle
+
+
+
+
+

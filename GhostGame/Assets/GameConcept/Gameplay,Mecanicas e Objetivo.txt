@@ -1,0 +1,53 @@
+--Gameplay--
+
+Personagem: fantasma
+Habilidades: voa,assustar,possuir
+
+Controles: 
+	--Movimento(Voar)--
+	PC->Setas direcionais ou W,A,S,D 
+	Joystick -> Analogico
+
+	--Possuir--
+	PC-> F
+	Joystick -> Quadrado
+
+	--Assustar--
+	PC->X
+	Joystick -> Triângulo
+
+	
+Inimigos:Possuem habilidades diferentes. Servem para concluir o nivel atual.
+
+--Sistema de dano--:
+
+Forma Fantasma: Não leva dano de nenhum inimigo nem obstaculo.
+Forma inimigo: Leva dano. Cada inimigo possui 3 corações. Caso seja perdido todos o personagem morre e da "game over".
+
+--Mecânicas--:
+
+Energia Fantasmagorica: É necessaria para possuir certos tipos de inimigos. Ex: Inimigos mais fortes. Alguns nao irão precisar 
+dessa energia para serem possuidos.
+
+Portais: Levam o personagem de um lado para o outro. Apenas se forem da mesma cor.
+
+Plataformas que caem: irão cair apos o jogador pisar nela.
+
+Plataformas que sobem e descem: irão subir e descer.
+
+Portal final: E aonde deverá ser levado todos os inimigos. 
+
+OBS:Em cada fase terá um numero de inimigos especifico.	
+
+Ex 3. Então 3 inimigos deverão ser possuidos e levados ate os portais para que a fase seja enfim concluida.
+
+Mecanimos: Deverão ser acionados de alguma forma para liberarem passagens. Ex: Um inimigo olho que ao ser acertado libera um portal final.
+
+Paredes: Paredes irão bloquear inimigos fisicos, porém nao irão bloquear o fantasma.
+
+
+--Resumo objetivo--:
+
+O jogador deverá possuir inimigos e leva-los ate o portal final para concluir a fase.
+Os inimigos e obstaculos no cenario irão atraplhar o jogador.
+No final, ou seja, na ultima fase o jogador deverá enfrentar o boss final.

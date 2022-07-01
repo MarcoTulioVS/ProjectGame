@@ -1,0 +1,4 @@
+--Mecanica de assustar--
+
+Cachorro e gato: Ao utilizar o assustar do fantasma, os cachorros e gatos ficarão com medo e irão correr disparando assim alguma coisa na fase.
+
