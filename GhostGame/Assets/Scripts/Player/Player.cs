@@ -56,11 +56,21 @@ public class Player : MonoBehaviour {
 			
 			anim.SetInteger ("transition", 0);
 		}
-
-		if ((moveX > 0 || moveX<0) && !isScaring ) {
 			
+
+		if (moveX > 0 && !isScaring) {
+		
 			anim.SetInteger ("transition", 1);
+			player.transform.eulerAngles = new Vector2 (0, 0);
 		}
+
+		if (moveX < 0 && !isScaring) {
+
+			anim.SetInteger ("transition", 1);
+			player.transform.eulerAngles = new Vector2 (0, 180);
+		}
+
+
 
 		float moveY = Input.GetAxis ("Vertical");
 

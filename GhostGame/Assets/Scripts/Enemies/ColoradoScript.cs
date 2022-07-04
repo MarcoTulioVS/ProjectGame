@@ -20,13 +20,11 @@ public class ColoradoScript : Enemies {
 	void FixedUpdate(){
 
 		MainController (this.gameObject.name,rb,speed);
-//		if (Player.instance.activeObject && Player.instance.nameObject == "colorado") {
-//		
-//			moveControl (rb,speed);
-//		}
 
 	}
 
+	//Não necessariamente precisa ser sobrescrito nesse inimigo
+	//Trocar para outro se for o caso
 	protected override void moveControl(Rigidbody2D rb,float speed){
 
 		float moveX = Input.GetAxis ("Horizontal");
