@@ -18,9 +18,9 @@ public class EndPortal : MonoBehaviour {
 
 		if (col.gameObject.layer == 8) {
 		
-			//Chamar a variavel que conta o numero de inimigos na cena e incrementa-la em 1
-			//OBS: Essa variavel se encontra dentro do GameController
-			Debug.Log("colidiu Inimigo");
+			//Verifica se a variavel countEnemies do GameController é igual ao valor da variavel quantMaxEnemies
+			//Caso seja vai pra próxima fase
+			GameController.instance.GoToNextScene();
 		}
 
 	}
