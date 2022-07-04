@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour {
 	public int quantMaxEnemies;
 	public int countEnemies;
 
+
 	void Awake(){
 
 		instance = this;
@@ -25,6 +26,7 @@ public class GameController : MonoBehaviour {
 	public void GoToNextScene(){
 
 		countEnemies++;
+
 
 		if (countEnemies == quantMaxEnemies) {
 		

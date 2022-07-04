@@ -49,4 +49,13 @@ public class Enemies : MonoBehaviour {
 	
 	}
 
+	public void getOutBodyWhenColliderWithPortal(GameObject player){
+
+		player.SetActive (true);
+		Player.instance.activeObject = false;
+		insideBody = false;
+
+	}
+
+
 }
