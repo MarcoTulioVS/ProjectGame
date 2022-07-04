@@ -23,6 +23,8 @@ public class Player : MonoBehaviour {
 	public Animator anim;
 	bool isScaring;
 
+
+
 	void Awake(){
 	
 		instance = this;
@@ -126,6 +128,8 @@ public class Player : MonoBehaviour {
 		isScaring = false;
 	
 	}
+
+
 
 
 }
