@@ -105,7 +105,7 @@ public class Player : MonoBehaviour {
 			activeObject = true;
 			nameObject = col.name;
 			player.SetActive (false);
-		
+			Enemies.instance.insideBody = true;
 		}
 
 	}
