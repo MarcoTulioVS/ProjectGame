@@ -3779,7 +3779,7 @@ GameObject:
   - component: {fileID: 1294201450}
   m_Layer: 0
   m_Name: portal (1)
-  m_TagString: red1
+  m_TagString: green1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

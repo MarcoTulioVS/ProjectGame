@@ -16,8 +16,8 @@ public class ColoradoScript : Enemies {
 
 	void Update () {
 		getOutBody (player);
-		OnCollisionPortalRed (gameObject.transform, trRefSecondPortal);
-		OnCollisionPortalRed1 (gameObject.transform, trRefFirstPortal);
+		OnCollisionPortal (gameObject.transform, trRefSecondPortal);
+		OnCollisionPortal1 (gameObject.transform, trRefFirstPortal);
 	}
 
 	void FixedUpdate(){

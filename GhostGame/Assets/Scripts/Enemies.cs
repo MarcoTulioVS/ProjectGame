@@ -8,6 +8,8 @@ public class Enemies : MonoBehaviour {
 	public static Enemies instance;
 	bool collPortalRed;
 	bool collPortalRed1;
+	bool collPortalGreen;
+	bool collPortalGreen1;
 
 	void Awake(){
 	
@@ -73,9 +75,21 @@ public class Enemies : MonoBehaviour {
 		
 		}
 
+		if (col.gameObject.tag == "green") {
+
+			collPortalGreen= true;
+
+		}
+
+		if (col.gameObject.tag == "green1") {
+
+			collPortalGreen1 = true;
+
+		}
+
 	}
 
-	public void OnCollisionPortalRed(Transform tr,Transform portalRef){
+	public void OnCollisionPortal(Transform tr,Transform portalRef){
 	
 		if (collPortalRed) {
 			
@@ -87,11 +101,22 @@ public class Enemies : MonoBehaviour {
 				collPortalRed = false;
 			}
 		}
+
+		if (collPortalGreen) {
+
+			GameObject otherPortal = GameObject.FindGameObjectWithTag ("green1");
+
+			if (otherPortal != null) {
+
+				tr.position = portalRef.position;
+				collPortalGreen = false;
+			}
+		}
 	
 	
 	}
 
-	public void OnCollisionPortalRed1(Transform tr,Transform portalRef){
+	public void OnCollisionPortal1(Transform tr,Transform portalRef){
 
 		if (collPortalRed1) {
 
@@ -101,6 +126,17 @@ public class Enemies : MonoBehaviour {
 
 				tr.position = portalRef.position;
 				collPortalRed1 = false;
+			}
+		}
+
+		if (collPortalGreen1) {
+
+			GameObject otherPortal = GameObject.FindGameObjectWithTag ("green");
+
+			if (otherPortal != null) {
+
+				tr.position = portalRef.position;
+				collPortalGreen1 = false;
 			}
 		}
 
