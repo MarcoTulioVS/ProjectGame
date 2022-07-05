@@ -33,24 +33,49 @@ public class PowerPortal : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col){
 
-		if (col.gameObject.tag == "red" || col.gameObject.tag == "red1") {
+		if (col.gameObject.tag == "red") {
 		
 			if (gameObject.name == "powerGreen(Clone)") {
 			
 				col.GetComponent<SpriteRenderer> ().color = Color.green;
+				col.gameObject.tag="green";
 			
 			}
 		
 		}
 
-		if (col.gameObject.tag == "green" || col.gameObject.tag == "green1") {
+		if (col.gameObject.tag == "red1") {
+		
+			if (gameObject.name == "powerGreen(Clone)") {
+
+				col.GetComponent<SpriteRenderer> ().color = Color.green;
+				col.gameObject.tag="green1";
+
+			}
+		
+		}
+
+		if (col.gameObject.tag == "green") {
 
 			if (gameObject.name == "powerRed(Clone)") {
 
 				col.GetComponent<SpriteRenderer> ().color = Color.red;
+				col.gameObject.tag="red";
 
 			}
 
+		}
+
+		if (col.gameObject.tag == "green1") {
+		
+			if (gameObject.name == "powerRed(Clone)") {
+
+				col.GetComponent<SpriteRenderer> ().color = Color.red;
+				col.gameObject.tag="red1";
+
+			}
+			
+		
 		}
 			
 	}
