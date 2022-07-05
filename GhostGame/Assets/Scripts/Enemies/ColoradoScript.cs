@@ -17,6 +17,7 @@ public class ColoradoScript : Enemies {
 	float fireRate = 0.5f;
 	float nextFire;
 	Animator anim;
+	bool isRed;
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
@@ -29,6 +30,7 @@ public class ColoradoScript : Enemies {
 		getOutBody (player);
 		OnCollisionPortal (gameObject.transform, trRefSecondPortal);
 		OnCollisionPortal1 (gameObject.transform, trRefFirstPortal);
+		switchPower ();
 
 	}
 
@@ -61,15 +63,31 @@ public class ColoradoScript : Enemies {
 
 	void throwPower(){
 
-		if (Input.GetButtonDown ("Fire1") && Time.time > nextFire) {
+		if (Input.GetButtonDown ("Fire1") && Time.time > nextFire && isRed) {
+
+			anim.SetBool ("throw", true);
+			nextFire = Time.time + fireRate;
+			Instantiate (prefabPowerRed, trRefPower.position, Quaternion.identity);
+		
+		} else if (Input.GetButtonDown ("Fire1") && Time.time > nextFire && !isRed) {
 
 			anim.SetBool ("throw", true);
 			nextFire = Time.time + fireRate;
 			Instantiate (prefabPowerGreen, trRefPower.position, Quaternion.identity);
-		
+
 		} else {
 		
 			anim.SetBool ("throw", false);
+		}
+
+	}
+
+	void switchPower(){
+
+		if (Input.GetKeyDown(KeyCode.Tab)) {
+		
+			isRed = !isRed;
+		
 		}
 
 	}
