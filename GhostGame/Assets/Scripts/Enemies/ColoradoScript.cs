@@ -44,20 +44,18 @@ public class ColoradoScript : Enemies {
 	//Trocar para outro se for o caso
 	protected override void moveControl(Rigidbody2D rb,float speed){
 
-		float moveX = Input.GetAxis ("Horizontal");
+		float movement = Input.GetAxis ("Horizontal");
 
-		if (moveX > 0) {
+		if (movement > 0) {
 		
 			transform.eulerAngles = new Vector2 (0, 0);
 
-		} else if(moveX<0) {
+		} else if(movement<0) {
 		
 			transform.eulerAngles = new Vector2 (0, 180);
 		}
-
-		float moveY = Input.GetAxis ("Vertical");
-		Vector3 movement = new Vector3 (moveX, moveY, 0);
-		rb.velocity = speed * movement;
+			
+		rb.velocity = new Vector2(speed * movement,rb.velocity.y);
 
 	}
 
