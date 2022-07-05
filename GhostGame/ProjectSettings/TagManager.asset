@@ -9,6 +9,7 @@ TagManager:
   - colorado
   - red1
   - green1
+  - power
   layers:
   - Default
   - TransparentFX

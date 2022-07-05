@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114085042229104872}
   m_Layer: 0
   m_Name: powerRed
-  m_TagString: Untagged
+  m_TagString: power
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e252f0efff1a855478108891060c30f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
 --- !u!212 &212278917241767738
 SpriteRenderer:
   m_ObjectHideFlags: 1
