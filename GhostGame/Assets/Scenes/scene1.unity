@@ -1282,6 +1282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f929012bf10487e46a494724eb2aa946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 167135681}
 --- !u!1 &294984842
 GameObject:
   m_ObjectHideFlags: 0
@@ -3975,7 +3976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d08ac0dc3c971f4683114c57879c844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quantMaxEnemies: 2
+  quantMaxEnemies: 1
   countEnemies: 0
 --- !u!4 &1644355706
 Transform:
