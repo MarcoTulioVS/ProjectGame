@@ -6,10 +6,11 @@ public class Enemies : MonoBehaviour {
 
 	public bool insideBody;
 	public static Enemies instance;
-	bool collPortalRed;
-	bool collPortalRed1;
-	bool collPortalGreen;
-	bool collPortalGreen1;
+	private bool collPortalRed;
+	private bool collPortalRed1;
+	private bool collPortalGreen;
+	private bool collPortalGreen1;
+	public bool isJumping;
 
 	void Awake(){
 	
@@ -61,6 +62,17 @@ public class Enemies : MonoBehaviour {
 
 	}
 
+	protected virtual void jump(Rigidbody2D rb,float jumpForce){
+
+		if (Input.GetButtonDown ("Jump") && !isJumping) {
+			
+			rb.AddForce (new Vector2 (0, jumpForce),ForceMode2D.Impulse);
+			isJumping = true;
+		
+		}
+	
+	}
+
 
 
 	protected virtual void OnTriggerEnter2D(Collider2D col){
@@ -89,6 +101,17 @@ public class Enemies : MonoBehaviour {
 
 		}
 
+	}
+
+	void OnCollisionEnter2D(Collision2D col){
+	
+		if (col.gameObject.layer == 9) {
+		
+			isJumping = false;
+
+		}
+	
+	
 	}
 
 	public void OnCollisionPortal(Transform tr,Transform portalRef){
