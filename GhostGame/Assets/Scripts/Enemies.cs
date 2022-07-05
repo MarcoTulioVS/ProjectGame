@@ -6,6 +6,8 @@ public class Enemies : MonoBehaviour {
 
 	public bool insideBody;
 	public static Enemies instance;
+	bool collPortalRed;
+	bool collPortalRed1;
 
 	void Awake(){
 	
@@ -54,6 +56,54 @@ public class Enemies : MonoBehaviour {
 		player.SetActive (true);
 		Player.instance.activeObject = false;
 		insideBody = false;
+
+	}
+
+	protected virtual void OnTriggerEnter2D(Collider2D col){
+
+		if (col.gameObject.tag == "red") {
+
+			collPortalRed= true;
+		
+		}
+
+		if (col.gameObject.tag == "red1") {
+		
+			collPortalRed1 = true;
+		
+		}
+
+	}
+
+	public void OnCollisionPortalRed(Transform tr,Transform portalRef){
+	
+		if (collPortalRed) {
+			
+			GameObject otherPortal = GameObject.FindGameObjectWithTag ("red1");
+
+			if (otherPortal != null) {
+
+				tr.position = portalRef.position;
+				collPortalRed = false;
+			}
+		}
+	
+	
+	}
+
+	public void OnCollisionPortalRed1(Transform tr,Transform portalRef){
+
+		if (collPortalRed1) {
+
+			GameObject otherPortal = GameObject.FindGameObjectWithTag ("red");
+
+			if (otherPortal != null) {
+
+				tr.position = portalRef.position;
+				collPortalRed1 = false;
+			}
+		}
+
 
 	}
 

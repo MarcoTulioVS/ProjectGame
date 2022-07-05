@@ -7,7 +7,8 @@ public class ColoradoScript : Enemies {
 	Rigidbody2D rb;
 	public float speed;
 	public GameObject player;
-
+	public Transform trRefSecondPortal;//ref do portal com tag red1
+	public Transform trRefFirstPortal;//ref do portal com tag red
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 	}
@@ -15,6 +16,8 @@ public class ColoradoScript : Enemies {
 
 	void Update () {
 		getOutBody (player);
+		OnCollisionPortalRed (gameObject.transform, trRefSecondPortal);
+		OnCollisionPortalRed1 (gameObject.transform, trRefFirstPortal);
 	}
 
 	void FixedUpdate(){
