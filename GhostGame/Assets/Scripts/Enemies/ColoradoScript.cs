@@ -63,15 +63,19 @@ public class ColoradoScript : Enemies {
 
 		if (Input.GetButtonDown ("Fire1") && Time.time > nextFire && isRed) {
 
-			anim.SetBool ("throw", true);
-			nextFire = Time.time + fireRate;
-			Instantiate (prefabPowerRed, trRefPower.position, Quaternion.identity);
+			if (insideBody) {
+				anim.SetBool ("throw", true);
+				nextFire = Time.time + fireRate;
+				Instantiate (prefabPowerRed, trRefPower.position, Quaternion.identity);
+			}
 		
 		} else if (Input.GetButtonDown ("Fire1") && Time.time > nextFire && !isRed) {
 
-			anim.SetBool ("throw", true);
-			nextFire = Time.time + fireRate;
-			Instantiate (prefabPowerGreen, trRefPower.position, Quaternion.identity);
+			if (insideBody) {
+				anim.SetBool ("throw", true);
+				nextFire = Time.time + fireRate;
+				Instantiate (prefabPowerGreen, trRefPower.position, Quaternion.identity);
+			}
 
 		} else {
 		
@@ -82,7 +86,7 @@ public class ColoradoScript : Enemies {
 
 	void switchPower(){
 
-		if (Input.GetKeyDown(KeyCode.Tab)) {
+		if (Input.GetKeyDown(KeyCode.Tab) && insideBody) {
 		
 			isRed = !isRed;
 		

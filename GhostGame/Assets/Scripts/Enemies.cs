@@ -64,7 +64,7 @@ public class Enemies : MonoBehaviour {
 
 	protected virtual void jump(Rigidbody2D rb,float jumpForce){
 
-		if (Input.GetButtonDown ("Jump") && !isJumping) {
+		if (Input.GetButtonDown ("Jump") && !isJumping && insideBody) {
 			
 			rb.AddForce (new Vector2 (0, jumpForce),ForceMode2D.Impulse);
 			isJumping = true;
