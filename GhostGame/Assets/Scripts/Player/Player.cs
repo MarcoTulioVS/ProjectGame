@@ -120,6 +120,17 @@ public class Player : MonoBehaviour {
 			Enemies.instance.insideBody = true;
 		}
 
+		//Layer 10 = obj(Objects)
+		//Ao colidir com algum objeto o fantasma o possui
+		if (col.gameObject.layer == 10) {
+		
+			activeObject = true;
+			nameObject = col.name;
+			player.SetActive (false);
+			ObjectsGame.instance.insideObject = true;
+		
+		}
+
 	}
 
 	IEnumerator resetScare(){
