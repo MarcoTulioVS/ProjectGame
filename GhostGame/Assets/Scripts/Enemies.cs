@@ -44,11 +44,44 @@ public class Enemies : MonoBehaviour {
 	
 	}
 
+	protected virtual void moveControl(Rigidbody2D rb,float speed,Animator anim){
+
+		movement = Input.GetAxis ("Horizontal");
+
+		if (movement > 0 && !isJumping) {
+
+			transform.eulerAngles = new Vector2 (0, 0);
+			anim.SetInteger ("transition",1);
+
+		} else if (movement < 0 && !isJumping) {
+
+			transform.eulerAngles = new Vector2 (0, 180);
+			anim.SetInteger ("transition",1);
+
+		} else if(movement==0 && !isJumping) {
+		
+			anim.SetInteger ("transition", 0);
+		}
+
+		rb.velocity = new Vector2 (speed * movement, rb.velocity.y);
+
+	}
+
+
 	protected void MainController(string nameObject,Rigidbody2D rb,float speed){
 
 		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
 
 			moveControl (rb,speed);
+		}
+
+	}
+
+	protected void MainController(string nameObject,Rigidbody2D rb,float speed,Animator anim){
+
+		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
+
+			moveControl (rb,speed,anim);
 		}
 
 	}
@@ -84,11 +117,11 @@ public class Enemies : MonoBehaviour {
 	
 	}
 
-	protected virtual void jump(Rigidbody2D rb,float jumpForce,Animator anim,int value){
+	protected virtual void jump(Rigidbody2D rb,float jumpForce,Animator anim){
 
 		if (Input.GetButtonDown ("Jump") && !isJumping && insideBody) {
 
-			anim.SetInteger("transition",value);
+			anim.SetInteger("transition",2);
 			rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
 			isJumping = true;
 		

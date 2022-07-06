@@ -16,12 +16,12 @@ public class PulinhoScript : Enemies {
 	
 
 	void Update () {
-		jump (rb, jumpForce, anim,2);
+		jump (rb, jumpForce, anim);
 	}
 
 	void FixedUpdate(){
 
-		MainController (gameObject.name, rb, speed);
+		MainController (gameObject.name, rb, speed,anim);
 
 	}
 }
