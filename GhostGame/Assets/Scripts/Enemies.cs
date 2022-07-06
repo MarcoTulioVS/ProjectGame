@@ -31,6 +31,15 @@ public class Enemies : MonoBehaviour {
 	protected virtual void moveControl(Rigidbody2D rb,float speed){
 
 		movement = Input.GetAxis ("Horizontal");
+
+		if (movement > 0) {
+		
+			transform.eulerAngles = new Vector2 (0, 0);
+		} else {
+		
+			transform.eulerAngles = new Vector2 (0, 180);
+		}
+
 		rb.velocity = new Vector2 (speed * movement, rb.velocity.y);
 	
 	}
@@ -74,7 +83,6 @@ public class Enemies : MonoBehaviour {
 		}
 	
 	}
-
 
 
 	protected virtual void OnTriggerEnter2D(Collider2D col){
