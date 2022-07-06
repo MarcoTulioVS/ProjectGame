@@ -8,7 +8,9 @@ public class SalivaScript : Enemies {
 	public float speed;
 	public GameObject player;
 	public float jumpForce;
-
+	public GameObject prefabBomb;
+	public Transform trRefBomb;
+	public bool withBomb;
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();	
@@ -18,6 +20,7 @@ public class SalivaScript : Enemies {
 	void Update () {
 		getOutBody (player);
 		jump (rb, jumpForce);
+		placeBomb ();
 	}
 
 	void FixedUpdate(){
@@ -46,6 +49,26 @@ public class SalivaScript : Enemies {
 				}
 			
 			}
+		}
+	}
+
+	void placeBomb(){
+
+		if (Input.GetKeyDown (KeyCode.F) && withBomb) {
+		
+			Instantiate (prefabBomb, trRefBomb.position, Quaternion.identity);
+			withBomb = false;
+		}
+
+	}
+
+	protected override void OnTriggerEnter2D (Collider2D col)
+	{
+		if (col.gameObject.tag == "bombItem") {
+		
+			withBomb = true;
+			Destroy (col.gameObject);
+		
 		}
 	}
 }

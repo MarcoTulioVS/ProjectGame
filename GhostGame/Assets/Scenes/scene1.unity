@@ -1605,7 +1605,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 308908862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.97, y: -0.33, z: 0}
+  m_LocalPosition: {x: -0.97, y: -0.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 712618142}
@@ -5408,7 +5408,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: c30aae76536bfd6458cf6b4da5d0bf61, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5449,6 +5449,9 @@ MonoBehaviour:
   speed: 5
   player: {fileID: 167135681}
   jumpForce: 12
+  prefabBomb: {fileID: 1101536687007092, guid: d71eff2d032609846a710f8f28ed33ea, type: 2}
+  trRefBomb: {fileID: 308908863}
+  withBomb: 0
 --- !u!1 &1104422825
 GameObject:
   m_ObjectHideFlags: 0
