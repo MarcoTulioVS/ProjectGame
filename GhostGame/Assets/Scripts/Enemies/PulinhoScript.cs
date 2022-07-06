@@ -6,14 +6,17 @@ public class PulinhoScript : Enemies {
 
 	Rigidbody2D rb;
 	public float speed;
+	public float jumpForce;
+	Animator anim;
 
 	void Start () {
+		anim = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
 	}
 	
 
 	void Update () {
-		
+		jump (rb, jumpForce, anim,2);
 	}
 
 	void FixedUpdate(){

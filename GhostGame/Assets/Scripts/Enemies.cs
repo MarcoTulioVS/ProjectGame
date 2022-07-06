@@ -84,6 +84,19 @@ public class Enemies : MonoBehaviour {
 	
 	}
 
+	protected virtual void jump(Rigidbody2D rb,float jumpForce,Animator anim,int value){
+
+		if (Input.GetButtonDown ("Jump") && !isJumping && insideBody) {
+
+			anim.SetInteger("transition",value);
+			rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
+			isJumping = true;
+		
+		} 
+		
+	
+	}
+
 
 	protected virtual void OnTriggerEnter2D(Collider2D col){
 
