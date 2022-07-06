@@ -25,4 +25,27 @@ public class SalivaScript : Enemies {
 		MainController (this.gameObject.name, rb, speed);
 
 	}
+
+	protected override void jump (Rigidbody2D rb, float jumpForce)
+	{
+		if (Input.GetButtonDown ("Jump") && insideBody) {
+
+			if (!isJumping) {
+
+				rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
+				isJumping = true;
+				doubleJump = true;
+
+			} else {
+
+				if (doubleJump) {
+
+					rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
+					doubleJump = false;
+				
+				}
+			
+			}
+		}
+	}
 }

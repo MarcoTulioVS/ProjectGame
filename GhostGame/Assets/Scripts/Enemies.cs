@@ -11,6 +11,7 @@ public class Enemies : MonoBehaviour {
 	private bool collPortalGreen;
 	private bool collPortalGreen1;
 	public bool isJumping;
+	protected bool doubleJump;
 
 	void Awake(){
 	
