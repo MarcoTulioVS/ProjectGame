@@ -13,6 +13,7 @@ public class Enemies : MonoBehaviour {
 	public bool isJumping;
 	protected bool doubleJump;
 	private float movement;
+	protected bool activeSpark;
 
 	void Awake(){
 	
@@ -159,14 +160,13 @@ public class Enemies : MonoBehaviour {
 
 	}
 
-	void OnCollisionEnter2D(Collision2D col){
+	protected virtual void OnCollisionEnter2D(Collision2D col){
 	
 		if (col.gameObject.layer == 9) {
 		
 			isJumping = false;
 
 		}
-	
 	
 	}
 

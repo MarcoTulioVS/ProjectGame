@@ -118,6 +118,7 @@ public class Player : MonoBehaviour {
 			nameObject = col.name;
 			player.SetActive (false);
 			Enemies.instance.insideBody = true;
+
 		}
 
 		//Layer 10 = obj(Objects)
@@ -139,8 +140,5 @@ public class Player : MonoBehaviour {
 		isScaring = false;
 	
 	}
-
-
-
 
 }
