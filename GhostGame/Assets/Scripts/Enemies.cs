@@ -12,6 +12,7 @@ public class Enemies : MonoBehaviour {
 	private bool collPortalGreen1;
 	public bool isJumping;
 	protected bool doubleJump;
+	private float movement;
 
 	void Awake(){
 	
@@ -29,7 +30,7 @@ public class Enemies : MonoBehaviour {
 
 	protected virtual void moveControl(Rigidbody2D rb,float speed){
 
-		float movement = Input.GetAxis ("Horizontal");
+		movement = Input.GetAxis ("Horizontal");
 		rb.velocity = new Vector2 (speed * movement, rb.velocity.y);
 	
 	}
@@ -164,6 +165,24 @@ public class Enemies : MonoBehaviour {
 				tr.position = portalRef.position;
 				collPortalGreen1 = false;
 			}
+		}
+
+
+	}
+
+	protected void showAnimation(Animator anim,string name){
+
+		if (movement > 0) {
+		
+			anim.SetBool (name, true);
+
+		} else if (movement < 0) {
+		
+			anim.SetBool (name, true);
+		
+		} else {
+		
+			anim.SetBool (name, false);
 		}
 
 

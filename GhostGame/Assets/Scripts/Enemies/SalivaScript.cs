@@ -11,8 +11,10 @@ public class SalivaScript : Enemies {
 	public GameObject prefabBomb;
 	public Transform trRefBomb;
 	public bool withBomb;
+	Animator anim;
 
 	void Start () {
+		anim = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();	
 	}
 	
@@ -21,6 +23,7 @@ public class SalivaScript : Enemies {
 		getOutBody (player);
 		jump (rb, jumpForce);
 		placeBomb ();
+		showAnimation (anim,"move");
 	}
 
 	void FixedUpdate(){
@@ -71,4 +74,6 @@ public class SalivaScript : Enemies {
 		
 		}
 	}
+
+
 }
