@@ -14,6 +14,10 @@ public class Enemies : MonoBehaviour {
 	protected bool doubleJump;
 	private float movement;
 	protected bool activeSpark;
+	protected bool withBomb;
+
+	[SerializeField]
+	private GameObject shine;
 
 	void Awake(){
 	
@@ -158,6 +162,20 @@ public class Enemies : MonoBehaviour {
 
 		}
 
+		if (col.gameObject.tag == "Player") {
+		
+			StartCoroutine ("blinkShine");
+
+		}
+
+		if (col.gameObject.tag == "bombItem" && gameObject.name == "saliva") {
+
+			withBomb = true;
+			Destroy (col.gameObject);
+
+		}
+
+
 	}
 
 	protected virtual void OnCollisionEnter2D(Collision2D col){
@@ -240,6 +258,14 @@ public class Enemies : MonoBehaviour {
 		}
 
 
+	}
+
+	IEnumerator blinkShine(){
+	
+		shine.SetActive (true);
+		yield return new WaitForSeconds (0.5f);
+		shine.SetActive (false);
+	
 	}
 
 

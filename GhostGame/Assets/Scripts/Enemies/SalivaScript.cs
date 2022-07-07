@@ -10,7 +10,6 @@ public class SalivaScript : Enemies {
 	public float jumpForce;
 	public GameObject prefabBomb;
 	public Transform trRefBomb;
-	public bool withBomb;
 	Animator anim;
 
 	void Start () {
@@ -64,16 +63,5 @@ public class SalivaScript : Enemies {
 		}
 
 	}
-
-	protected override void OnTriggerEnter2D (Collider2D col)
-	{
-		if (col.gameObject.tag == "bombItem") {
-		
-			withBomb = true;
-			Destroy (col.gameObject);
-		
-		}
-	}
-
 
 }
