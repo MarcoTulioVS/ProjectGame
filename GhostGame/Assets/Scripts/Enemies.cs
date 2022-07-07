@@ -15,6 +15,7 @@ public class Enemies : MonoBehaviour {
 	private float movement;
 	protected bool activeSpark;
 	protected bool withBomb;
+	public float speed;
 
 	[SerializeField]
 	private GameObject shine;
@@ -33,14 +34,15 @@ public class Enemies : MonoBehaviour {
 	}
 		
 
-	protected virtual void moveControl(Rigidbody2D rb,float speed){
+	protected virtual void moveControl(Rigidbody2D rb){
 
 		movement = Input.GetAxis ("Horizontal");
 
 		if (movement > 0) {
 		
 			transform.eulerAngles = new Vector2 (0, 0);
-		} else {
+
+		} else if(movement<0) {
 		
 			transform.eulerAngles = new Vector2 (0, 180);
 		}
@@ -49,7 +51,7 @@ public class Enemies : MonoBehaviour {
 	
 	}
 
-	protected virtual void moveControl(Rigidbody2D rb,float speed,Animator anim){
+	protected virtual void moveControl(Rigidbody2D rb,Animator anim){
 
 		movement = Input.GetAxis ("Horizontal");
 
@@ -73,20 +75,20 @@ public class Enemies : MonoBehaviour {
 	}
 
 
-	protected void MainController(string nameObject,Rigidbody2D rb,float speed){
+	protected void MainController(string nameObject,Rigidbody2D rb){
 
 		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
 
-			moveControl (rb,speed);
+			moveControl (rb);
 		}
 
 	}
 
-	protected void MainController(string nameObject,Rigidbody2D rb,float speed,Animator anim){
+	protected void MainController(string nameObject,Rigidbody2D rb,Animator anim){
 
 		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
 
-			moveControl (rb,speed,anim);
+			moveControl (rb,anim);
 		}
 
 	}

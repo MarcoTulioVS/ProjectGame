@@ -5,7 +5,6 @@ using UnityEngine;
 public class SalivaScript : Enemies {
 
 	Rigidbody2D rb;
-	public float speed;
 	public GameObject player;
 	public float jumpForce;
 	public GameObject prefabBomb;
@@ -27,7 +26,7 @@ public class SalivaScript : Enemies {
 
 	void FixedUpdate(){
 
-		MainController (this.gameObject.name, rb, speed);
+		MainController (this.gameObject.name, rb);
 
 	}
 

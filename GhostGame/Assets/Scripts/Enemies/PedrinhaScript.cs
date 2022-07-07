@@ -2,28 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PulinhoScript : Enemies {
+public class PedrinhaScript : Enemies {
 
 	Rigidbody2D rb;
-	public float jumpForce;
 	Animator anim;
 
-
 	void Start () {
-		anim = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
+		anim = GetComponent<Animator> ();
 	}
 	
 
 	void Update () {
-		jump (rb, jumpForce, anim);
-
+		showAnimation (anim, "walk");
 	}
 
 	void FixedUpdate(){
 
-		MainController (gameObject.name, rb,anim);
+		MainController (gameObject.name, rb);
 
 	}
-		
+
+
 }
