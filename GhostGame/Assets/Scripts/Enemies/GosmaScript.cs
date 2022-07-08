@@ -22,6 +22,7 @@ public class GosmaScript : Enemies {
 		getOutBody (player);
 		jump (rb, jumpForce);
 		GosmaForm ();
+		turnVertical ();
 	}
 
 	void FixedUpdate(){
@@ -57,9 +58,27 @@ public class GosmaScript : Enemies {
 
 		if (Input.GetKeyDown (KeyCode.F) && !isJumping && insideBody) {
 		
-			anim.SetInteger ("transition", 2);
+			StartCoroutine ("transitionForm");
 			inFormGosma = true;
 		} 
 			
+	}
+
+	void turnVertical(){
+
+		if (colWall) {
+
+			anim.SetInteger ("transition", 4);
+		
+		}
+
+	}
+
+	IEnumerator transitionForm(){
+
+		anim.SetInteger ("transition",2);
+		yield return new WaitForSeconds (0.5f);
+		anim.SetInteger ("transition", 3);
+
 	}
 }

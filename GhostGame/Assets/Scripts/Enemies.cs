@@ -21,6 +21,8 @@ public class Enemies : MonoBehaviour {
 	[SerializeField]
 	private GameObject shine;
 
+	protected bool colWall; 
+
 	void Awake(){
 	
 		instance = this;
@@ -191,6 +193,7 @@ public class Enemies : MonoBehaviour {
 		if (col.gameObject.name == "area") {
 		
 			//teste
+			colWall = true;
 		
 		}
 
