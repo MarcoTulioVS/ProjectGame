@@ -201,6 +201,17 @@ public class Enemies : MonoBehaviour {
 
 	}
 
+	void OnTriggerExit2D(Collider2D notCol){
+	
+		if (notCol.gameObject.name == "area") {
+		
+			colWall = false;
+		
+		}
+	
+	
+	}
+
 	protected virtual void OnCollisionEnter2D(Collision2D col){
 	
 		if (col.gameObject.layer == 9) {

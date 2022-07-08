@@ -8,7 +8,7 @@ public class GosmaScript : Enemies {
 	Animator anim;
 	public GameObject player;
 	public float jumpForce;
-
+	Vector3 move;
 
 	void Start () {
 
@@ -59,19 +59,19 @@ public class GosmaScript : Enemies {
 		if (Input.GetKeyDown (KeyCode.F) && !isJumping && insideBody) {
 		
 			StartCoroutine ("transitionForm");
-			inFormGosma = true;
+			inFormGosma = !inFormGosma;
+
 		} 
 			
 	}
 
 	void turnVertical(){
 
-		if (colWall) {
+		if (colWall && inFormGosma) {
 
 			anim.SetInteger ("transition", 4);
-		
-		}
 
+		} 
 	}
 
 	IEnumerator transitionForm(){
@@ -79,6 +79,47 @@ public class GosmaScript : Enemies {
 		anim.SetInteger ("transition",2);
 		yield return new WaitForSeconds (0.5f);
 		anim.SetInteger ("transition", 3);
+
+	}
+
+	protected override void moveControl (Rigidbody2D rb, Animator anim)
+	{
+		float moveX = Input.GetAxis ("Horizontal");
+		float moveY = Input.GetAxis ("Vertical");
+
+		if (colWall) {
+			move = new Vector3 (moveX, moveY, 0);
+			rb.velocity = speed * move;
+		} else {
+		
+			rb.velocity = new Vector2 (speed * moveX, rb.velocity.y);
+		}
+
+
+		if (moveX > 0) {
+
+			transform.eulerAngles = new Vector2 (0, 0);
+
+		} else if (moveX < 0) {
+
+			transform.eulerAngles = new Vector2 (0, 180);
+
+		}
+
+		if (moveX > 0 && !isJumping && !inFormGosma) {
+
+			transform.eulerAngles = new Vector2 (0, 0);
+			anim.SetInteger ("transition",1);
+
+		} else if (moveX < 0 && !isJumping && !inFormGosma) {
+
+			transform.eulerAngles = new Vector2 (0, 180);
+			anim.SetInteger ("transition",1);
+
+		} else if(moveX==0 && !isJumping && !inFormGosma) {
+
+			anim.SetInteger ("transition", 0);
+		}
 
 	}
 }
