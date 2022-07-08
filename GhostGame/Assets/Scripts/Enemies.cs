@@ -16,6 +16,7 @@ public class Enemies : MonoBehaviour {
 	protected bool activeSpark;
 	protected bool withBomb;
 	public float speed;
+	public bool inFormGosma;
 
 	[SerializeField]
 	private GameObject shine;
@@ -55,17 +56,27 @@ public class Enemies : MonoBehaviour {
 
 		movement = Input.GetAxis ("Horizontal");
 
-		if (movement > 0 && !isJumping) {
+		if (movement > 0) {
+
+			transform.eulerAngles = new Vector2 (0, 0);
+		
+		} else if (movement < 0) {
+		
+			transform.eulerAngles = new Vector2 (0, 180);
+		
+		}
+
+		if (movement > 0 && !isJumping && !inFormGosma) {
 
 			transform.eulerAngles = new Vector2 (0, 0);
 			anim.SetInteger ("transition",1);
 
-		} else if (movement < 0 && !isJumping) {
+		} else if (movement < 0 && !isJumping && !inFormGosma) {
 
 			transform.eulerAngles = new Vector2 (0, 180);
 			anim.SetInteger ("transition",1);
 
-		} else if(movement==0 && !isJumping) {
+		} else if(movement==0 && !isJumping && !inFormGosma) {
 		
 			anim.SetInteger ("transition", 0);
 		}
@@ -177,6 +188,13 @@ public class Enemies : MonoBehaviour {
 
 		}
 
+		if (col.gameObject.name == "area") {
+		
+			//teste
+		
+		}
+
+
 
 	}
 
@@ -269,6 +287,8 @@ public class Enemies : MonoBehaviour {
 		shine.SetActive (false);
 	
 	}
+
+
 
 
 }
