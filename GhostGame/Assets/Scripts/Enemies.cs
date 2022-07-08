@@ -21,7 +21,8 @@ public class Enemies : MonoBehaviour {
 	[SerializeField]
 	private GameObject shine;
 
-	protected bool colWall; 
+	protected bool colWall;
+
 
 	void Awake(){
 	
@@ -190,15 +191,13 @@ public class Enemies : MonoBehaviour {
 
 		}
 
-		if (col.gameObject.name == "area") {
+		if (col.gameObject.name == "area" && gameObject.name=="gosma") {
 		
 			//teste
 			colWall = true;
 		
 		}
-
-
-
+			
 	}
 
 	void OnTriggerExit2D(Collider2D notCol){
@@ -206,9 +205,9 @@ public class Enemies : MonoBehaviour {
 		if (notCol.gameObject.name == "area") {
 		
 			colWall = false;
+
 		
 		}
-	
 	
 	}
 
