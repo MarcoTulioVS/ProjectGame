@@ -21,8 +21,9 @@ public class Enemies : MonoBehaviour {
 	[SerializeField]
 	private GameObject shine;
 
-	protected bool colWall;
+	public bool colWall;
 
+	protected bool isGround; 
 
 	void Awake(){
 	
@@ -191,23 +192,36 @@ public class Enemies : MonoBehaviour {
 
 		}
 
-		if (col.gameObject.name == "area" && gameObject.name=="gosma") {
+		if (col.gameObject.tag == "areaGosma" && gameObject.name=="gosma") {
 		
 			//teste
 			colWall = true;
 		
+		}
+
+		if (col.gameObject.tag == "areaGosmaDir" && gameObject.name=="gosma") {
+
+			//teste
+			colWall = true;
+
 		}
 			
 	}
 
 	void OnTriggerExit2D(Collider2D notCol){
 	
-		if (notCol.gameObject.name == "area") {
+		if (notCol.gameObject.tag == "areaGosma" && gameObject.name=="gosma") {
 		
 			colWall = false;
 
-		
 		}
+
+		if (notCol.gameObject.tag == "areaGosmaDir" && gameObject.name=="gosma") {
+
+			colWall = false;
+
+		}
+
 	
 	}
 
@@ -216,10 +230,22 @@ public class Enemies : MonoBehaviour {
 		if (col.gameObject.layer == 9) {
 		
 			isJumping = false;
-
+			isGround = true;
 		}
 	
 	}
+
+	protected virtual void OnCollisionExit2D(Collision2D notCol){
+
+		if (notCol.gameObject.layer == 9) {
+
+			isGround = false;
+
+		}
+
+
+	}
+
 
 	public void OnCollisionPortal(Transform tr,Transform portalRef){
 	

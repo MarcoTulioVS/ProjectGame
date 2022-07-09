@@ -10,6 +10,13 @@ public class GosmaScript : Enemies {
 	public float jumpForce;
 	Vector3 move;
 
+
+	public Transform pointCollider;
+	public float radius;
+	public LayerMask layerGosma;
+
+
+
 	void Start () {
 
 		rb = GetComponent<Rigidbody2D> ();
@@ -22,7 +29,9 @@ public class GosmaScript : Enemies {
 		getOutBody (player);
 		jump (rb, jumpForce);
 		GosmaForm ();
-		turnVertical ();
+		//turnVertical ();
+		turnVer();
+
 	}
 
 	void FixedUpdate(){
@@ -73,6 +82,31 @@ public class GosmaScript : Enemies {
 
 		} 
 	}
+
+	void turnVer(){
+	
+		Collider2D hit = Physics2D.OverlapCircle (pointCollider.position, radius,layerGosma);
+
+		if (hit != null && inFormGosma) {
+			
+			anim.SetInteger ("transition", 4);
+
+
+		} else if(hit==null && !isGround){
+
+			anim.SetInteger ("transition", 3);
+			
+		}
+	
+	}
+
+	void OnDrawGizmos(){
+
+		Gizmos.DrawWireSphere (pointCollider.position, radius);
+
+	}
+
+
 
 	IEnumerator transitionForm(){
 

@@ -13,6 +13,8 @@ TagManager:
   - bombItem
   - block
   - bomb
+  - areaGosma
+  - areaGosmaDir
   layers:
   - Default
   - TransparentFX
@@ -25,7 +27,7 @@ TagManager:
   - enemies
   - ground
   - obj
-  - 
+  - gosma
   - 
   - 
   - 
