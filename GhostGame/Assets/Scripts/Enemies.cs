@@ -24,7 +24,7 @@ public class Enemies : MonoBehaviour {
 	public bool colWall;
 
 	protected bool isGround; 
-
+	protected bool notColWall;
 	void Awake(){
 	
 		instance = this;
@@ -196,14 +196,14 @@ public class Enemies : MonoBehaviour {
 		
 			//teste
 			colWall = true;
-		
+			notColWall = false;
 		}
 
 		if (col.gameObject.tag == "areaGosmaDir" && gameObject.name=="gosma") {
 
 			//teste
 			colWall = true;
-
+			notColWall = false;
 		}
 			
 	}
@@ -213,13 +213,14 @@ public class Enemies : MonoBehaviour {
 		if (notCol.gameObject.tag == "areaGosma" && gameObject.name=="gosma") {
 		
 			colWall = false;
+			notColWall = true;
 
 		}
 
 		if (notCol.gameObject.tag == "areaGosmaDir" && gameObject.name=="gosma") {
 
 			colWall = false;
-
+			notColWall = true;
 		}
 
 	

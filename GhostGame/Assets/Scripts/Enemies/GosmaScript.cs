@@ -15,7 +15,7 @@ public class GosmaScript : Enemies {
 	public float radius;
 	public LayerMask layerGosma;
 
-
+	bool form_out;
 
 	void Start () {
 
@@ -29,8 +29,7 @@ public class GosmaScript : Enemies {
 		getOutBody (player);
 		jump (rb, jumpForce);
 		GosmaForm ();
-		//turnVertical ();
-		turnVer();
+		turnVertical();
 
 	}
 
@@ -66,24 +65,17 @@ public class GosmaScript : Enemies {
 	void GosmaForm(){
 
 		if (Input.GetKeyDown (KeyCode.F) && !isJumping && insideBody) {
-		
-			StartCoroutine ("transitionForm");
+
 			inFormGosma = !inFormGosma;
+			StartCoroutine ("transitionForm");
 
 		} 
 			
 	}
 
+
+
 	void turnVertical(){
-
-		if (colWall && inFormGosma) {
-
-			anim.SetInteger ("transition", 4);
-
-		} 
-	}
-
-	void turnVer(){
 	
 		Collider2D hit = Physics2D.OverlapCircle (pointCollider.position, radius,layerGosma);
 
@@ -92,7 +84,7 @@ public class GosmaScript : Enemies {
 			anim.SetInteger ("transition", 4);
 
 
-		} else if(hit==null && !isGround){
+		} else if(hit==null && notColWall && inFormGosma){
 
 			anim.SetInteger ("transition", 3);
 			
@@ -110,11 +102,20 @@ public class GosmaScript : Enemies {
 
 	IEnumerator transitionForm(){
 
-		anim.SetInteger ("transition",2);
-		yield return new WaitForSeconds (0.5f);
-		anim.SetInteger ("transition", 3);
+		if (inFormGosma) {
+			anim.SetInteger ("transition", 2);
+			yield return new WaitForSeconds (0.5f);
+			anim.SetInteger ("transition", 3);
+		} else {
+			
+			anim.SetInteger ("transition", 3);
+			yield return new WaitForSeconds (0.4f);
+			anim.SetInteger ("transition", 0);
+		
+		}
 
 	}
+
 
 	protected override void moveControl (Rigidbody2D rb, Animator anim)
 	{
