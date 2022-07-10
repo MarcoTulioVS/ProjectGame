@@ -84,11 +84,11 @@ public class GosmaScript : Enemies {
 			anim.SetInteger ("transition", 4);
 
 
-		} else if(hit==null && notColWall && inFormGosma){
+		} else if (hit == null && notColWall && inFormGosma) {
 
 			anim.SetInteger ("transition", 3);
 			
-		}
+		} 
 	
 	}
 

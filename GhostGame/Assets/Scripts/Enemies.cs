@@ -197,13 +197,7 @@ public class Enemies : MonoBehaviour {
 			//teste
 			colWall = true;
 			notColWall = false;
-		}
 
-		if (col.gameObject.tag == "areaGosmaDir" && gameObject.name=="gosma") {
-
-			//teste
-			colWall = true;
-			notColWall = false;
 		}
 			
 	}
@@ -216,13 +210,6 @@ public class Enemies : MonoBehaviour {
 			notColWall = true;
 
 		}
-
-		if (notCol.gameObject.tag == "areaGosmaDir" && gameObject.name=="gosma") {
-
-			colWall = false;
-			notColWall = true;
-		}
-
 	
 	}
 
