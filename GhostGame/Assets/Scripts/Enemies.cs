@@ -69,8 +69,8 @@ public class Enemies : MonoBehaviour {
 			transform.eulerAngles = new Vector2 (0, 180);
 		
 		}
-
-		if (movement > 0 && !isJumping && !inFormGosma) {
+		//MODIFICAR E TIRAR O GAMEOBJECT.NAME
+		if (movement > 0 && !isJumping && !inFormGosma ) {
 
 			transform.eulerAngles = new Vector2 (0, 0);
 			anim.SetInteger ("transition",1);
@@ -84,7 +84,7 @@ public class Enemies : MonoBehaviour {
 		
 			anim.SetInteger ("transition", 0);
 		}
-
+			
 		rb.velocity = new Vector2 (speed * movement, rb.velocity.y);
 
 	}
