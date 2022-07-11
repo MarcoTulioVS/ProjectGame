@@ -15,8 +15,6 @@ public class MartinScript : Enemies {
 
 	public Transform pointDown;
 
-
-
 	void Start () {
 		
 		rb = GetComponent<Rigidbody2D> ();
@@ -44,7 +42,6 @@ public class MartinScript : Enemies {
 		if (colUp != null) {
 			
 			colUp.gameObject.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Dynamic;
-
 		
 		}
 
@@ -52,8 +49,6 @@ public class MartinScript : Enemies {
 			
 			colDown.gameObject.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Dynamic;
 		}
-
-
 	
 	}
 
@@ -61,6 +56,7 @@ public class MartinScript : Enemies {
 
 		Gizmos.DrawWireSphere (pointUp.position, radius);
 		Gizmos.DrawWireSphere (pointDown.position, radius);
+
 	}
 
 
