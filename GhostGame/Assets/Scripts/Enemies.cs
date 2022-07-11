@@ -69,7 +69,8 @@ public class Enemies : MonoBehaviour {
 			transform.eulerAngles = new Vector2 (0, 180);
 		
 		}
-		//MODIFICAR E TIRAR O GAMEOBJECT.NAME
+
+
 		if (movement > 0 && !isJumping && !inFormGosma ) {
 
 			transform.eulerAngles = new Vector2 (0, 0);
