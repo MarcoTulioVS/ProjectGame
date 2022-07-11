@@ -11,6 +11,8 @@ public class MedusaScript : Enemies {
 	public float radius;
 	public LayerMask layer;
 	public GameObject prefabStone;
+	GameObject stoneInstance;
+
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
@@ -39,10 +41,11 @@ public class MedusaScript : Enemies {
 
 			if (col != null) {
 
-				Instantiate (prefabStone, col.transform.position, Quaternion.identity);
 				col.gameObject.SetActive (false);
+				stoneInstance = Instantiate (prefabStone, col.transform.position, Quaternion.identity);
+				StartCoroutine ("timeDespetrify",col);
 
-			
+	
 			}
 		}
 	}
@@ -52,5 +55,18 @@ public class MedusaScript : Enemies {
 		Gizmos.DrawWireSphere (point.position, radius);
 
 	}
+
+
+	IEnumerator timeDespetrify(Collider2D c){
+	
+
+		yield return new WaitForSeconds (3f);
+		stoneInstance.GetComponent<Animator> ().SetTrigger ("breaking");
+		yield return new WaitForSeconds (0.7f);
+		Destroy (stoneInstance);
+		c.gameObject.SetActive (true);
+	
+	}
+
 
 }
