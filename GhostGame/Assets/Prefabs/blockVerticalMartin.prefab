@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212717921776397046}
   - component: {fileID: 61026003234411898}
   - component: {fileID: 50520839632632260}
+  - component: {fileID: 114705461191677498}
   m_Layer: 12
   m_Name: blockVerticalMartin
   m_TagString: Untagged
@@ -87,6 +88,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9678938, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114705461191677498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1926523521650388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b3e7c80d753fd4490176a4cac099d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212717921776397046
 SpriteRenderer:
   m_ObjectHideFlags: 1
