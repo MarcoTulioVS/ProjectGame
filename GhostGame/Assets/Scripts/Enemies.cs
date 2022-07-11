@@ -16,6 +16,7 @@ public class Enemies : MonoBehaviour {
 	protected bool activeSpark;
 	protected bool withBomb;
 	public float speed;
+	public int life;
 	public bool inFormGosma;
 
 	[SerializeField]
