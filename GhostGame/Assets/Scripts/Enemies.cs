@@ -225,6 +225,13 @@ public class Enemies : MonoBehaviour {
 			isJumping = false;
 			isGround = true;
 		}
+
+		//Ao colidir com plataformas que caem
+		if (col.gameObject.layer == 14) {
+
+			isJumping = false;
+		
+		}
 	
 	}
 
@@ -319,8 +326,6 @@ public class Enemies : MonoBehaviour {
 		shine.SetActive (false);
 	
 	}
-
-
 
 
 }

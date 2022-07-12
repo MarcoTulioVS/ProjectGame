@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class FallPlataform : MonoBehaviour {
 
-
-	bool colUp;
-	Rigidbody2D rb;
 	public float speed;
+	private TargetJoint2D target;
+	private BoxCollider2D collisor;
+
+	float posY;
 
 	void Start () {
-		
-		rb = GetComponent<Rigidbody2D> ();
+		target = GetComponent<TargetJoint2D> ();
+		collisor = GetComponent<BoxCollider2D> ();
+		posY = transform.position.y;
 	}
 	
 
@@ -21,41 +23,30 @@ public class FallPlataform : MonoBehaviour {
 
 	void FixedUpdate(){
 
-		UpDown ();
 
 	}
 
-	void UpDown(){
-	
-		if (colUp) {
-		
-			rb.velocity = new Vector2 (rb.velocity.x, -speed);
-		
-		} else {
+	void OnCollisionEnter2D(Collision2D col){
 
-			rb.velocity = new Vector2 (rb.velocity.x, speed);
-		
+		if (col.gameObject.layer == 8) {
+
+
+			StartCoroutine ("repositionPlat");
+
 		}
-	
-	
+
 	}
 
-
-	void OnTriggerEnter2D(Collider2D col){
-
-		if (col.gameObject.tag == "colUP") {
-		
-			colUp = true;
-		
-		}
-
-		if (col.gameObject.tag == "colDOWN") {
-		
-			colUp = false;
-		
-		}
-
-
+	IEnumerator repositionPlat(){
+	
+		yield return new WaitForSeconds (2);
+		target.enabled = false;
+		collisor.enabled = false;
+		yield return new WaitForSeconds (1);
+		target.enabled = true;
+		collisor.enabled = true;
+		transform.position = new Vector2 (transform.position.x, posY);
+	
 	}
 
 
