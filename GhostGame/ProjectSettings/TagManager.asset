@@ -16,6 +16,8 @@ TagManager:
   - areaGosma
   - areaGosmaDir
   - energy
+  - colUP
+  - colDOWN
   layers:
   - Default
   - TransparentFX
