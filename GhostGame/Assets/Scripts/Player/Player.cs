@@ -116,10 +116,16 @@ public class Player : MonoBehaviour {
 		//Ao colidir com o inimigo o fantasma o possui
 		if (col.gameObject.layer == 8) {
 
-			activeObject = true;
-			nameObject = col.name;
-			player.SetActive (false);
-			Enemies.instance.insideBody = true;
+			if (GameController.instance.quantEnergy >= Enemies.instance.energyNeeded) {
+
+				activeObject = true;
+				nameObject = col.name;
+				player.SetActive (false);
+				Enemies.instance.insideBody = true;
+				GameController.instance.quantEnergy -= Enemies.instance.energyNeeded;
+				
+			}
+
 
 		}
 

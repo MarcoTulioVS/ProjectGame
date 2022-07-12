@@ -26,6 +26,8 @@ public class Enemies : MonoBehaviour {
 
 	protected bool isGround; 
 	protected bool notColWall;
+	public int energyNeeded;
+
 	void Awake(){
 	
 		instance = this;
@@ -182,7 +184,7 @@ public class Enemies : MonoBehaviour {
 
 		}
 
-		if (col.gameObject.tag == "Player") {
+		if (col.gameObject.tag == "Player" && GameController.instance.quantEnergy >= Enemies.instance.energyNeeded) {
 		
 			StartCoroutine ("blinkShine");
 

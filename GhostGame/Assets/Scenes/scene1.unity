@@ -1722,7 +1722,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.14464192, y: -0.40829527}
@@ -1880,7 +1880,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.14464192, y: -0.40829527}
@@ -2255,7 +2255,12 @@ Prefab:
       objectReference: {fileID: 167135681}
     - target: {fileID: 1797526759467818, guid: a5bb444e4c23bc74d90065792a0b3116, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114152481503104410, guid: a5bb444e4c23bc74d90065792a0b3116,
+        type: 2}
+      propertyPath: energyNeeded
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5bb444e4c23bc74d90065792a0b3116, type: 2}
@@ -6469,7 +6474,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.14464192, y: -0.40829527}
