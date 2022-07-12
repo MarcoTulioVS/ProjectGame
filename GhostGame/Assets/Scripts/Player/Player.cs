@@ -23,6 +23,8 @@ public class Player : MonoBehaviour {
 	public Animator anim;
 	bool isScaring;
 
+	public int energyCollected;
+
 
 
 	void Awake(){
@@ -129,6 +131,13 @@ public class Player : MonoBehaviour {
 			nameObject = col.name;
 			player.SetActive (false);
 			ObjectsGame.instance.insideObject = true;
+		
+		}
+
+		if (col.gameObject.tag == "energy") {
+		
+			GameController.instance.quantEnergy += energyCollected;
+			Destroy (col.gameObject);
 		
 		}
 

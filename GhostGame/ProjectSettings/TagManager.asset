@@ -15,6 +15,7 @@ TagManager:
   - bomb
   - areaGosma
   - areaGosmaDir
+  - energy
   layers:
   - Default
   - TransparentFX
