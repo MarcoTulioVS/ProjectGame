@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class GameController : MonoBehaviour {
 
 	public static GameController instance;
 	public int quantMaxEnemies;
 	public int countEnemies;
 
+	public float quantEnergy;
+	public Image imageBar;
 
 	void Awake(){
 
@@ -20,7 +24,7 @@ public class GameController : MonoBehaviour {
 	
 
 	void Update () {
-		
+		imageBar.fillAmount = quantEnergy / 100;
 	}
 
 	public void GoToNextScene(){
