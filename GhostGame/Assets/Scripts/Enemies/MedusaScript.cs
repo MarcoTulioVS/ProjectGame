@@ -46,7 +46,6 @@ public class MedusaScript : Enemies {
 				col.gameObject.SetActive (false);
 				stoneInstance = Instantiate (prefabStone, col.transform.position, Quaternion.identity);
 				StartCoroutine ("timeDespetrify", col);
-
 	
 			}
 

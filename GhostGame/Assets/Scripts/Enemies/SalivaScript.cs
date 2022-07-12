@@ -55,7 +55,7 @@ public class SalivaScript : Enemies {
 
 	void placeBomb(){
 
-		if (Input.GetKeyDown (KeyCode.F) && withBomb) {
+		if (Input.GetKeyDown (KeyCode.F) && withBomb && insideBody) {
 		
 			Instantiate (prefabBomb, trRefBomb.position, Quaternion.identity);
 			withBomb = false;

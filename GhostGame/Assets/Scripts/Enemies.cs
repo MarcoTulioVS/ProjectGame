@@ -71,18 +71,18 @@ public class Enemies : MonoBehaviour {
 		
 		}
 
-
-		if (movement > 0 && !isJumping && !inFormGosma ) {
+	
+		if (movement > 0 && !isJumping) {
 
 			transform.eulerAngles = new Vector2 (0, 0);
 			anim.SetInteger ("transition",1);
 
-		} else if (movement < 0 && !isJumping && !inFormGosma) {
+		} else if (movement < 0 && !isJumping) {
 
 			transform.eulerAngles = new Vector2 (0, 180);
 			anim.SetInteger ("transition",1);
 
-		} else if(movement==0 && !isJumping && !inFormGosma) {
+		} else if(movement==0 && !isJumping) {
 		
 			anim.SetInteger ("transition", 0);
 		}
@@ -105,7 +105,8 @@ public class Enemies : MonoBehaviour {
 
 		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
 
-			moveControl (rb,anim);
+			moveControl (rb, anim);
+			
 		}
 
 	}
@@ -113,7 +114,7 @@ public class Enemies : MonoBehaviour {
 	public void getOutBody(GameObject player){
 	
 		if(Input.GetKeyDown(KeyCode.Mouse1) && insideBody){
-
+			
 			player.SetActive (true);
 			Player.instance.activeObject = false;
 			insideBody = false;

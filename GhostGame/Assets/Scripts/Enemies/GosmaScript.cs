@@ -115,6 +115,7 @@ public class GosmaScript : Enemies {
 		}
 
 	}
+		
 
 
 	protected override void moveControl (Rigidbody2D rb, Animator anim)
@@ -144,17 +145,18 @@ public class GosmaScript : Enemies {
 		if (moveX > 0 && !isJumping && !inFormGosma) {
 
 			transform.eulerAngles = new Vector2 (0, 0);
-			anim.SetInteger ("transition",1);
+			anim.SetInteger ("transition", 1);
 
 		} else if (moveX < 0 && !isJumping && !inFormGosma) {
 
 			transform.eulerAngles = new Vector2 (0, 180);
-			anim.SetInteger ("transition",1);
+			anim.SetInteger ("transition", 1);
 
-		} else if(moveX==0 && !isJumping && !inFormGosma) {
+		} else if (moveX == 0 && !isJumping && !inFormGosma) {
 
 			anim.SetInteger ("transition", 0);
-		}
+
+		} 
 
 	}
 }
