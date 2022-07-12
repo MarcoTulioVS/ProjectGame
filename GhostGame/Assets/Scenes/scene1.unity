@@ -1694,7 +1694,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   anim: {fileID: 1104422828}
-  energyCollected: 20
+  energyCollected: 10
 --- !u!1 &229539444
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,8 +2069,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1672734742605218, guid: 2d34991ee1a2ee043937b975a1341b36, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114655455487999566, guid: 2d34991ee1a2ee043937b975a1341b36,
+        type: 2}
+      propertyPath: energyNeeded
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114655455487999566, guid: 2d34991ee1a2ee043937b975a1341b36,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 167135681}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2d34991ee1a2ee043937b975a1341b36, type: 2}
   m_IsPrefabParent: 0
@@ -2255,7 +2265,7 @@ Prefab:
       objectReference: {fileID: 167135681}
     - target: {fileID: 1797526759467818, guid: a5bb444e4c23bc74d90065792a0b3116, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114152481503104410, guid: a5bb444e4c23bc74d90065792a0b3116,
         type: 2}

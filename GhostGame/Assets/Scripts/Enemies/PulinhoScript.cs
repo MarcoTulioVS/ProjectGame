@@ -7,7 +7,7 @@ public class PulinhoScript : Enemies {
 	Rigidbody2D rb;
 	public float jumpForce;
 	Animator anim;
-
+	public GameObject player;
 
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -17,7 +17,7 @@ public class PulinhoScript : Enemies {
 
 	void Update () {
 		jump (rb, jumpForce, anim);
-
+		getOutBody (player);
 	}
 
 	void FixedUpdate(){
