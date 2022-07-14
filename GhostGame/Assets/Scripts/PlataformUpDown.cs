@@ -44,11 +44,28 @@ public class PlataformUpDown : MonoBehaviour {
 
 		}
 
-		if (col.gameObject.tag == "Player") {
-		
+	}
 
-		
+	void OnCollisionEnter2D(Collision2D col){
+
+		if (col.gameObject.layer == 8) {
+
+			//Move o player para dentro da plataforma
+			//Dessa forma ele não fica quicando
+			col.transform.parent = gameObject.transform;
+
 		}
 
+
+	}
+
+	void OnCollisionExit2D(Collision2D notCol){
+	
+		if (notCol.gameObject.layer == 8) {
+
+			notCol.transform.parent = null;
+
+		}
+	
 	}
 }
