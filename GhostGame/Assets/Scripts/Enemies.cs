@@ -28,9 +28,13 @@ public class Enemies : MonoBehaviour {
 	protected bool notColWall;
 	public int energyNeeded;
 
+	bool activeDamage;
+
+
 	void Awake(){
 	
 		instance = this;
+		activeDamage = true;
 	}
 	void Start () {
 		
@@ -219,7 +223,30 @@ public class Enemies : MonoBehaviour {
 	}
 
 	protected virtual void OnCollisionEnter2D(Collision2D col){
-	
+
+		if (col.gameObject.layer == 8) {
+
+			if (activeDamage && insideBody) {
+
+				float halfLife = GameController.instance.quantLife / 2;
+
+				if (halfLife < 25) {
+				
+					GameController.instance.quantLife = 0;
+					//Chama GameOver
+
+				} else {
+					
+					GameController.instance.quantLife -= halfLife;
+				}
+
+				activeDamage = false;
+			}
+			StartCoroutine ("timeInvencible");
+
+		}
+
+
 		if (col.gameObject.layer == 9) {
 		
 			isJumping = false;
@@ -343,6 +370,13 @@ public class Enemies : MonoBehaviour {
 		shine.SetActive (true);
 		yield return new WaitForSeconds (0.5f);
 		shine.SetActive (false);
+	
+	}
+
+	IEnumerator timeInvencible(){
+
+		yield return new WaitForSeconds (2);
+		activeDamage = true;
 	
 	}
 
