@@ -20,14 +20,22 @@ public class DogScript : MonoBehaviour {
 
 	void FixedUpdate(){
 
-		Move ();
+		if (Player.instance.scared && Player.instance.hit.name==gameObject.name) {
+			Move ();
+		}
 
 	}
 
 	void Move(){
-
+		
 		rb.velocity = new Vector2 (speed, rb.velocity.y);
 		anim.SetBool ("walking", true);
+
+	}
+
+	void OnBecameInvisible(){
+
+		Destroy (gameObject);
 
 	}
 

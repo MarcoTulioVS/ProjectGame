@@ -18,14 +18,15 @@ public class Player : MonoBehaviour {
 
 	public Transform pointCollider;
 	public float radius;
-	public LayerMask enemyLayer;
+	public LayerMask animalLayer;
 
 	public Animator anim;
 	bool isScaring;
+	public bool scared;
 
 	public int energyCollected;
 
-
+	public Collider2D hit;
 
 	void Awake(){
 	
@@ -90,11 +91,11 @@ public class Player : MonoBehaviour {
 
 			isScaring = true;
 			anim.SetInteger ("transition", 2);
-			Collider2D hit = Physics2D.OverlapCircle (pointCollider.position, radius,enemyLayer);
+			hit = Physics2D.OverlapCircle (pointCollider.position, radius,animalLayer);
 
 			if (hit != null) {
 			
-				Debug.Log ("Acertou");
+				scared = true;
 			
 			}
 
@@ -155,6 +156,7 @@ public class Player : MonoBehaviour {
 	
 		yield return new WaitForSeconds (0.583f);
 		isScaring = false;
+		scared = false;
 	
 	}
 
