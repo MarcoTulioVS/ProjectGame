@@ -123,6 +123,8 @@ public class Player : MonoBehaviour {
 				player.SetActive (false);
 				Enemies.instance.insideBody = true;
 				GameController.instance.quantEnergy -= Enemies.instance.energyNeeded;
+
+				lifeBarOnOff ();
 				
 			}
 
@@ -154,6 +156,24 @@ public class Player : MonoBehaviour {
 		yield return new WaitForSeconds (0.583f);
 		isScaring = false;
 	
+	}
+
+	void lifeBarOnOff(){
+
+		//Para a vida
+		Color c = GameController.instance.imageLifeBar.color;
+		c.a = 1;
+
+		GameController.instance.imageLifeBar.color = c;
+		GameController.instance.imageMoldureLifeBar.color = c;
+
+		//Para a energia
+		Color c1 = GameController.instance.imageLifeBar.color;
+		c1.a = 0.35f;
+
+		GameController.instance.imageBar.color = c1;
+		GameController.instance.imageMoldureBar.color = c1;
+
 	}
 
 }

@@ -12,6 +12,11 @@ public class GameController : MonoBehaviour {
 
 	public float quantEnergy;
 	public Image imageBar;
+	public Image imageMoldureBar;
+
+	public float quantLife;
+	public Image imageLifeBar;
+	public Image imageMoldureLifeBar;
 
 	void Awake(){
 
@@ -25,6 +30,7 @@ public class GameController : MonoBehaviour {
 
 	void Update () {
 		imageBar.fillAmount = quantEnergy / 100;
+		imageLifeBar.fillAmount = quantLife / 100;
 	}
 
 	public void GoToNextScene(){
