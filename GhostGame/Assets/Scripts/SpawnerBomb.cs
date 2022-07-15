@@ -24,5 +24,11 @@ public class SpawnerBomb : MonoBehaviour {
 			bomb = Instantiate (prefabBomb, pointSpawnBomb.position, Quaternion.identity);
 		}
 
+		if (Enemies.instance.withBomb) {
+		
+			bomb = null;
+		
+		}
+
 	}
 }
