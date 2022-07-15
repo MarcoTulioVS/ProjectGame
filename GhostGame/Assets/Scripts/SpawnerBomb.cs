@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class SpawnerBomb : MonoBehaviour {
 
-	// Use this for initialization
+	public Transform pointSpawnBomb;
+	public GameObject prefabBomb;
+
+	GameObject bomb;
+
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
-		
+		SpawnBomb ();
+	}
+
+	void SpawnBomb(){
+
+		if (bomb == null && !Enemies.instance.withBomb) {
+			bomb = Instantiate (prefabBomb, pointSpawnBomb.position, Quaternion.identity);
+		}
+
 	}
 }

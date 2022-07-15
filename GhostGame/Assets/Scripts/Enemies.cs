@@ -14,7 +14,7 @@ public class Enemies : MonoBehaviour {
 	protected bool doubleJump;
 	private float movement;
 	protected bool activeSpark;
-	protected bool withBomb;
+	public bool withBomb;
 	public float speed;
 	public int life;
 	public bool inFormGosma;
@@ -193,13 +193,7 @@ public class Enemies : MonoBehaviour {
 			StartCoroutine ("blinkShine");
 
 		}
-
-		if (col.gameObject.tag == "bombItem" && gameObject.name == "saliva") {
-
-			withBomb = true;
-			Destroy (col.gameObject);
-
-		}
+			
 
 		if (col.gameObject.tag == "areaGosma" && gameObject.name=="gosma") {
 		
@@ -258,6 +252,13 @@ public class Enemies : MonoBehaviour {
 
 			isJumping = false;
 		
+		}
+
+		if (col.gameObject.tag == "bombItem" && gameObject.name == "saliva") {
+
+			withBomb = true;
+			Destroy (col.gameObject);
+
 		}
 
 	
