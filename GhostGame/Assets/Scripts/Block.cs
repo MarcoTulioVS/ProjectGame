@@ -21,8 +21,25 @@ public class Block : ObjectsGame {
 	void FixedUpdate(){
 
 		MainController (gameObject.name, rb, speed);
+		FreezeBlock ();
 
 	}
+
+	void FreezeBlock(){
+
+		if (Enemies.instance.insideBody) {
+		
+			rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
+		} else {
+		
+
+			rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+		
+		}
+
+	}
+
 
 
 

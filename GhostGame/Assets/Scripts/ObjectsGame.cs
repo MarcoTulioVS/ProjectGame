@@ -21,15 +21,14 @@ public class ObjectsGame : MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter2D(Collider2D col){
+	protected void OnTriggerEnter2D(Collider2D col){
 
 		if (col.gameObject.tag == "bomb") {
-		
+			
 			Destroy (gameObject,3.4f);
 			Destroy (col.gameObject, 3.4f);
 		
 		}
-
 	}
 
 	protected void MainController(string nameObject,Rigidbody2D rb,float speed){

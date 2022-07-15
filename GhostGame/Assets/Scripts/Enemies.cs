@@ -259,6 +259,7 @@ public class Enemies : MonoBehaviour {
 			isJumping = false;
 		
 		}
+
 	
 	}
 
@@ -269,8 +270,7 @@ public class Enemies : MonoBehaviour {
 			isGround = false;
 
 		}
-
-
+			
 	}
 
 
