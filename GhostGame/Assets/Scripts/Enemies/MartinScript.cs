@@ -136,6 +136,7 @@ public class MartinScript : Enemies {
 			transform.eulerAngles = new Vector3 (0,180,180);
 			anim.SetInteger ("transition",1);
 
+
 		} else if (movement < 0 && colorMartin=="g" && !isJumping) {
 
 			transform.eulerAngles = new Vector3 (0, 0,180);
@@ -144,6 +145,7 @@ public class MartinScript : Enemies {
 		}else if(movement==0 && !isJumping && colorMartin=="g") {
 
 			anim.SetInteger ("transition", 0);
+
 		}
 
 		rb.velocity = new Vector2 (speed * movement, rb.velocity.y);
