@@ -30,6 +30,8 @@ public class Enemies : MonoBehaviour {
 
 	bool activeDamage;
 
+	public Transform trRefSecondPortal;//ref do portal com tag red1
+	public Transform trRefFirstPortal;//ref do portal com tag red
 
 	void Awake(){
 	
@@ -261,6 +263,12 @@ public class Enemies : MonoBehaviour {
 
 		}
 
+		if (col.gameObject.tag == "block") {
+		
+			isJumping = false;
+		
+		}
+
 	
 	}
 
@@ -269,6 +277,12 @@ public class Enemies : MonoBehaviour {
 		if (notCol.gameObject.layer == 9) {
 
 			isGround = false;
+			isJumping = true;
+		}
+
+		if (notCol.gameObject.tag == "block") {
+
+			isJumping = true;
 
 		}
 			

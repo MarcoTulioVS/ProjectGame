@@ -25,8 +25,8 @@ public class ObjectsGame : MonoBehaviour {
 
 		if (col.gameObject.tag == "bomb") {
 			
-			Destroy (gameObject,3.4f);
-			Destroy (col.gameObject, 3.4f);
+			Destroy (gameObject,2.6f);
+			Destroy (col.gameObject, 2.6f);
 		
 		}
 	}

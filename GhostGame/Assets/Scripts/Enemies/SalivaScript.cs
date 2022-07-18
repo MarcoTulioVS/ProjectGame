@@ -22,6 +22,8 @@ public class SalivaScript : Enemies {
 		jump (rb, jumpForce);
 		placeBomb ();
 		showAnimation (anim,"move");
+		OnCollisionPortal (gameObject.transform, trRefSecondPortal);
+		OnCollisionPortal1 (gameObject.transform, trRefFirstPortal);
 	}
 
 	void FixedUpdate(){
@@ -37,7 +39,6 @@ public class SalivaScript : Enemies {
 			if (!isJumping) {
 
 				rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
-				isJumping = true;
 				doubleJump = true;
 
 			} else {
@@ -46,7 +47,7 @@ public class SalivaScript : Enemies {
 
 					rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
 					doubleJump = false;
-				
+
 				}
 			
 			}
@@ -55,7 +56,7 @@ public class SalivaScript : Enemies {
 
 	void placeBomb(){
 
-		if (Input.GetKeyDown (KeyCode.F) && withBomb && insideBody) {
+		if (Input.GetButtonDown("Fire1") && withBomb && insideBody) {
 		
 			Instantiate (prefabBomb, trRefBomb.position, Quaternion.identity);
 			withBomb = false;

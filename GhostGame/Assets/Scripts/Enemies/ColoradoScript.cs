@@ -6,8 +6,6 @@ public class ColoradoScript : Enemies {
 
 	Rigidbody2D rb;
 	public GameObject player;
-	public Transform trRefSecondPortal;//ref do portal com tag red1
-	public Transform trRefFirstPortal;//ref do portal com tag red
 
 	public GameObject prefabPowerGreen;
 	public GameObject prefabPowerRed;

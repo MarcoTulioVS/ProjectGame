@@ -20,7 +20,7 @@ public class Bomb : MonoBehaviour {
 
 	void DestroyBomb(){
 
-		Destroy (gameObject, 3.4f);
+		Destroy (gameObject, 2.6f);
 
 	}
 }
