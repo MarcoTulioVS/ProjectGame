@@ -33,7 +33,7 @@ public class CatScript : MonoBehaviour {
 
 	void Move(){
 
-		rb.velocity = new Vector2 (speed, rb.velocity.y);
+		rb.velocity = new Vector2 (-speed, rb.velocity.y);
 		anim.SetBool ("walking", true);
 
 		if (en == null) {
