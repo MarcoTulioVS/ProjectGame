@@ -134,8 +134,10 @@ public class Player : MonoBehaviour {
 				player.SetActive (false);
 				Enemies.instance.insideBody = true;
 				GameController.instance.quantEnergy -= Enemies.instance.energyNeeded;
-
+				CameraScript.instance.tr = col.gameObject.transform;
 				lifeBarOnOff ();
+
+
 				
 			}
 
