@@ -9,6 +9,7 @@ public class PulinhoScript : Enemies {
 	Animator anim;
 	public GameObject player;
 
+
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();

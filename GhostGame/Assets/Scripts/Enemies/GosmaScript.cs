@@ -17,6 +17,7 @@ public class GosmaScript : Enemies {
 
 	bool form_out;
 
+
 	void Start () {
 
 		rb = GetComponent<Rigidbody2D> ();
@@ -64,10 +65,12 @@ public class GosmaScript : Enemies {
 
 	void GosmaForm(){
 
-		if (Input.GetKeyDown (KeyCode.F) && !isJumping && insideBody) {
+		if (Input.GetKeyDown (KeyCode.F) && !isJumping) {
 
-			inFormGosma = !inFormGosma;
-			StartCoroutine ("transitionForm");
+			if (insideBody && Player.instance.activeObject && Player.instance.nameObject == gameObject.name) {
+				inFormGosma = !inFormGosma;
+				StartCoroutine ("transitionForm");
+			}
 
 		} 
 			

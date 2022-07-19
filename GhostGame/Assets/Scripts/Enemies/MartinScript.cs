@@ -19,6 +19,7 @@ public class MartinScript : Enemies {
 	string colorMartin;
 	bool turnUptoDown;
 
+
 	void Start () {
 		
 		rb = GetComponent<Rigidbody2D> ();

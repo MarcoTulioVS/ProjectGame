@@ -120,7 +120,7 @@ public class Enemies : MonoBehaviour {
 	}
 
 	public void getOutBody(GameObject player){
-	
+
 		if(Input.GetKeyDown(KeyCode.Mouse1) && insideBody){
 			
 			player.SetActive (true);
@@ -143,8 +143,7 @@ public class Enemies : MonoBehaviour {
 
 		if (Input.GetButtonDown ("Jump") && !isJumping && insideBody) {
 			
-			rb.AddForce (new Vector2 (0, jumpForce),ForceMode2D.Impulse);
-			isJumping = true;
+			rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
 		
 		}
 	
@@ -156,7 +155,6 @@ public class Enemies : MonoBehaviour {
 
 			anim.SetInteger("transition",2);
 			rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
-			isJumping = true;
 		
 		} 
 		

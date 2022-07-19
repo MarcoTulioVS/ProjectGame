@@ -8,6 +8,7 @@ public class RatScript : Enemies {
 	Animator anim;
 	public GameObject player;
 
+
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();

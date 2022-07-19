@@ -11,6 +11,7 @@ public class SalivaScript : Enemies {
 	public Transform trRefBomb;
 	Animator anim;
 
+
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();	

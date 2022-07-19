@@ -17,6 +17,7 @@ public class ColoradoScript : Enemies {
 	bool isRed;
 	public float jumpForce;
 
+
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
@@ -44,7 +45,8 @@ public class ColoradoScript : Enemies {
 
 		if (Input.GetButtonDown ("Fire1") && Time.time > nextFire && isRed) {
 
-			if (insideBody) {
+			if (insideBody && Player.instance.activeObject && Player.instance.nameObject == gameObject.name) {
+
 				anim.SetBool ("throw", true);
 				nextFire = Time.time + fireRate;
 				Instantiate (prefabPowerRed, trRefPower.position, Quaternion.identity);
@@ -52,7 +54,8 @@ public class ColoradoScript : Enemies {
 		
 		} else if (Input.GetButtonDown ("Fire1") && Time.time > nextFire && !isRed) {
 
-			if (insideBody) {
+			if (insideBody  && Player.instance.activeObject && Player.instance.nameObject == gameObject.name) {
+				
 				anim.SetBool ("throw", true);
 				nextFire = Time.time + fireRate;
 				Instantiate (prefabPowerGreen, trRefPower.position, Quaternion.identity);
