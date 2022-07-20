@@ -18,6 +18,7 @@ TagManager:
   - energy
   - colUP
   - colDOWN
+  - fall
   layers:
   - Default
   - TransparentFX
