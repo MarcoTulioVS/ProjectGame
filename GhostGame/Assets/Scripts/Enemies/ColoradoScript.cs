@@ -32,6 +32,7 @@ public class ColoradoScript : Enemies {
 		switchPower ();
 		jump (rb, jumpForce);
 
+
 	}
 
 	void FixedUpdate(){

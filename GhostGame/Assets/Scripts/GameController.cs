@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour {
 	public Image imageLifeBar;
 	public Image imageMoldureLifeBar;
 
+	public Transform trPlayer;
 	void Awake(){
 
 		instance = this;
@@ -31,6 +32,8 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		imageBar.fillAmount = quantEnergy / 100;
 		imageLifeBar.fillAmount = quantLife / 100;
+
+		GetCameraBackToPlayer ();
 	}
 
 	public void GoToNextScene(){
@@ -44,5 +47,15 @@ public class GameController : MonoBehaviour {
 		
 		}
 
+	}
+
+	void GetCameraBackToPlayer(){
+	
+		if (CameraScript.instance.tr == null) {
+		
+			CameraScript.instance.tr = trPlayer;
+		
+		}
+	
 	}
 }

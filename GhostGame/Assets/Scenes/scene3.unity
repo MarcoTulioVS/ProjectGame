@@ -13367,6 +13367,7 @@ MonoBehaviour:
   quantLife: 100
   imageLifeBar: {fileID: 1303074870}
   imageMoldureLifeBar: {fileID: 398443454}
+  trPlayer: {fileID: 167135682}
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0

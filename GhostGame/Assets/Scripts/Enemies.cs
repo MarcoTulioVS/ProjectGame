@@ -127,6 +127,7 @@ public class Enemies : MonoBehaviour {
 			Player.instance.activeObject = false;
 			insideBody = false;
 			lifeBarOnOff ();
+			CameraScript.instance.tr = null;
 		}
 	
 	}
@@ -392,6 +393,7 @@ public class Enemies : MonoBehaviour {
 		activeDamage = true;
 	
 	}
+
 
 
 }

@@ -32,6 +32,7 @@ public class GosmaScript : Enemies {
 		GosmaForm ();
 		turnVertical();
 
+
 	}
 
 	void FixedUpdate(){

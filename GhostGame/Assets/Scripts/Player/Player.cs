@@ -136,8 +136,6 @@ public class Player : MonoBehaviour {
 				GameController.instance.quantEnergy -= col.gameObject.GetComponent<Enemies>().energyNeeded;
 				CameraScript.instance.tr = col.gameObject.transform;
 				lifeBarOnOff ();
-
-
 				
 			}
 
@@ -164,6 +162,8 @@ public class Player : MonoBehaviour {
 
 	}
 
+
+
 	IEnumerator resetScare(){
 	
 		yield return new WaitForSeconds (0.583f);
@@ -189,5 +189,7 @@ public class Player : MonoBehaviour {
 		GameController.instance.imageMoldureBar.color = c1;
 
 	}
+
+
 
 }
