@@ -18,7 +18,7 @@ public class ButtonScript : MonoBehaviour {
 	
 		if (col.gameObject.layer == 8) {
 
-			GameObject[] lista = new GameObject [13];
+			GameObject[] lista = new GameObject [12];
 
 			lista = GameObject.FindGameObjectsWithTag ("fall");
 
