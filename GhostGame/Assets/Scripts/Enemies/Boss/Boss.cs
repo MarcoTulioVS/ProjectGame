@@ -11,7 +11,7 @@ public class Boss : MonoBehaviour {
 	public float stopDistance;
 	int countHit;
 	bool hited;
-
+	public bool isTired;
 	public Color mycolor;
 
 
@@ -112,9 +112,15 @@ public class Boss : MonoBehaviour {
 		if (col.gameObject.tag == "power") {
 			
 			if (mycolor == col.gameObject.GetComponent<SpriteRenderer>().color) {
-
+				
 				countHit++;
 				hited = true;
+			}
+
+			if (isTired) {
+			
+				life--;
+				isTired = false;
 			}
 
 		}
@@ -126,10 +132,7 @@ public class Boss : MonoBehaviour {
 
 		if (notCol.gameObject.tag == "power") {
 
-			if (mycolor == notCol.gameObject.GetComponent<SpriteRenderer>().color) {
-
-				hited = false;
-			}
+			hited = false;
 
 		}
 
@@ -141,9 +144,8 @@ public class Boss : MonoBehaviour {
 	protected void DealDamage(Animator anim){
 	
 		if (countHit >= 10) {
-		
-			anim.SetTrigger ("tired");
-			life--;
+
+			isTired = true;
 			countHit = 0;
 		}
 	
@@ -167,6 +169,8 @@ public class Boss : MonoBehaviour {
 		sp.enabled = true;
 
 	}
+
+
 
 
 		

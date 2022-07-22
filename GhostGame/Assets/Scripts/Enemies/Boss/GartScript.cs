@@ -11,15 +11,17 @@ public class GartScript : Boss {
 	public float maxVision;
 	Vector2 direction;
 	SpriteRenderer sp;
+	float auxSpeed;
 
 	void Start () {
 
+		auxSpeed = speed;
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 		sp = GetComponent<SpriteRenderer> ();
 
 		GetComponent<SpriteRenderer> ().color = Color.green;
-		mycolor = sp.color;
+
 
 		isRight = true;
 
@@ -43,7 +45,11 @@ public class GartScript : Boss {
 
 		DealDamage (anim);
 		OnHurt (anim, sp);
+		mycolor = sp.color;
 
+		if (isTired) {
+			StartCoroutine ("Tired");
+		}
 
 	}
 
@@ -69,6 +75,26 @@ public class GartScript : Boss {
 			sp.color = Color.green;
 		}
 	
+	}
+
+	IEnumerator Tired(){
+
+		if (isTired) {
+
+			anim.SetTrigger ("tired");
+			speed = 0;
+			yield return new WaitForSeconds (5);
+			anim.SetInteger ("transition", 1);
+			speed = auxSpeed;
+			isTired = false;
+
+		} else {
+
+			anim.SetInteger ("transition", 1);
+			speed = auxSpeed;
+		
+		}
+
 	}
 
 

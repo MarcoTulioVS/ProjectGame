@@ -26497,7 +26497,7 @@ Prefab:
     - target: {fileID: 114668118001761444, guid: 527d41219de7a4f41b38f6a030d22c67,
         type: 2}
       propertyPath: jumpForce
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
@@ -26954,6 +26954,7 @@ MonoBehaviour:
   isRight: 0
   activeMove: 0
   stopDistance: 0.6
+  isTired: 0
   mycolor: {r: 0, g: 0, b: 0, a: 0}
   point: {fileID: 1968218299}
   pointBack: {fileID: 26683224}
