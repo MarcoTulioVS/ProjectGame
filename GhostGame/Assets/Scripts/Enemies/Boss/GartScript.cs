@@ -66,8 +66,13 @@ public class GartScript : Boss {
 	void OnDrawGizmos(){
 	
 		Gizmos.DrawRay (point.position,direction*maxVision);
-		Gizmos.DrawRay (pointBack.position, direction*maxVision);
 	
+	}
+
+	void OnDrawGizmosSelected(){
+
+		Gizmos.DrawRay (pointBack.position,-direction*maxVision);
+
 	}
 
 	IEnumerator switchColor(){
