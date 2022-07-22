@@ -9,6 +9,10 @@ public class Boss : MonoBehaviour {
 	public bool isRight;
 	public bool activeMove;
 	public float stopDistance;
+	int countHit;
+	bool hited;
+
+	public Color mycolor;
 
 
 	void Start () {
@@ -18,7 +22,8 @@ public class Boss : MonoBehaviour {
 	
 
 	void Update () {
-		
+
+
 	}
 
 	public void Move(Rigidbody2D rb,Animator anim,Vector2 direction){
@@ -51,7 +56,7 @@ public class Boss : MonoBehaviour {
 
 		if (hit.collider != null) {
 			
-			if (hit.transform.CompareTag ("Player")) {
+			if (hit.transform.CompareTag ("colorado")) {
 
 				activeMove = true;
 
@@ -74,7 +79,7 @@ public class Boss : MonoBehaviour {
 
 		if (behindHit.collider != null) {
 		
-			if (behindHit.transform.CompareTag ("Player")) {
+			if (behindHit.transform.CompareTag ("colorado")) {
 			
 				isRight = !isRight;
 				activeMove = true;
@@ -83,5 +88,86 @@ public class Boss : MonoBehaviour {
 		
 		}
 	}
+
+	void OnCollisionEnter2D(Collision2D col){
+	
+		if (col.gameObject.name == "Pedrada") {
+
+			hited = true;
+		}
+	
+	}
+
+	void OnCollisionExit2D(Collision2D notCol){
+	
+		if (notCol.gameObject.name == "Pedrada") {
+		
+			hited = false;
+		
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D col){
+
+		if (col.gameObject.tag == "power") {
+			
+			if (mycolor == col.gameObject.GetComponent<SpriteRenderer>().color) {
+
+				countHit++;
+				hited = true;
+			}
+
+		}
+
+
+	}
+
+	void OnTriggerExit2D(Collider2D notCol){
+
+		if (notCol.gameObject.tag == "power") {
+
+			if (mycolor == notCol.gameObject.GetComponent<SpriteRenderer>().color) {
+
+				hited = false;
+			}
+
+		}
+
+
+	}
+
+
+
+	protected void DealDamage(Animator anim){
+	
+		if (countHit >= 10) {
+		
+			anim.SetTrigger ("tired");
+			life--;
+			countHit = 0;
+		}
+	
+	}
+
+	protected void OnHurt(Animator anim,SpriteRenderer sp){
+	
+		if (hited) {
+			anim.SetTrigger ("hurt");
+			StartCoroutine ("BlinkHurt", sp);
+		}
+	
+	}
+
+
+
+	IEnumerator BlinkHurt(SpriteRenderer sp){
+
+		sp.enabled = false;
+		yield return new WaitForSeconds (0.1f);
+		sp.enabled = true;
+
+	}
+
+
 		
 }

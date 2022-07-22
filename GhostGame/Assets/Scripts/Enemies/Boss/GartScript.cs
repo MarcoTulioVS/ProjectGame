@@ -10,12 +10,17 @@ public class GartScript : Boss {
 	public Transform pointBack;
 	public float maxVision;
 	Vector2 direction;
+	SpriteRenderer sp;
 
 	void Start () {
 
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
-	
+		sp = GetComponent<SpriteRenderer> ();
+
+		GetComponent<SpriteRenderer> ().color = Color.green;
+		mycolor = sp.color;
+
 		isRight = true;
 
 		if (isRight) {
@@ -29,11 +34,16 @@ public class GartScript : Boss {
 			direction = Vector2.left;
 
 		}
+
+		StartCoroutine ("switchColor");
 	}
 	
 
 	void Update () {
-		
+
+		DealDamage (anim);
+		OnHurt (anim, sp);
+
 
 	}
 
@@ -49,6 +59,19 @@ public class GartScript : Boss {
 		Gizmos.DrawRay (pointBack.position, direction*maxVision);
 	
 	}
+
+	IEnumerator switchColor(){
+
+		while (life > 0) {
+			yield return new WaitForSeconds (5);
+			sp.color = Color.red;
+			yield return new WaitForSeconds (5);
+			sp.color = Color.green;
+		}
+	
+	}
+
+
 
 
 }
