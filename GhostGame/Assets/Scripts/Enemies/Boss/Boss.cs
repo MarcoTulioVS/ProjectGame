@@ -10,7 +10,7 @@ public class Boss : MonoBehaviour {
 	public bool activeMove;
 	public float stopDistance;
 	int countHit;
-	bool hited;
+	public bool hited;
 	public bool isTired;
 	public Color mycolor;
 
@@ -91,21 +91,22 @@ public class Boss : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col){
 	
-		if (col.gameObject.name == "Pedrada") {
+		if (col.gameObject.tag == "pedrada") {
 
 			hited = true;
+
+			if (isTired) {
+
+				life--;
+				isTired = false;
+				hited = false;
+				Destroy (col.gameObject);
+			}
+
 		}
 	
 	}
 
-	void OnCollisionExit2D(Collision2D notCol){
-	
-		if (notCol.gameObject.name == "Pedrada") {
-		
-			hited = false;
-		
-		}
-	}
 
 	void OnTriggerEnter2D(Collider2D col){
 
@@ -115,12 +116,6 @@ public class Boss : MonoBehaviour {
 				
 				countHit++;
 				hited = true;
-			}
-
-			if (isTired) {
-			
-				life--;
-				isTired = false;
 			}
 
 		}
@@ -143,7 +138,7 @@ public class Boss : MonoBehaviour {
 
 	protected void DealDamage(Animator anim){
 	
-		if (countHit >= 10) {
+		if (countHit >= 2) {
 
 			isTired = true;
 			countHit = 0;
@@ -151,11 +146,16 @@ public class Boss : MonoBehaviour {
 	
 	}
 
-	protected void OnHurt(Animator anim,SpriteRenderer sp){
+	protected void OnHurt(Animator anim,SpriteRenderer sp,float auxSpeed){
 	
 		if (hited) {
 			anim.SetTrigger ("hurt");
 			StartCoroutine ("BlinkHurt", sp);
+		} else {
+
+			anim.SetInteger ("transition", 1);
+			speed = auxSpeed;
+		
 		}
 	
 	}

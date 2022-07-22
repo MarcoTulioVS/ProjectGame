@@ -19,6 +19,7 @@ TagManager:
   - colUP
   - colDOWN
   - fall
+  - pedrada
   layers:
   - Default
   - TransparentFX

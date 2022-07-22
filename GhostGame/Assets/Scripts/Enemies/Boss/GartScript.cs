@@ -44,7 +44,11 @@ public class GartScript : Boss {
 	void Update () {
 
 		DealDamage (anim);
-		OnHurt (anim, sp);
+
+		if (hited) {
+			OnHurt (anim, sp,auxSpeed);
+		}
+
 		mycolor = sp.color;
 
 		if (isTired) {
@@ -83,7 +87,7 @@ public class GartScript : Boss {
 
 			anim.SetTrigger ("tired");
 			speed = 0;
-			yield return new WaitForSeconds (5);
+			yield return new WaitForSeconds (15);
 			anim.SetInteger ("transition", 1);
 			speed = auxSpeed;
 			isTired = false;
