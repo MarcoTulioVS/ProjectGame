@@ -32,6 +32,10 @@ public class Gart : MonoBehaviour {
 
 	public GameObject player;
 
+	float nextHit;
+	float hitRate = 2f;
+
+
 	void Start () {
 		
 		auxSpeed = speed;
@@ -104,12 +108,12 @@ public class Gart : MonoBehaviour {
 
 	void FixedUpdate(){
 
-		GetPlayer ();
+		HitPlayer ();
 		OnMove ();
 
 	}
 
-	void GetPlayer(){
+	void HitPlayer(){
 
 		RaycastHit2D hit = Physics2D.Raycast (point.position, direction, maxVision);
 
@@ -128,11 +132,20 @@ public class Gart : MonoBehaviour {
 
 					anim.SetInteger ("transition", 2);
 
+					if (Time.time>nextHit) {
+
+						GameController.instance.DecrementLife ();
+						nextHit = Time.time + hitRate;
+
+					}
+
 				}
+
 
 			}
 
-		}
+
+		} 
 
 		RaycastHit2D behindHit = Physics2D.Raycast (behind.position, -direction, maxVision);
 
@@ -193,7 +206,6 @@ public class Gart : MonoBehaviour {
 		}
 
 	}
-
 
 
 	void OnCollisionEnter2D(Collision2D col){

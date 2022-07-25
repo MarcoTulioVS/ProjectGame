@@ -19,6 +19,9 @@ public class GameController : MonoBehaviour {
 	public Image imageMoldureLifeBar;
 
 	public Transform trPlayer;
+
+
+
 	void Awake(){
 
 		instance = this;
@@ -58,4 +61,22 @@ public class GameController : MonoBehaviour {
 		}
 	
 	}
+
+	public void DecrementLife(){
+
+		float halfLife = quantLife / 2;
+
+		if (halfLife < 25) {
+			
+			quantLife = 0;
+
+		} else {
+				
+			quantLife -= halfLife;
+
+		}
+
+	} 
+
+
 }
