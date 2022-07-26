@@ -25,8 +25,6 @@ public class Gart : MonoBehaviour {
 	public bool isTired;
 	public int life;
 
-	public bool hited;
-
 	public Color mycolor;
 	public int countHit;
 
@@ -211,7 +209,8 @@ public class Gart : MonoBehaviour {
 			if (mycolor == col.gameObject.GetComponent<SpriteRenderer>().color) {
 
 				StartCoroutine ("Tired");
-				hited = true;
+				StartCoroutine ("BlinkHurt");
+
 			}
 
 		}
@@ -219,19 +218,8 @@ public class Gart : MonoBehaviour {
 
 	}
 
-	void OnTriggerExit2D(Collider2D notCol){
 
-		if (notCol.gameObject.tag == "power") {
-
-			hited = false;
-
-		}
-
-
-	}
-
-
-	IEnumerator BlinkHurt(SpriteRenderer sp){
+	IEnumerator BlinkHurt(){
 
 		sp.enabled = false;
 		yield return new WaitForSeconds (0.1f);
