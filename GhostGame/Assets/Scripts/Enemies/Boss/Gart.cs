@@ -236,7 +236,7 @@ public class Gart : MonoBehaviour {
 			isDead = true;
 			life = 0;
 			anim.SetTrigger ("death");
-			Destroy (gameObject,2.5f);
+			Destroy (gameObject,1.5f);
 		}
 	
 	

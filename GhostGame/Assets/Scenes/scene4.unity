@@ -27095,7 +27095,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2088928521}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -27151,7 +27151,7 @@ MonoBehaviour:
   behind: {fileID: 26683224}
   stopDistance: 2
   isTired: 0
-  life: 2
+  life: 1
   mycolor: {r: 0, g: 0, b: 0, a: 0}
   countHit: 0
   player: {fileID: 167135681}
