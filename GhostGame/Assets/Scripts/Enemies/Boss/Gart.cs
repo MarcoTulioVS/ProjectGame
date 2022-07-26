@@ -34,7 +34,7 @@ public class Gart : MonoBehaviour {
 	float hitRate = 2f;
 
 	public bool isDead;
-
+	private bool stoped;
 
 
 	void Start () {
@@ -74,7 +74,7 @@ public class Gart : MonoBehaviour {
 
 	void OnMove(){
 		
-		if (isFront && !isTired) {
+		if (isFront && !isTired && !stoped) {
 
 			anim.SetInteger ("transition", 1);
 
@@ -186,7 +186,8 @@ public class Gart : MonoBehaviour {
 
 			StopCoroutine ("Tired");
 			anim.SetBool ("tired", false);
-			speed = auxSpeed;
+			StartCoroutine ("DelayStoped");
+			countHit = 0;
 
 			if (isTired) {
 
@@ -256,6 +257,15 @@ public class Gart : MonoBehaviour {
 
 		}
 			
+	}
+
+
+	IEnumerator DelayStoped(){
+	
+		stoped = true;
+		yield return new WaitForSeconds (5);
+		stoped = false;
+	
 	}
 
 

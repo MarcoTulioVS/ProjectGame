@@ -26675,6 +26675,11 @@ Prefab:
       propertyPath: jumpForce
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 61758712709989456, guid: 527d41219de7a4f41b38f6a030d22c67,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 461f904348cfe9b4f98d72172b123534, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
   m_IsPrefabParent: 0
@@ -27147,7 +27152,6 @@ MonoBehaviour:
   stopDistance: 2
   isTired: 0
   life: 2
-  hited: 0
   mycolor: {r: 0, g: 0, b: 0, a: 0}
   countHit: 0
   player: {fileID: 167135681}
