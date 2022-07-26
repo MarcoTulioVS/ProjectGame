@@ -20,7 +20,6 @@ public class Gart : MonoBehaviour {
 	Animator anim;
 
 	SpriteRenderer sp;
-	float auxSpeed;
 
 	public bool isTired;
 	public int life;
@@ -39,7 +38,7 @@ public class Gart : MonoBehaviour {
 
 	void Start () {
 		
-		auxSpeed = speed;
+
 		isRight = true;
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
@@ -211,6 +210,7 @@ public class Gart : MonoBehaviour {
 
 				StartCoroutine ("Tired");
 				StartCoroutine ("BlinkHurt");
+				anim.SetTrigger ("hurt");
 
 			}
 
@@ -253,7 +253,9 @@ public class Gart : MonoBehaviour {
 			anim.SetBool ("tired", true);
 			yield return new WaitForSeconds (15);
 			anim.SetBool ("tired", false);
-			speed = auxSpeed;
+			isTired = false;
+			countHit=0;
+
 
 		}
 			
@@ -263,7 +265,9 @@ public class Gart : MonoBehaviour {
 	IEnumerator DelayStoped(){
 	
 		stoped = true;
+		anim.SetBool ("tired", true);
 		yield return new WaitForSeconds (5);
+		anim.SetBool ("tired", false);
 		stoped = false;
 	
 	}
