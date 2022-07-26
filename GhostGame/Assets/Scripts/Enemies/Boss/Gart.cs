@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Gart : MonoBehaviour {
 
@@ -35,6 +36,7 @@ public class Gart : MonoBehaviour {
 	public bool isDead;
 	private bool stoped;
 
+	public List<GameObject> lifes;
 
 	void Start () {
 		
@@ -232,6 +234,12 @@ public class Gart : MonoBehaviour {
 	
 		life--;
 
+		for (int i = life; i >= 0; i--) {
+			
+			lifes [i].SetActive (false);
+			break;
+		}
+
 		if (life <= 0) {
 			isDead = true;
 			life = 0;
@@ -271,8 +279,7 @@ public class Gart : MonoBehaviour {
 		stoped = false;
 	
 	}
-
-
+		
 		
 }
 
