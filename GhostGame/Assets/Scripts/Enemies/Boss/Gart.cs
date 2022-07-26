@@ -22,18 +22,21 @@ public class Gart : MonoBehaviour {
 	SpriteRenderer sp;
 	float auxSpeed;
 
-	bool isTired;
+	public bool isTired;
 	public int life;
 
 	public bool hited;
 
 	public Color mycolor;
-	int countHit;
+	public int countHit;
 
 	public GameObject player;
 
 	float nextHit;
 	float hitRate = 2f;
+
+	public bool isDead;
+
 
 
 	void Start () {
@@ -60,31 +63,20 @@ public class Gart : MonoBehaviour {
 		}
 
 		StartCoroutine ("switchColor");
+
 	}
 
 
 	void Update () {
 
-		DealDamage (anim);
-
-		if (hited) {
-			OnHurt (anim, sp,auxSpeed);
-		}
-
 		mycolor = sp.color;
-
-		if (isTired) {
-			StartCoroutine ("Tired");
-		}
 
 	}
 		
 
 	void OnMove(){
-
-
-
-		if (isFront) {
+		
+		if (isFront && !isTired) {
 
 			anim.SetInteger ("transition", 1);
 
@@ -102,7 +94,7 @@ public class Gart : MonoBehaviour {
 
 			}
 
-		}
+		} 
 
 	}
 
@@ -187,43 +179,26 @@ public class Gart : MonoBehaviour {
 
 	}
 
-	IEnumerator Tired(){
 
-		if (isTired) {
-
-			anim.SetTrigger ("tired");
-			speed = 0;
-			yield return new WaitForSeconds (15);
-			anim.SetInteger ("transition", 1);
-			speed = auxSpeed;
-			isTired = false;
-
-		} else {
-
-			anim.SetInteger ("transition", 1);
-			speed = auxSpeed;
-
-		}
-
-	}
 
 
 	void OnCollisionEnter2D(Collision2D col){
 
 		if (col.gameObject.tag == "pedrada") {
 
-			hited = true;
+			StopCoroutine ("Tired");
+			anim.SetBool ("tired", false);
+			speed = auxSpeed;
 
 			if (isTired) {
 
-				life--;
-				isTired = false;
-				hited = false;
+				Die ();
 				Destroy (col.gameObject);
 				player.SetActive (true);
+				isTired = false;
 
-			}
-
+			} 
+				
 		}
 
 	}
@@ -235,7 +210,7 @@ public class Gart : MonoBehaviour {
 
 			if (mycolor == col.gameObject.GetComponent<SpriteRenderer>().color) {
 
-				countHit++;
+				StartCoroutine ("Tired");
 				hited = true;
 			}
 
@@ -256,33 +231,6 @@ public class Gart : MonoBehaviour {
 	}
 
 
-
-	protected void DealDamage(Animator anim){
-
-		if (countHit >= 2) {
-
-			isTired = true;
-			countHit = 0;
-		}
-
-	}
-
-	protected void OnHurt(Animator anim,SpriteRenderer sp,float auxSpeed){
-
-		if (hited) {
-			anim.SetTrigger ("hurt");
-			StartCoroutine ("BlinkHurt", sp);
-		} else {
-
-			anim.SetInteger ("transition", 1);
-			speed = auxSpeed;
-
-		}
-
-	}
-
-
-
 	IEnumerator BlinkHurt(SpriteRenderer sp){
 
 		sp.enabled = false;
@@ -290,6 +238,39 @@ public class Gart : MonoBehaviour {
 		sp.enabled = true;
 
 	}
+
+	void Die(){
+	
+		life--;
+
+		if (life <= 0) {
+			isDead = true;
+			life = 0;
+			anim.SetTrigger ("death");
+			Destroy (gameObject,2.5f);
+		}
+	
+	
+	}
+
+	IEnumerator Tired(){
+
+		countHit++;
+
+		if (countHit >= 2) {
+
+			isTired = true;
+			rb.velocity = Vector2.zero;
+			anim.SetBool ("tired", true);
+			yield return new WaitForSeconds (15);
+			anim.SetBool ("tired", false);
+			speed = auxSpeed;
+
+		}
+			
+	}
+
+
 		
 }
 
