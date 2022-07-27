@@ -5,7 +5,11 @@ using UnityEngine;
 public class SoundController : MonoBehaviour {
 
 	public static SoundController instance;
-	public AudioClip sfxTest;
+	public AudioClip sfxPosses;
+	public AudioClip sfxFinalPortal;
+	public AudioClip sfxStartBossLevel;
+	public AudioClip sfxFirstLevel;
+	public AudioClip sfxThirdLevel;
 	AudioSource a;
 
 	void Awake(){
