@@ -7,11 +7,10 @@ public class PlayerMenu : MonoBehaviour {
 	Animator anim;
 	public List<Transform> listPoints;
 	int posNumber;
-	bool isRunning;
+
 
 	void Start () {
 
-		isRunning = true;
 		anim = GetComponent<Animator> ();
 		StartCoroutine ("PlayScare");
 
