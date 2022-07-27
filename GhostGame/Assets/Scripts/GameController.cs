@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour {
 
 
 		if (countEnemies == quantMaxEnemies) {
-		
+			
 			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 		
 		}

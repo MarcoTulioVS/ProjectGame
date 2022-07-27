@@ -3176,6 +3176,30 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 461f904348cfe9b4f98d72172b123534, type: 2}
+    - target: {fileID: 1337983891514520, guid: a5bb444e4c23bc74d90065792a0b3116, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544370315301514, guid: a5bb444e4c23bc74d90065792a0b3116, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 6.9305196
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544370315301514, guid: a5bb444e4c23bc74d90065792a0b3116, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 6.6190567
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544370315301514, guid: a5bb444e4c23bc74d90065792a0b3116, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 6.22969
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544370315301514, guid: a5bb444e4c23bc74d90065792a0b3116, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544370315301514, guid: a5bb444e4c23bc74d90065792a0b3116, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5bb444e4c23bc74d90065792a0b3116, type: 2}
   m_IsPrefabParent: 0
@@ -8027,7 +8051,7 @@ MonoBehaviour:
   quantLife: 100
   imageLifeBar: {fileID: 1303074870}
   imageMoldureLifeBar: {fileID: 398443454}
-  trPlayer: {fileID: 0}
+  trPlayer: {fileID: 167135682}
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0

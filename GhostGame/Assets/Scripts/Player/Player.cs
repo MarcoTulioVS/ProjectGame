@@ -135,6 +135,7 @@ public class Player : MonoBehaviour {
 				col.gameObject.GetComponent<Enemies>().insideBody=true;
 				GameController.instance.quantEnergy -= col.gameObject.GetComponent<Enemies>().energyNeeded;
 				CameraScript.instance.tr = col.gameObject.transform;
+				SoundController.instance.PlaySound (SoundController.instance.sfxPosses);
 				lifeBarOnOff ();
 				
 			}

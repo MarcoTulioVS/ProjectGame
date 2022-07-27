@@ -23,10 +23,18 @@ public class EndPortal : MonoBehaviour {
 			//Logo em seguida o objeto é destruido
 			Enemies.instance.getOutBodyWhenColliderWithPortal (player);
 
+			SoundController.instance.PlaySound (SoundController.instance.sfxFinalPortal);
 			//Verifica se a variavel countEnemies do GameController é igual ao valor da variavel quantMaxEnemies
 			//Caso seja vai pra próxima fase
-			GameController.instance.GoToNextScene();
+			StartCoroutine("NextLevel");
 		}
+
+	}
+
+	IEnumerator NextLevel(){
+	
+		yield return new WaitForSeconds (3);
+		GameController.instance.GoToNextScene();
 
 	}
 }
