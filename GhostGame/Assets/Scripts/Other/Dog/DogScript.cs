@@ -10,6 +10,7 @@ public class DogScript : MonoBehaviour {
 	public Transform trPointEnergy;
 	public GameObject prefabEnergy;
 	GameObject en;
+	bool energySpawned;
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
@@ -34,9 +35,10 @@ public class DogScript : MonoBehaviour {
 		rb.velocity = new Vector2 (speed, rb.velocity.y);
 		anim.SetBool ("walking", true);
 
-		if (en == null) {
+		if (en == null && !energySpawned) {
 		
 			en = Instantiate (prefabEnergy, trPointEnergy.position, Quaternion.identity);
+			energySpawned = true;
 		}
 
 	}

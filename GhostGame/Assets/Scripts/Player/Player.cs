@@ -107,6 +107,10 @@ public class Player : MonoBehaviour {
 			
 				scared = true;
 			
+			} else {
+			
+				scared = false;
+			
 			}
 
 			StartCoroutine ("resetScare");
