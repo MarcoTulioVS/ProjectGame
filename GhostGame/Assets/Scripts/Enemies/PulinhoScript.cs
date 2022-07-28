@@ -5,7 +5,7 @@ using UnityEngine;
 public class PulinhoScript : Enemies {
 
 	Rigidbody2D rb;
-	public float jumpForce;
+	//public float jumpForce;
 	Animator anim;
 	public GameObject player;
 
@@ -17,7 +17,7 @@ public class PulinhoScript : Enemies {
 	
 
 	void Update () {
-		jump (rb, jumpForce, anim);
+		jump (rb, this.jumpForce, anim);
 		getOutBody (player);
 	}
 

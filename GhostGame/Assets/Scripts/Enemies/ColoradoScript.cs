@@ -15,7 +15,7 @@ public class ColoradoScript : Enemies {
 	float nextFire;
 	Animator anim;
 	bool isRed;
-	public float jumpForce;
+	//public float jumpForce;
 
 
 	void Start () {
@@ -30,7 +30,7 @@ public class ColoradoScript : Enemies {
 		OnCollisionPortal (gameObject.transform, trRefSecondPortal);
 		OnCollisionPortal1 (gameObject.transform, trRefFirstPortal);
 		switchPower ();
-		jump (rb, jumpForce);
+		jump (rb, this.jumpForce);
 
 
 	}

@@ -21,6 +21,7 @@ TagManager:
   - fall
   - pedrada
   - pedrinha
+  - boost
   layers:
   - Default
   - TransparentFX

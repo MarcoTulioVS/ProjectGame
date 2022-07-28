@@ -10,6 +10,7 @@ public class Enemies : MonoBehaviour {
 	private bool collPortalRed1;
 	private bool collPortalGreen;
 	private bool collPortalGreen1;
+	public float jumpForce;
 	public bool isJumping;
 	protected bool doubleJump;
 	private float movement;
@@ -203,6 +204,16 @@ public class Enemies : MonoBehaviour {
 			colWall = true;
 			notColWall = false;
 
+		}
+
+		if (col.gameObject.tag == "boost") {
+		
+			if (gameObject.GetComponent<Enemies> ().jumpForce > 0) {
+
+				gameObject.GetComponent<Enemies> ().jumpForce += 10;
+				Destroy (col.gameObject);
+			}
+		
 		}
 			
 	}

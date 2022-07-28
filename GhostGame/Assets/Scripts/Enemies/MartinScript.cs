@@ -8,7 +8,7 @@ public class MartinScript : Enemies {
 	Animator anim;
 	SpriteRenderer sp;
 	public GameObject player;
-	public float jumpForce;
+	//public float jumpForce;
 
 	public Transform pointUp;
 	public float radius;
@@ -31,7 +31,7 @@ public class MartinScript : Enemies {
 
 	void Update () {
 		getOutBody (player);
-		jump (rb, jumpForce,anim);
+		jump (rb, this.jumpForce,anim);
 		HitUpDown ();
 		ChangeColor ();
 		TurnUpsideDown ();

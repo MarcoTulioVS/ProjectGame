@@ -6,7 +6,7 @@ public class SalivaScript : Enemies {
 
 	Rigidbody2D rb;
 	public GameObject player;
-	public float jumpForce;
+	//public float jumpForce;
 	public GameObject prefabBomb;
 	public Transform trRefBomb;
 	Animator anim;
@@ -20,7 +20,7 @@ public class SalivaScript : Enemies {
 
 	void Update () {
 		getOutBody (player);
-		jump (rb, jumpForce);
+		jump (rb, this.jumpForce);
 		placeBomb ();
 		showAnimation (anim,"move");
 		OnCollisionPortal (gameObject.transform, trRefSecondPortal);

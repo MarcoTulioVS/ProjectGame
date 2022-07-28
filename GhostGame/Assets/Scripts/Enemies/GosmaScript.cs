@@ -7,7 +7,7 @@ public class GosmaScript : Enemies {
 	Rigidbody2D rb;
 	Animator anim;
 	public GameObject player;
-	public float jumpForce;
+	//public float jumpForce;
 	Vector3 move;
 
 
@@ -28,7 +28,7 @@ public class GosmaScript : Enemies {
 
 	void Update () {
 		getOutBody (player);
-		jump (rb, jumpForce);
+		jump (rb, this.jumpForce);
 		GosmaForm ();
 		turnVertical();
 
