@@ -7,16 +7,21 @@ public class PlayerVisible : MonoBehaviour {
 	float posX;
 	float posY;
 	public Transform trObject;
+	public Transform player;
 
 	void Start () {
-		posX = trObject.transform.position.x;
-		posY = trObject.transform.position.y;
+		
 	}
 	
 
 	void Update () {
-		
+
+		posX = trObject.transform.position.x;
+		posY = trObject.transform.position.y;
+
 	}
+
+
 
 	void OnBecameInvisible(){
 
@@ -25,9 +30,11 @@ public class PlayerVisible : MonoBehaviour {
 	}
 
 
-	void RespawnInScenery(){
 
-		trObject.transform.position = new Vector2 (posX, posY);
+	void RespawnInScenery(){
+		
+		player.transform.position = new Vector2 (posX, posY);
 
 	}
+		
 }

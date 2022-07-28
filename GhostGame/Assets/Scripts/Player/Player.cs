@@ -28,7 +28,7 @@ public class Player : MonoBehaviour {
 
 	public Collider2D hit;
 
-	public Transform spawnPoint;
+
 
 	void Awake(){
 	
@@ -50,12 +50,14 @@ public class Player : MonoBehaviour {
 
 	void Start () {
 		
-		rb = GetComponent<Rigidbody2D> ();	
+		rb = GetComponent<Rigidbody2D> ();
+
 	}
 	
 
 	void Update () {
-		
+
+
 	}
 
 	void FixedUpdate(){
