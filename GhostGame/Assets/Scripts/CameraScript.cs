@@ -15,7 +15,7 @@ public class CameraScript : MonoBehaviour {
 
 	void Start () {
 		instance = this;
-		//Debug.Log(GameObject.Find (Enemies.instance.gameObject.name));
+
 	}
 	
 

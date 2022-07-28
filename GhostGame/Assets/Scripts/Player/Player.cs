@@ -28,6 +28,8 @@ public class Player : MonoBehaviour {
 
 	public Collider2D hit;
 
+	public Transform spawnPoint;
+
 	void Awake(){
 	
 		if (instance == null) {
