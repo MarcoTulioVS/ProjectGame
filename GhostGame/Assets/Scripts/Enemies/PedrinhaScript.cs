@@ -6,7 +6,7 @@ public class PedrinhaScript : Enemies {
 
 	Rigidbody2D rb;
 	Animator anim;
-
+	public GameObject player;
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
@@ -16,6 +16,7 @@ public class PedrinhaScript : Enemies {
 
 	void Update () {
 		showAnimation (anim, "walk");
+		getOutBody (player);
 	}
 
 	void FixedUpdate(){

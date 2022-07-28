@@ -5,6 +5,8 @@ using UnityEngine;
 public class RedButton : MonoBehaviour {
 
 	Animator anim;
+	public GameObject blockMove;
+
 
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -20,6 +22,7 @@ public class RedButton : MonoBehaviour {
 		if(col.gameObject.tag=="pedrinha"){
 
 			anim.SetBool ("pressed",true);
+			blockMove.SetActive (false);
 
 		}
 
@@ -30,7 +33,7 @@ public class RedButton : MonoBehaviour {
 		if (notCol.gameObject.tag == "pedrinha") {
 		
 			anim.SetBool ("pressed",false);
-		
+
 		}
 	}
 }
