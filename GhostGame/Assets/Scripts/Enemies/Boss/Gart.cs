@@ -38,6 +38,8 @@ public class Gart : MonoBehaviour {
 
 	public List<GameObject> lifes;
 
+	public BoxCollider2D botolho;
+
 	void Start () {
 		
 
@@ -244,8 +246,8 @@ public class Gart : MonoBehaviour {
 			isDead = true;
 			life = 0;
 			anim.SetTrigger ("death");
+			botolho.enabled = true;
 			Destroy (gameObject,1.5f);
-			StartCoroutine ("GoNextLevel");
 		}
 	
 	
@@ -279,13 +281,6 @@ public class Gart : MonoBehaviour {
 		anim.SetBool ("tired", false);
 		stoped = false;
 	
-	}
-
-	IEnumerator GoNextLevel(){
-
-		yield return new WaitForSeconds (5);
-		GameController.instance.CallScene (5);
-
 	}
 		
 }
