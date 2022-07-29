@@ -4,37 +4,40 @@ using UnityEngine;
 
 public class PlayerVisible : MonoBehaviour {
 
-	float posX;
-	float posY;
+	public float maxX;
+	public float minX;
+
+
 	public Transform trObject;
 	public Transform player;
 
+	public static PlayerVisible instance;
+
+	void Awake(){
+
+		instance = this;
+
+	}
 	void Start () {
-		
+
+		trObject.transform.position = new Vector3 (trObject.transform.position.x,
+			trObject.transform.position.y,0);
 	}
 	
 
 	void Update () {
 
-		posX = trObject.transform.position.x;
-		posY = trObject.transform.position.y;
-
+		RepositionPlayer ();
 	}
 
-
-
-	void OnBecameInvisible(){
-
-		RespawnInScenery ();
-
-	}
-
-
-
-	void RespawnInScenery(){
+	void RepositionPlayer(){
+	
+		if (player.transform.position.x > maxX || player.transform.position.x<minX) {
 		
-		player.transform.position = new Vector2 (posX, posY);
-
+			player.position = trObject.position;
+		
+		}
+	
 	}
 		
 }

@@ -129,6 +129,7 @@ public class Enemies : MonoBehaviour {
 			insideBody = false;
 			lifeBarOnOff ();
 			CameraScript.instance.tr = null;
+			player.transform.position = PlayerVisible.instance.trObject.position;
 
 		}
 	

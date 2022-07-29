@@ -52,6 +52,11 @@ public class GameController : MonoBehaviour {
 
 	}
 
+	public void CallScene(int i){
+
+		SceneManager.LoadScene (i);
+	}
+
 	void GetCameraBackToPlayer(){
 	
 		if (CameraScript.instance.tr == null) {

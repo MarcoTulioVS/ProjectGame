@@ -245,6 +245,7 @@ public class Gart : MonoBehaviour {
 			life = 0;
 			anim.SetTrigger ("death");
 			Destroy (gameObject,1.5f);
+			StartCoroutine ("GoNextLevel");
 		}
 	
 	
@@ -279,7 +280,13 @@ public class Gart : MonoBehaviour {
 		stoped = false;
 	
 	}
-		
+
+	IEnumerator GoNextLevel(){
+
+		yield return new WaitForSeconds (5);
+		GameController.instance.CallScene (5);
+
+	}
 		
 }
 
