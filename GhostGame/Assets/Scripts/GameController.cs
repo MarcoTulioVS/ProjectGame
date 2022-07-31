@@ -20,6 +20,10 @@ public class GameController : MonoBehaviour {
 
 	public Transform trPlayer;
 
+	public GameObject panelGameOver;
+
+	public Text textMsg;
+	public Text buttonMsg;
 
 
 	void Awake(){
@@ -81,7 +85,66 @@ public class GameController : MonoBehaviour {
 
 		}
 
-	} 
+	}
 
 
+	public void GameOver(){
+
+		panelGameOver.SetActive (true);
+		textMsg.text = CreateTextTitle ();
+		buttonMsg.text = CreateTextButton ();
+
+	}
+
+	private string CreateTextTitle(){
+	
+		int number = Random.Range (1, 6);
+	
+		switch (number) {
+	
+			case 1:
+				return "Acabou pra você meu chapa!!!";
+				break;
+			case 2:
+				return "Não deu não!";
+				break;
+			case 3:
+				return "Já foi tarde";
+				break;
+			case 4:
+				return "Que pena. Ha! Ha!";
+				break;
+			case 5:
+				return "Quem sabe da próxima! He He!";
+				break;
+			default:
+				return "nada";
+		}
+	}
+
+	private string CreateTextButton(){
+
+		int number = Random.Range (1, 6);
+
+		switch (number) {
+
+			case 1:
+				return "Bora mais uma";
+				break;
+			case 2:
+				return "Que não vai dar o que";
+				break;
+			case 3:
+				return "E cá vamos nós de novo";
+				break;
+			case 4:
+				return "Agora vou jogar sério";
+				break;
+			case 5:
+				return "Essa não valeu";
+				break;
+			default:
+				return "nada";
+		}
+	}
 }

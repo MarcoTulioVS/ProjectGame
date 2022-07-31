@@ -241,7 +241,7 @@ public class Enemies : MonoBehaviour {
 				if (halfLife < 25) {
 				
 					GameController.instance.quantLife = 0;
-					//Chama GameOver
+					GameController.instance.GameOver ();
 
 				} else {
 					
