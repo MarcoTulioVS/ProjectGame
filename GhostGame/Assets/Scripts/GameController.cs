@@ -96,6 +96,13 @@ public class GameController : MonoBehaviour {
 
 	}
 
+	public void RestarGame(){
+
+		//Colocar checkPoint caso tenha pegado
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+
+	}
+
 	private string CreateTextTitle(){
 	
 		int number = Random.Range (1, 6);
@@ -104,19 +111,14 @@ public class GameController : MonoBehaviour {
 	
 			case 1:
 				return "Acabou pra você meu chapa!!!";
-				break;
 			case 2:
 				return "Não deu não!";
-				break;
 			case 3:
 				return "Já foi tarde";
-				break;
 			case 4:
 				return "Que pena. Ha! Ha!";
-				break;
 			case 5:
 				return "Quem sabe da próxima! He He!";
-				break;
 			default:
 				return "nada";
 		}
@@ -130,19 +132,14 @@ public class GameController : MonoBehaviour {
 
 			case 1:
 				return "Bora mais uma";
-				break;
 			case 2:
 				return "Que não vai dar o que";
-				break;
 			case 3:
 				return "E cá vamos nós de novo";
-				break;
 			case 4:
 				return "Agora vou jogar sério";
-				break;
 			case 5:
 				return "Essa não valeu";
-				break;
 			default:
 				return "nada";
 		}
