@@ -5,8 +5,8 @@ using UnityEngine;
 public class ButtonScript : MonoBehaviour {
 
 	Animator anim;
-	GameObject[] lista = new GameObject [12];
-	GameObject[] sprites = new GameObject[16];
+	GameObject[] lista = new GameObject [11];
+	GameObject[] sprites = new GameObject[15];
 
 	void Start () {
 

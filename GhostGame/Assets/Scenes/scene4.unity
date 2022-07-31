@@ -1761,7 +1761,7 @@ Prefab:
     - target: {fileID: 114588042056818730, guid: 000b942a102dc344db4ae872493ecb01,
         type: 2}
       propertyPath: speed
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 000b942a102dc344db4ae872493ecb01, type: 2}
@@ -5601,9 +5601,9 @@ GameObject:
   m_Component:
   - component: {fileID: 370994003}
   - component: {fileID: 370994007}
-  - component: {fileID: 370994006}
   - component: {fileID: 370994005}
   - component: {fileID: 370994004}
+  - component: {fileID: 370994006}
   m_Layer: 0
   m_Name: button (2)
   m_TagString: Untagged
@@ -5618,7 +5618,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 370994002}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7282774, y: -5.369259, z: 0}
+  m_LocalPosition: {x: 0.7282774, y: -5.376, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 706789602}
@@ -5653,8 +5653,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!61 &370994006
-BoxCollider2D:
+--- !u!60 &370994006
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5665,7 +5665,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.023832485}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5675,9 +5675,14 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.092335045}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.07788378, y: -0.014787197}
+      - {x: -0.14999999, y: 0}
+      - {x: -0.14999999, y: -0.07}
+      - {x: 0.15138698, y: -0.07358551}
+      - {x: 0.12687618, y: -0.06093359}
+      - {x: 0.10724348, y: -0.056165695}
 --- !u!212 &370994007
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5962,6 +5967,41 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &402177040 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1871131509157382, guid: 8372189c4c0bd3042883f52d8dffa6db,
+    type: 2}
+  m_PrefabInternal: {fileID: 1098545596}
+--- !u!60 &402177043
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 402177040}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.3, y: 0.14}
+    newSize: {x: 0.3, y: 0.1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.12818897, y: -0.002755762}
+      - {x: -0.14999999, y: 0}
+      - {x: -0.14999999, y: -0.07}
+      - {x: 0.14999999, y: -0.07}
+      - {x: 0.101496264, y: -0.04063009}
+      - {x: 0.04128651, y: -0.008818076}
 --- !u!1 &416556489
 GameObject:
   m_ObjectHideFlags: 0
@@ -6365,6 +6405,16 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 167135681}
+    - target: {fileID: 212716578771222766, guid: 246e8154cdd764a4e924a2d609156e34,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114972581265890366, guid: 246e8154cdd764a4e924a2d609156e34,
+        type: 2}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 246e8154cdd764a4e924a2d609156e34, type: 2}
   m_IsPrefabParent: 0
@@ -6412,9 +6462,9 @@ GameObject:
   m_Component:
   - component: {fileID: 624788711}
   - component: {fileID: 624788715}
-  - component: {fileID: 624788714}
   - component: {fileID: 624788713}
   - component: {fileID: 624788712}
+  - component: {fileID: 624788714}
   m_Layer: 0
   m_Name: button (1)
   m_TagString: Untagged
@@ -6464,8 +6514,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!61 &624788714
-BoxCollider2D:
+--- !u!60 &624788714
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -6476,7 +6526,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.023832485}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6486,9 +6536,14 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.092335045}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.08664942, y: -0.004723549}
+      - {x: -0.18009031, y: -0.017588854}
+      - {x: -0.17916095, y: -0.055989265}
+      - {x: 0.1479075, y: -0.059113026}
+      - {x: 0.10329771, y: -0.04382658}
+      - {x: 0.075751305, y: -0.037415028}
 --- !u!212 &624788715
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27944,6 +27999,16 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 167135681}
+    - target: {fileID: 212716578771222766, guid: 246e8154cdd764a4e924a2d609156e34,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114972581265890366, guid: 246e8154cdd764a4e924a2d609156e34,
+        type: 2}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 246e8154cdd764a4e924a2d609156e34, type: 2}
   m_IsPrefabParent: 0
@@ -28576,7 +28641,8 @@ Prefab:
       propertyPath: blockMove
       value: 
       objectReference: {fileID: 146962783}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61098348048166788, guid: 8372189c4c0bd3042883f52d8dffa6db, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8372189c4c0bd3042883f52d8dffa6db, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1104422825
@@ -28850,7 +28916,7 @@ Prefab:
     - target: {fileID: 114588042056818730, guid: 000b942a102dc344db4ae872493ecb01,
         type: 2}
       propertyPath: speed
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 000b942a102dc344db4ae872493ecb01, type: 2}
@@ -29686,6 +29752,16 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 167135681}
+    - target: {fileID: 212716578771222766, guid: 246e8154cdd764a4e924a2d609156e34,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114972581265890366, guid: 246e8154cdd764a4e924a2d609156e34,
+        type: 2}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 246e8154cdd764a4e924a2d609156e34, type: 2}
   m_IsPrefabParent: 0
@@ -30735,7 +30811,7 @@ Prefab:
     - target: {fileID: 114588042056818730, guid: 000b942a102dc344db4ae872493ecb01,
         type: 2}
       propertyPath: speed
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 000b942a102dc344db4ae872493ecb01, type: 2}
