@@ -4,33 +4,51 @@ using UnityEngine;
 
 public class ButtonScript : MonoBehaviour {
 
-	void Start () {
-		
+	Animator anim;
+	GameObject[] lista = new GameObject [12];
 
+
+	void Start () {
+
+		anim = GetComponent<Animator> ();
+		lista = GameObject.FindGameObjectsWithTag ("fall");
 	}
 	
 
 	void Update () {
 		
 	}
-
-	void OnTriggerEnter2D(Collider2D col){
+		
 	
-		if (col.gameObject.layer == 8) {
+	void OnCollisionStay2D(Collision2D col){
 
-			GameObject[] lista = new GameObject [12];
+		if(col.gameObject.tag == "gosma"){
 
-			lista = GameObject.FindGameObjectsWithTag ("fall");
+			anim.SetBool ("pressed",true);
 
 			for (int i = 0; i < lista.Length; i++) {
-			
+
 				lista [i].GetComponent<BoxCollider2D> ().enabled = true;
-			
+
 			}
 
 		}
-	
+
 	}
 
+	void OnCollisionExit2D(Collision2D notCol){
+
+		if (notCol.gameObject.tag == "gosma") {
+
+			anim.SetBool ("pressed",false);
+
+			for (int i = 0; i < lista.Length; i++) {
+
+				lista [i].GetComponent<BoxCollider2D> ().enabled = false;
+
+			}
+				
+		}
+	}
 
 }

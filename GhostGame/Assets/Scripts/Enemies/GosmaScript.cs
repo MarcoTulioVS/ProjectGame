@@ -7,7 +7,6 @@ public class GosmaScript : Enemies {
 	Rigidbody2D rb;
 	Animator anim;
 	public GameObject player;
-	//public float jumpForce;
 	Vector3 move;
 
 
