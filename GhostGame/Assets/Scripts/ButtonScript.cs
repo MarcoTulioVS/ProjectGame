@@ -6,12 +6,14 @@ public class ButtonScript : MonoBehaviour {
 
 	Animator anim;
 	GameObject[] lista = new GameObject [12];
-
+	GameObject[] sprites = new GameObject[16];
 
 	void Start () {
 
 		anim = GetComponent<Animator> ();
 		lista = GameObject.FindGameObjectsWithTag ("fall");
+		sprites = GameObject.FindGameObjectsWithTag ("fallPlataform");
+
 	}
 	
 
@@ -32,6 +34,14 @@ public class ButtonScript : MonoBehaviour {
 
 			}
 
+			for (int i = 0; i < sprites.Length; i++) {
+
+				Color c = sprites [0].GetComponent<SpriteRenderer> ().color;
+				c.a = 1;
+				sprites [i].GetComponent<SpriteRenderer> ().color = c;
+			
+			}
+
 		}
 
 	}
@@ -45,6 +55,14 @@ public class ButtonScript : MonoBehaviour {
 			for (int i = 0; i < lista.Length; i++) {
 
 				lista [i].GetComponent<BoxCollider2D> ().enabled = false;
+
+			}
+
+			for (int i = 0; i < sprites.Length; i++) {
+
+				Color c = sprites [0].GetComponent<SpriteRenderer> ().color;
+				c.a = 0.64f;
+				sprites [i].GetComponent<SpriteRenderer> ().color = c;
 
 			}
 				

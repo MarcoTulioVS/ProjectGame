@@ -258,6 +258,15 @@ Prefab:
       propertyPath: m_TagString
       value: fall
       objectReference: {fileID: 0}
+    - target: {fileID: 1947042720829312, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 212848266901241336, guid: dc4a5a02c2e58d747b39f8dac9d90222,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.64705884
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
   m_IsPrefabParent: 0
@@ -1880,6 +1889,24 @@ Prefab:
       propertyPath: m_TagString
       value: fall
       objectReference: {fileID: 0}
+    - target: {fileID: 1898393014582294, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947042720829312, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 212848266901241336, guid: dc4a5a02c2e58d747b39f8dac9d90222,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.64705884
+      objectReference: {fileID: 0}
+    - target: {fileID: 212515823410342796, guid: dc4a5a02c2e58d747b39f8dac9d90222,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.64705884
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
   m_IsPrefabParent: 0
@@ -3390,6 +3417,15 @@ Prefab:
       propertyPath: m_TagString
       value: fall
       objectReference: {fileID: 0}
+    - target: {fileID: 1947042720829312, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 212848266901241336, guid: dc4a5a02c2e58d747b39f8dac9d90222,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.64705884
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
   m_IsPrefabParent: 0
@@ -3483,6 +3519,15 @@ Prefab:
     - target: {fileID: 1190360085037604, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
       propertyPath: m_TagString
       value: fall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947042720829312, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 212848266901241336, guid: dc4a5a02c2e58d747b39f8dac9d90222,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.64705884
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
@@ -3883,12 +3928,12 @@ Prefab:
     - target: {fileID: 212848266901241336, guid: dc4a5a02c2e58d747b39f8dac9d90222,
         type: 2}
       propertyPath: m_Color.a
-      value: 1
+      value: 0.64705884
       objectReference: {fileID: 0}
     - target: {fileID: 212515823410342796, guid: dc4a5a02c2e58d747b39f8dac9d90222,
         type: 2}
       propertyPath: m_Color.a
-      value: 1
+      value: 0.64705884
       objectReference: {fileID: 0}
     - target: {fileID: 212515823410342796, guid: dc4a5a02c2e58d747b39f8dac9d90222,
         type: 2}
@@ -3928,6 +3973,14 @@ Prefab:
     - target: {fileID: 1190360085037604, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
       propertyPath: m_TagString
       value: fall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947042720829312, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898393014582294, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
@@ -4090,6 +4143,15 @@ Prefab:
       propertyPath: m_TagString
       value: fall
       objectReference: {fileID: 0}
+    - target: {fileID: 1947042720829312, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 212848266901241336, guid: dc4a5a02c2e58d747b39f8dac9d90222,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.64705884
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
   m_IsPrefabParent: 0
@@ -4247,6 +4309,15 @@ Prefab:
     - target: {fileID: 1190360085037604, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
       propertyPath: m_TagString
       value: fall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947042720829312, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 212848266901241336, guid: dc4a5a02c2e58d747b39f8dac9d90222,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.64705884
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
@@ -13457,6 +13528,24 @@ Prefab:
       propertyPath: m_TagString
       value: fall
       objectReference: {fileID: 0}
+    - target: {fileID: 1898393014582294, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947042720829312, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 212515823410342796, guid: dc4a5a02c2e58d747b39f8dac9d90222,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.64705884
+      objectReference: {fileID: 0}
+    - target: {fileID: 212848266901241336, guid: dc4a5a02c2e58d747b39f8dac9d90222,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.64705884
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
   m_IsPrefabParent: 0
@@ -14202,6 +14291,24 @@ Prefab:
       propertyPath: m_TagString
       value: fall
       objectReference: {fileID: 0}
+    - target: {fileID: 1898393014582294, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947042720829312, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 212848266901241336, guid: dc4a5a02c2e58d747b39f8dac9d90222,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.64705884
+      objectReference: {fileID: 0}
+    - target: {fileID: 212515823410342796, guid: dc4a5a02c2e58d747b39f8dac9d90222,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.64705884
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
   m_IsPrefabParent: 0
@@ -14427,6 +14534,15 @@ Prefab:
       propertyPath: m_TagString
       value: fall
       objectReference: {fileID: 0}
+    - target: {fileID: 1947042720829312, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 212848266901241336, guid: dc4a5a02c2e58d747b39f8dac9d90222,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.64705884
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
   m_IsPrefabParent: 0
@@ -14520,6 +14636,15 @@ Prefab:
     - target: {fileID: 1190360085037604, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
       propertyPath: m_TagString
       value: fall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947042720829312, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 212848266901241336, guid: dc4a5a02c2e58d747b39f8dac9d90222,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.64705884
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
@@ -14909,7 +15034,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b041bd40270f649aac26af0bab9fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activePlatforms: 0
 --- !u!1 &1956736061
 GameObject:
   m_ObjectHideFlags: 0
@@ -15154,7 +15278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b041bd40270f649aac26af0bab9fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activePlatforms: 0
 --- !u!61 &1970988997
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15551,6 +15674,15 @@ Prefab:
     - target: {fileID: 1190360085037604, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
       propertyPath: m_TagString
       value: fall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947042720829312, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}
+      propertyPath: m_TagString
+      value: fallPlataform
+      objectReference: {fileID: 0}
+    - target: {fileID: 212848266901241336, guid: dc4a5a02c2e58d747b39f8dac9d90222,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.64705884
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc4a5a02c2e58d747b39f8dac9d90222, type: 2}

@@ -23,6 +23,7 @@ TagManager:
   - pedrinha
   - boost
   - gosma
+  - fallPlataform
   layers:
   - Default
   - TransparentFX
