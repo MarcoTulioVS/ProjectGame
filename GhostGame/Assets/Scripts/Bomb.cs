@@ -11,6 +11,7 @@ public class Bomb : MonoBehaviour {
 	
 
 	void Update () {
+		
 		DestroyBomb ();
 	}
 
@@ -20,7 +21,8 @@ public class Bomb : MonoBehaviour {
 
 	void DestroyBomb(){
 
-		Destroy (gameObject, 2.6f);
+		Destroy (gameObject,2.6f);
 
 	}
+
 }

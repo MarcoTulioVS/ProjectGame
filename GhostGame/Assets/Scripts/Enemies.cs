@@ -34,6 +34,7 @@ public class Enemies : MonoBehaviour {
 	public Transform trRefSecondPortal;//ref do portal com tag red1
 	public Transform trRefFirstPortal;//ref do portal com tag red
 
+
 	void Awake(){
 	
 		instance = this;
@@ -213,6 +214,16 @@ public class Enemies : MonoBehaviour {
 
 				gameObject.GetComponent<Enemies> ().jumpForce += 10;
 				Destroy (col.gameObject);
+			}
+		
+		}
+
+		if (col.gameObject.tag == "bomb") {
+		
+			if (insideBody) {
+
+				StartCoroutine ("DealDamageExplodeBomb");
+
 			}
 		
 		}
@@ -405,6 +416,13 @@ public class Enemies : MonoBehaviour {
 		yield return new WaitForSeconds (2);
 		activeDamage = true;
 	
+	}
+
+	IEnumerator DealDamageExplodeBomb(){
+
+		yield return new WaitForSeconds (2.6f);
+		GameController.instance.DecrementLife ();
+
 	}
 
 

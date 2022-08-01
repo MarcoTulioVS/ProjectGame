@@ -8473,6 +8473,8 @@ MonoBehaviour:
   imageMoldureLifeBar: {fileID: 398443454}
   trPlayer: {fileID: 167135682}
   panelGameOver: {fileID: 1408549451}
+  textMsg: {fileID: 238449590}
+  buttonMsg: {fileID: 1561164254}
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0
