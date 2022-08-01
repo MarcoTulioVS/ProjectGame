@@ -25,6 +25,20 @@ public class GameController : MonoBehaviour {
 	public Text textMsg;
 	public Text buttonMsg;
 
+	public Image imageEnemy;
+	public Text nameEnemyText;
+	public Text descriptionEnemy;
+
+	public List<string> listNameEnemies;
+	public List<Image> listImagesEnemies;
+	public List<string>listDescriptionEnemies;
+
+	int indexNames;
+	int maxCountNames;
+
+	int maxCountDescription;
+	int minCountDescription;
+	int indexDescription;
 
 	void Awake(){
 
@@ -32,7 +46,8 @@ public class GameController : MonoBehaviour {
 
 	}
 	void Start () {
-		
+		maxCountNames = listNameEnemies.Count;
+
 	}
 	
 
@@ -41,6 +56,8 @@ public class GameController : MonoBehaviour {
 		imageLifeBar.fillAmount = quantLife / 100;
 
 		GetCameraBackToPlayer ();
+		SetNameEnemy ();
+		SetDescriptionEnemy ();
 	}
 
 	public void GoToNextScene(){
@@ -144,4 +161,85 @@ public class GameController : MonoBehaviour {
 				return "nada";
 		}
 	}
+
+	void SetNameEnemy(){
+
+		nameEnemyText.text = listNameEnemies [indexNames]; 
+	}
+
+
+	void SetDescriptionEnemy(){
+
+		switch (nameEnemyText.text) {
+			
+			case "SALIVA":
+
+				maxCountDescription = 1;
+				minCountDescription = 0;
+				break;
+			case "COLORADO":
+				maxCountDescription = 3;
+				minCountDescription = 2;
+				break;
+
+			default:
+				break;
+
+		}
+
+		descriptionEnemy.text = listDescriptionEnemies [indexDescription];
+
+
+	}
+
+	public void NextName(){
+		
+		indexNames++;
+
+		if (indexNames > maxCountNames - 1) {
+		
+			indexNames = maxCountNames - 1;
+		
+		}
+
+	}
+
+	public void PreviousName(){
+		
+		indexNames--;
+
+		if (indexNames < 0) {
+
+			indexNames = 0;
+		
+		}
+
+	}
+
+	public void NextDescription(){
+
+		indexDescription++;
+
+		if (indexDescription > maxCountDescription) {
+
+			indexDescription = maxCountDescription;
+
+		}
+
+	}
+
+	public void PreviousDescription(){
+
+		indexDescription--;
+
+		if (indexDescription < minCountDescription) {
+
+			indexDescription = minCountDescription;
+
+		}
+
+	}
+
+
+		
 }
