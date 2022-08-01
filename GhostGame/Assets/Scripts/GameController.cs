@@ -78,7 +78,7 @@ public class GameController : MonoBehaviour {
 		if (halfLife < 25) {
 			
 			quantLife = 0;
-
+			GameOver ();
 		} else {
 				
 			quantLife -= halfLife;
