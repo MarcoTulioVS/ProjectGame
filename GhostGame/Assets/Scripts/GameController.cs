@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour {
 	public Text descriptionEnemy;
 
 	public List<string> listNameEnemies;
-	public List<Image> listImagesEnemies;
+	public List<Sprite> listImagesEnemies;
 	public List<string>listDescriptionEnemies;
 
 	int indexNames;
@@ -39,6 +39,7 @@ public class GameController : MonoBehaviour {
 	int maxCountDescription;
 	int minCountDescription;
 	int indexDescription;
+	int indexImage;
 
 	void Awake(){
 
@@ -178,11 +179,14 @@ public class GameController : MonoBehaviour {
 			indexDescription = minCountDescription;
 			descriptionEnemy.text = listDescriptionEnemies [indexDescription];
 
+
 		} else if(indexDescription>=minCountDescription) {
 		
 			indexDescription = maxCountDescription;
 			descriptionEnemy.text = listDescriptionEnemies [indexDescription];
 		}
+
+		imageEnemy.sprite = listImagesEnemies [indexImage];
 
 	}
 
@@ -194,12 +198,58 @@ public class GameController : MonoBehaviour {
 
 				maxCountDescription = 1;
 				minCountDescription = 0;
+				indexImage = 0;
 				break;
 			case "COLORADO":
 				maxCountDescription = 3;
 				minCountDescription = 2;
+				indexImage = 1;
 				break;
-
+			case "GOSMA":
+				maxCountDescription = 5;
+				minCountDescription = 4;
+				indexImage = 2;
+				break;
+			case "MARTIN":
+				maxCountDescription = 7;
+				minCountDescription = 6;
+				indexImage = 3;
+				break;
+			case "MEDUSA":
+				maxCountDescription = 9;
+				minCountDescription = 8;
+				indexImage = 4;
+				break;
+			case "PEDRADA":
+				maxCountDescription = 11;
+				minCountDescription = 10;
+				indexImage = 5;
+				break;
+			case "PEDRINHA":
+				maxCountDescription = 13;
+				minCountDescription = 12;
+				indexImage = 6;
+				break;
+			case "PULINHO":
+				maxCountDescription = 15;
+				minCountDescription = 14;
+				indexImage = 7;
+				break;
+			case "RATO":
+				maxCountDescription = 17;
+				minCountDescription = 16;
+				indexImage = 8;
+				break;
+			case "GATO":
+				maxCountDescription = 19;
+				minCountDescription = 18;
+				indexImage = 9;
+				break;
+			case "CACHORRO":
+				maxCountDescription = 21;
+				minCountDescription = 20;
+				indexImage = 10;
+				break;
 			default:
 				break;
 
