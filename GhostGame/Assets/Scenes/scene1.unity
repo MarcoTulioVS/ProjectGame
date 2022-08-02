@@ -10371,11 +10371,51 @@ MonoBehaviour:
   descriptionEnemy: {fileID: 855753648}
   listNameEnemies:
   - SALIVA
+  - COLORADO
+  - GOSMA
+  - MARTIN
+  - MEDUSA
+  - PEDRADA
+  - PEDRINHA
+  - PULINHO
+  - RATO
+  - GATO
+  - CACHORRO
   listImagesEnemies:
   - {fileID: 21300000, guid: c30aae76536bfd6458cf6b4da5d0bf61, type: 3}
+  - {fileID: 21300000, guid: a6b022dd0ad629a4292c477d139ad428, type: 3}
+  - {fileID: 21300000, guid: b1e42f81d7873a4479496544f773c8c8, type: 3}
+  - {fileID: 21300000, guid: 1597db9b98983304c9dc207f7e682830, type: 3}
+  - {fileID: 21300000, guid: 666fbaca7977042459320c2bcdfd03b3, type: 3}
+  - {fileID: 21300008, guid: 71c25839379a9bf4ea4def55c4738535, type: 3}
+  - {fileID: 21300000, guid: 71c25839379a9bf4ea4def55c4738535, type: 3}
+  - {fileID: 21300000, guid: b875044975bead54fb8ccc3e5164f61a, type: 3}
+  - {fileID: 21300000, guid: f3f5c8a1a5a8dab4084f0a153d6cbf0e, type: 3}
+  - {fileID: 21300000, guid: 6d91707b42b73284888c5e278b66da95, type: 3}
+  - {fileID: 21300000, guid: 8a69e047911a22c43960de90659b55bc, type: 3}
   listDescriptionEnemies:
   - Saliva pode grudar bombas nos blocos com X.
   - "Para colocar bomba pressione o bot\xE3o de a\xE7\xE3o"
+  - Colorado pode cuspir gosmas vermelhas e verdes.
+  - "Para cuspir pressione o bot\xE3o de a\xE7\xE3o."
+  - Gosma pode escalar paredes em sua forma gosmenta.
+  - "Para ativar forma gosmenta pressione o bot\xE3o de a\xE7\xE3o"
+  - Martin pode inverter a gravidade e tirar gravidade.
+  - Para inverter pressione tal e pra tirar encoste em tal.
+  - Medusa pode petrificar os inimigos.
+  - "Para petrificar pressione o bot\xE3o de a\xE7\xE3o"
+  - Pedrada pode dar dano nos inimigos e pesar objetos.
+  - Para dar dano e so cair em cima de um inimigo.
+  - Pedrinha consegue pesar objetos leves.
+  - "Utilizado para pesar bot\xF5es."
+  - Pulinho consegue dar um super pulo.
+  - "Para pular pressione o bot\xE3o de a\xE7\xE3o"
+  - Rato consegue passar por lugares estreitos e pular.
+  - "Para pular pressione o bot\xE3o de a\xE7\xE3o"
+  - Gato pode ser assustado pelo fantasma.
+  - "Para assustar pressione o bot\xE3o de a\xE7\xE3o"
+  - Cachorro pode ser assustado pelo fantasma.
+  - "Para assustar pressione o bot\xE3o de a\xE7\xE3o"
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0
@@ -10484,7 +10524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1779929150
 RectTransform:
   m_ObjectHideFlags: 0

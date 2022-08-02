@@ -311,17 +311,16 @@ public class GameController : MonoBehaviour {
 
 	}
 
-	public void ShowTutorial(){
+	public void HidePause(){
 
 		pauseMenu.SetActive (false);
-		panelTutorial.SetActive (true);
+
 
 	}
 
 	public void ShowPause(){
 	
 		pauseMenu.SetActive (true);
-		panelTutorial.SetActive (false);
 	
 	}
 

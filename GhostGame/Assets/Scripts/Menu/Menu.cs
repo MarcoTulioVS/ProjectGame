@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 
+	public GameObject tutorial;
+	public GameObject menuOptions;
 
 	void Start () {
 		
@@ -25,5 +27,18 @@ public class Menu : MonoBehaviour {
 		
 		Application.Quit ();
 	
+	}
+
+	public void ShowTutorial(){
+
+		tutorial.SetActive (true);
+		menuOptions.SetActive (false);
+
+	}
+
+	public void HideTutorial(){
+	
+		tutorial.SetActive (false);
+		menuOptions.SetActive (true);
 	}
 }
