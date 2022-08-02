@@ -21,6 +21,9 @@ public class GameController : MonoBehaviour {
 	public Transform trPlayer;
 
 	public GameObject panelGameOver;
+	public GameObject panelTutorial;
+	public GameObject pauseMenu;
+	public GameObject menuPause;
 
 	public Text textMsg;
 	public Text buttonMsg;
@@ -305,6 +308,38 @@ public class GameController : MonoBehaviour {
 
 		}
 
+
+	}
+
+	public void ShowTutorial(){
+
+		pauseMenu.SetActive (false);
+		panelTutorial.SetActive (true);
+
+	}
+
+	public void ShowPause(){
+	
+		pauseMenu.SetActive (true);
+		panelTutorial.SetActive (false);
+	
+	}
+
+	public void ShowMenuPause(){
+
+		menuPause.SetActive (true);
+	
+	}
+
+	public void HideMenuPause(){
+	
+		menuPause.SetActive (false);
+	
+	}
+
+	public void QuitGame(){
+
+		Application.Quit ();
 
 	}
 
