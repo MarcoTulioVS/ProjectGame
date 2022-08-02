@@ -58,6 +58,7 @@ public class GameController : MonoBehaviour {
 		GetCameraBackToPlayer ();
 		SetNameEnemy ();
 		SetDescriptionEnemy ();
+
 	}
 
 	public void GoToNextScene(){
@@ -170,8 +171,25 @@ public class GameController : MonoBehaviour {
 
 	void SetDescriptionEnemy(){
 
+		defineMaxMinCountDescription ();
+
+		if (indexDescription <= minCountDescription) {
+
+			indexDescription = minCountDescription;
+			descriptionEnemy.text = listDescriptionEnemies [indexDescription];
+
+		} else if(indexDescription>=minCountDescription) {
+		
+			indexDescription = maxCountDescription;
+			descriptionEnemy.text = listDescriptionEnemies [indexDescription];
+		}
+
+	}
+
+	void defineMaxMinCountDescription(){
+
 		switch (nameEnemyText.text) {
-			
+
 			case "SALIVA":
 
 				maxCountDescription = 1;
@@ -186,10 +204,6 @@ public class GameController : MonoBehaviour {
 				break;
 
 		}
-
-		descriptionEnemy.text = listDescriptionEnemies [indexDescription];
-
-
 	}
 
 	public void NextName(){
@@ -199,7 +213,8 @@ public class GameController : MonoBehaviour {
 		if (indexNames > maxCountNames - 1) {
 		
 			indexNames = maxCountNames - 1;
-		
+
+
 		}
 
 	}
@@ -211,6 +226,7 @@ public class GameController : MonoBehaviour {
 		if (indexNames < 0) {
 
 			indexNames = 0;
+		
 		
 		}
 
@@ -226,6 +242,7 @@ public class GameController : MonoBehaviour {
 
 		}
 
+
 	}
 
 	public void PreviousDescription(){
@@ -237,6 +254,7 @@ public class GameController : MonoBehaviour {
 			indexDescription = minCountDescription;
 
 		}
+
 
 	}
 
