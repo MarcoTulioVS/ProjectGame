@@ -195,14 +195,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insideBody: 0
+  jumpForce: 12
   isJumping: 0
+  withBomb: 0
   speed: 5
   life: 0
   inFormGosma: 0
   shine: {fileID: 1337983891514520}
   colWall: 0
-  player: {fileID: 0}
-  jumpForce: 12
+  energyNeeded: 0
+  trRefSecondPortal: {fileID: 4546429882782890, guid: 0abb8e38314cc0f4196208be4e7e01f8,
+    type: 2}
+  trRefFirstPortal: {fileID: 4582333811984850, guid: 23c1576ddc4abdf4485487db1599cdc9,
+    type: 2}
+  player: {fileID: 1119647711055812, guid: 041dc186a0be13145a02ff48eff9241c, type: 2}
   prefabBomb: {fileID: 1101536687007092, guid: d71eff2d032609846a710f8f28ed33ea, type: 2}
   trRefBomb: {fileID: 4353369062857284}
 --- !u!212 &212056815640468930

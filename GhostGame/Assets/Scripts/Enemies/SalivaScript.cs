@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class SalivaScript : Enemies {
 
 	Rigidbody2D rb;
@@ -25,6 +26,8 @@ public class SalivaScript : Enemies {
 		showAnimation (anim,"move");
 		OnCollisionPortal (gameObject.transform, trRefSecondPortal);
 		OnCollisionPortal1 (gameObject.transform, trRefFirstPortal);
+
+
 	}
 
 	void FixedUpdate(){
@@ -64,5 +67,7 @@ public class SalivaScript : Enemies {
 		}
 
 	}
+		
+
 
 }

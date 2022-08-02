@@ -21,7 +21,6 @@ public class GameController : MonoBehaviour {
 	public Transform trPlayer;
 
 	public GameObject panelGameOver;
-	public GameObject panelTutorial;
 	public GameObject pauseMenu;
 	public GameObject menuPause;
 

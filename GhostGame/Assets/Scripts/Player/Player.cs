@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Player : MonoBehaviour {
 
 	Rigidbody2D rb;
@@ -27,7 +28,6 @@ public class Player : MonoBehaviour {
 	public int energyCollected;
 
 	public Collider2D hit;
-
 
 
 	void Awake(){
@@ -197,7 +197,5 @@ public class Player : MonoBehaviour {
 		GameController.instance.imageMoldureBar.color = c1;
 
 	}
-
-
 
 }
