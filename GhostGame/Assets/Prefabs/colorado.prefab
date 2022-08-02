@@ -70,8 +70,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1460881652668332}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16, y: 0.08, z: 0}
-  m_LocalScale: {x: 1.23386, y: 1.1784099, z: 1.10909}
+  m_LocalPosition: {x: 0.13, y: 0.08, z: 0}
+  m_LocalScale: {x: 7.4887285, y: 7.1521797, z: 6.731454}
   m_Children: []
   m_Father: {fileID: 4840881171560542}
   m_RootOrder: 1
@@ -82,9 +82,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1001171186153558}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.73, y: -4.39, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.4026034, y: -18.558102, z: 0}
+  m_LocalScale: {x: 0.39750037, y: 0.39750046, z: 0.39750046}
   m_Children:
   - {fileID: 4849280821598518}
   - {fileID: 4451677522141042}
@@ -195,12 +195,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insideBody: 0
+  jumpForce: 15
   isJumping: 0
-  shine: {fileID: 1460881652668332}
+  withBomb: 0
   speed: 5
-  player: {fileID: 0}
+  life: 0
+  inFormGosma: 0
+  shine: {fileID: 1460881652668332}
+  colWall: 0
+  energyNeeded: 20
   trRefSecondPortal: {fileID: 0}
   trRefFirstPortal: {fileID: 0}
+  player: {fileID: 0}
   prefabPowerGreen: {fileID: 1065668346372424, guid: 655b0ea4bb9faeb43b015b04d4d8f48a,
     type: 2}
   prefabPowerRed: {fileID: 1295102887439228, guid: e2e5d95677639544089461dd3bb77259,

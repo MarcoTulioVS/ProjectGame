@@ -3356,10 +3356,9 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 167135681}
-    - target: {fileID: 114552867210331522, guid: 15f8dab9819766c48bc530afc062b33a,
-        type: 2}
-      propertyPath: energyNeeded
-      value: 20
+    - target: {fileID: 1882924880159432, guid: 15f8dab9819766c48bc530afc062b33a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15f8dab9819766c48bc530afc062b33a, type: 2}
@@ -9519,17 +9518,10 @@ MonoBehaviour:
   imageMoldureLifeBar: {fileID: 398443454}
   trPlayer: {fileID: 167135682}
   panelGameOver: {fileID: 1819760876}
-  panelTutorial: {fileID: 2086147060}
   pauseMenu: {fileID: 525972742}
   menuPause: {fileID: 1839799892}
   textMsg: {fileID: 342248657}
   buttonMsg: {fileID: 922591075}
-  imageEnemy: {fileID: 953481571}
-  nameEnemyText: {fileID: 1065841772}
-  descriptionEnemy: {fileID: 1020804469}
-  listNameEnemies: []
-  listImagesEnemies: []
-  listDescriptionEnemies: []
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0
