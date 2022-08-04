@@ -31,6 +31,8 @@ public class Player : MonoBehaviour {
 
 	public Rigidbody2D rbCol;
 
+
+
 	void Awake(){
 	
 		if (instance == null) {
@@ -148,6 +150,7 @@ public class Player : MonoBehaviour {
 				SoundController.instance.PlaySound (SoundController.instance.sfxPosses);
 				lifeBarOnOff ();
 				rbCol = col.gameObject.GetComponent<Rigidbody2D> ();
+
 			}
 
 

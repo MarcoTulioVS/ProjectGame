@@ -2500,6 +2500,7 @@ MonoBehaviour:
   scared: 0
   energyCollected: 10
   hit: {fileID: 0}
+  rbCol: {fileID: 0}
 --- !u!1001 &169608553
 Prefab:
   m_ObjectHideFlags: 0
@@ -7613,10 +7614,10 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1644355705}
           m_MethodName: MoveLeft
-          m_Mode: 2
+          m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 1346219510}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Rigidbody2D, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -8723,10 +8724,10 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1644355705}
           m_MethodName: MoveRight
-          m_Mode: 2
+          m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 1346219510}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Rigidbody2D, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -8803,11 +8804,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1303074868}
---- !u!50 &1346219510 stripped
-Rigidbody2D:
-  m_PrefabParentObject: {fileID: 50787306166936264, guid: 89ac2635253198543a16d52d0ace7321,
+--- !u!1 &1349826402 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1797526759467818, guid: a5bb444e4c23bc74d90065792a0b3116,
     type: 2}
-  m_PrefabInternal: {fileID: 678239205}
+  m_PrefabInternal: {fileID: 630600999}
 --- !u!4 &1363624692 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4080303565940350, guid: 89ac2635253198543a16d52d0ace7321,
@@ -9249,6 +9250,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1644355708}
+        m_MethodName: getOutBody
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 167135681}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1508677377
@@ -9523,6 +9535,7 @@ GameObject:
   - component: {fileID: 1644355706}
   - component: {fileID: 1644355705}
   - component: {fileID: 1644355707}
+  - component: {fileID: 1644355708}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -9582,6 +9595,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insideObject: 0
+--- !u!114 &1644355708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1644355704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42212bd058870c84289c85b0632d2a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  insideBody: 0
+  jumpForce: 0
+  isJumping: 0
+  withBomb: 0
+  speed: 0
+  life: 0
+  inFormGosma: 0
+  shine: {fileID: 1932622802005508, guid: 88f09b8eccf2ffb4f97e48144356534d, type: 2}
+  colWall: 0
+  energyNeeded: 0
+  trRefSecondPortal: {fileID: 0}
+  trRefFirstPortal: {fileID: 0}
+  enemiesList:
+  - {fileID: 1349826402}
 --- !u!1 &1650076295
 GameObject:
   m_ObjectHideFlags: 0

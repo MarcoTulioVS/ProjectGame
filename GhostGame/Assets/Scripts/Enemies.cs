@@ -34,11 +34,14 @@ public class Enemies : MonoBehaviour {
 	public Transform trRefSecondPortal;//ref do portal com tag red1
 	public Transform trRefFirstPortal;//ref do portal com tag red
 
+	public List<GameObject> enemiesList;
+
 
 	void Awake(){
 	
 		instance = this;
 		activeDamage = true;
+
 	}
 	void Start () {
 		
@@ -122,17 +125,34 @@ public class Enemies : MonoBehaviour {
 	}
 
 	public void getOutBody(GameObject player){
-		
-		if(Input.GetButtonDown("Fire1") && insideBody){
-			
-			player.SetActive (true);
-			Player.instance.activeObject = false;
-			insideBody = false;
-			lifeBarOnOff ();
-			CameraScript.instance.tr = null;
-			player.transform.position = PlayerVisible.instance.trObject.position;
+
+
+		for(int i=0; i <enemiesList.Count; i++){
+
+			if (enemiesList[i].GetComponent<Enemies>().insideBody) {
+
+				player.SetActive (true);
+				Player.instance.activeObject = false;
+				insideBody = false;
+				lifeBarOnOff ();
+				CameraScript.instance.tr = null;
+				player.transform.position = PlayerVisible.instance.trObject.position;
+				break;
+
+			}
 
 		}
+
+//		if(insideBody){
+//			
+//			player.SetActive (true);
+//			Player.instance.activeObject = false;
+//			insideBody = false;
+//			lifeBarOnOff ();
+//			CameraScript.instance.tr = null;
+//			player.transform.position = PlayerVisible.instance.trObject.position;
+//
+//		}
 	
 	}
 
@@ -194,7 +214,7 @@ public class Enemies : MonoBehaviour {
 		}
 
 		if (col.gameObject.tag == "Player" && GameController.instance.quantEnergy >= Enemies.instance.energyNeeded) {
-		
+
 			StartCoroutine ("blinkShine");
 
 		}

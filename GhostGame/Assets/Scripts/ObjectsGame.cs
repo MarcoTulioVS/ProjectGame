@@ -58,7 +58,8 @@ public class ObjectsGame : MonoBehaviour {
 				blockList = null;
 				break;
 
-			} 
+			}
+
 		}
 
 	}
