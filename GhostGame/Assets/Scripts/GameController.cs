@@ -185,18 +185,20 @@ public class GameController : MonoBehaviour {
 
 	}
 
-	public void MoveRight(GameObject obj){
-		
+	public void MoveRight(){
+
+
 		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
-			obj.GetComponent<Rigidbody2D>().velocity = new Vector2 (speed, obj.GetComponent<Rigidbody2D>().velocity.y);
+			Player.instance.rbCol.velocity = new Vector2 (speed, Player.instance.rbCol.velocity.y);
 		}
 
 	}
 
-	public void MoveLeft(GameObject obj){
-		
+	public void MoveLeft(){
+
+
 		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
-			obj.GetComponent<Rigidbody2D>().velocity = new Vector2 (-speed, obj.GetComponent<Rigidbody2D>().velocity.y);
+			Player.instance.rbCol.velocity = new Vector2 (-speed, Player.instance.rbCol.velocity.y);
 		}
 	}
 

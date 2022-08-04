@@ -29,6 +29,7 @@ public class Player : MonoBehaviour {
 
 	public Collider2D hit;
 
+	public Rigidbody2D rbCol;
 
 	void Awake(){
 	
@@ -146,6 +147,7 @@ public class Player : MonoBehaviour {
 				CameraScript.instance.tr = col.gameObject.transform;
 				SoundController.instance.PlaySound (SoundController.instance.sfxPosses);
 				lifeBarOnOff ();
+				rbCol = col.gameObject.GetComponent<Rigidbody2D> ();
 			}
 
 
@@ -160,6 +162,7 @@ public class Player : MonoBehaviour {
 			nameObject = col.name;
 			player.SetActive (false);
 			col.gameObject.GetComponent<ObjectsGame> ().insideObject = true;
+			rbCol = col.gameObject.GetComponent<Rigidbody2D> ();
 
 		
 		}
