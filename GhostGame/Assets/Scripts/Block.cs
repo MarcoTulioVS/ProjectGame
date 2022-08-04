@@ -15,12 +15,12 @@ public class Block : ObjectsGame {
 	
 
 	void Update () {
-		getOutBody (player);
+		//getOutBody (player);
 	}
 
 	void FixedUpdate(){
 
-		MainController (gameObject.name, rb, speed);
+		//MainController (gameObject.name, rb, speed);
 		FreezeBlock ();
 
 	}

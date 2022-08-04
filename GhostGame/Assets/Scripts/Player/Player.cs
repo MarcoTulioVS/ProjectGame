@@ -69,39 +69,40 @@ public class Player : MonoBehaviour {
 
 	void Move(){
 
-		float moveX = Input.GetAxis ("Horizontal");
-
-		if (moveX == 0 && !isScaring) {
-			
-			anim.SetInteger ("transition", 0);
-		}
-			
-
-		if (moveX > 0 && !isScaring) {
+		if (Input.touchCount > 0 && !isScaring) {
 		
-			anim.SetInteger ("transition", 1);
-			player.transform.eulerAngles = new Vector2 (0, 0);
+			Touch t = Input.GetTouch (0);
+
+			if (t.phase == TouchPhase.Moved) {
+
+				transform.position += (Vector3)t.deltaPosition / speed;
+
+				if (t.deltaPosition.x> 0) {
+					
+					anim.SetInteger ("transition", 1);
+					player.transform.eulerAngles = new Vector2 (0, 0);
+
+				} else if(t.deltaPosition.x<0) {
+
+					anim.SetInteger ("transition", 1);
+					player.transform.eulerAngles = new Vector2 (0, 180);
+				}
+
+			}
 		}
 
-		if (moveX < 0 && !isScaring) {
-
-			anim.SetInteger ("transition", 1);
-			player.transform.eulerAngles = new Vector2 (0, 180);
+		if (Input.touchCount == 0 && !isScaring) {
+		
+			anim.SetInteger ("transition", 0);
+		
 		}
-
-
-
-		float moveY = Input.GetAxis ("Vertical");
-
-		movement = new Vector3 (moveX, moveY, 0);
-
-		rb.velocity = movement * speed;
 
 	}
 
 	void Scare(){
+		
 
-		if (Input.GetButtonDown ("Fire1")) {
+		if (Input.GetKeyDown(KeyCode.F)) {
 
 			isScaring = true;
 			anim.SetInteger ("transition", 2);
@@ -153,11 +154,12 @@ public class Player : MonoBehaviour {
 		//Layer 10 = obj(Objects)
 		//Ao colidir com algum objeto o fantasma o possui
 		if (col.gameObject.layer == 10) {
-		
+			
 			activeObject = true;
 			nameObject = col.name;
 			player.SetActive (false);
-			ObjectsGame.instance.insideObject = true;
+			col.gameObject.GetComponent<ObjectsGame> ().insideObject = true;
+			GameController.instance.rb = col.gameObject.GetComponent<Rigidbody2D> ();
 		
 		}
 

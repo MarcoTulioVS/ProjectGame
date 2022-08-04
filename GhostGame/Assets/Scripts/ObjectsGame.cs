@@ -6,6 +6,7 @@ public class ObjectsGame : MonoBehaviour {
 
 	public bool insideObject;
 	public static ObjectsGame instance;
+	GameObject[] blockList;
 
 	void Awake(){
 
@@ -31,30 +32,33 @@ public class ObjectsGame : MonoBehaviour {
 		}
 	}
 
-	protected void MainController(string nameObject,Rigidbody2D rb,float speed){
+//	public void MainController(string nameObject,Rigidbody2D rb,float speed){
+//
+//		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
+//
+//			moveControl (rb,speed);
+//		}
+//
+//	}
 
-		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
 
-			moveControl (rb,speed);
-		}
-
-	}
-
-	protected virtual void moveControl(Rigidbody2D rb,float speed){
-
-		float movement = Input.GetAxis ("Horizontal");
-		rb.velocity = new Vector2 (speed * movement, rb.velocity.y);
-
-	}
 
 	public void getOutBody(GameObject player){
 
-		if(Input.GetKeyDown(KeyCode.Mouse1) && insideObject){
+		blockList = GameObject.FindGameObjectsWithTag ("block");
 
-			player.SetActive (true);
-			Player.instance.activeObject = false;
-			insideObject = false;
+		for(int i=0; i <blockList.Length; i++){
 
+			if (blockList[i].GetComponent<ObjectsGame>().insideObject) {
+
+				player.SetActive (true);
+				Player.instance.activeObject = false;
+				insideObject = false;
+				player.transform.position = PlayerVisible.instance.trObject.position;
+				blockList = null;
+				break;
+
+			} 
 		}
 
 	}

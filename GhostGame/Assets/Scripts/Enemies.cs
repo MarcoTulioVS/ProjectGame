@@ -122,8 +122,8 @@ public class Enemies : MonoBehaviour {
 	}
 
 	public void getOutBody(GameObject player){
-
-		if(Input.GetKeyDown(KeyCode.Mouse1) && insideBody){
+		
+		if(Input.GetButtonDown("Fire1") && insideBody){
 			
 			player.SetActive (true);
 			Player.instance.activeObject = false;
