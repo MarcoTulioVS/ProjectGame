@@ -27,9 +27,10 @@ public class GameController : MonoBehaviour {
 	public Text textMsg;
 	public Text buttonMsg;
 
-	public Rigidbody2D rb;
 	public float speed;
 	public string nameObject; 
+
+
 
 	void Awake(){
 
@@ -184,19 +185,19 @@ public class GameController : MonoBehaviour {
 
 	}
 
-	public void MoveRight(){
-
-		//if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
-			rb.velocity = new Vector2 (speed, rb.velocity.y);
-		//}
+	public void MoveRight(GameObject obj){
+		
+		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
+			obj.GetComponent<Rigidbody2D>().velocity = new Vector2 (speed, obj.GetComponent<Rigidbody2D>().velocity.y);
+		}
 
 	}
 
-	public void MoveLeft(){
-
-		//if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
-			rb.velocity = new Vector2 (-speed, rb.velocity.y);
-		//}
+	public void MoveLeft(GameObject obj){
+		
+		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
+			obj.GetComponent<Rigidbody2D>().velocity = new Vector2 (-speed, obj.GetComponent<Rigidbody2D>().velocity.y);
+		}
 	}
 
 

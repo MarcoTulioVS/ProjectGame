@@ -154,12 +154,13 @@ public class Player : MonoBehaviour {
 		//Layer 10 = obj(Objects)
 		//Ao colidir com algum objeto o fantasma o possui
 		if (col.gameObject.layer == 10) {
-			
+
+			GameController.instance.nameObject = col.gameObject.name;
 			activeObject = true;
 			nameObject = col.name;
 			player.SetActive (false);
 			col.gameObject.GetComponent<ObjectsGame> ().insideObject = true;
-			GameController.instance.rb = col.gameObject.GetComponent<Rigidbody2D> ();
+
 		
 		}
 
