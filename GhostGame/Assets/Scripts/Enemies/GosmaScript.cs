@@ -26,7 +26,7 @@ public class GosmaScript : Enemies {
 	
 
 	void Update () {
-		getOutBody (player);
+		//getOutBody (player);
 		jump (rb, this.jumpForce);
 		GosmaForm ();
 		turnVertical();

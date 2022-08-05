@@ -16,7 +16,7 @@ public class RatScript : Enemies {
 	
 
 	void Update () {
-		getOutBody (player);
+		//getOutBody (player);
 	}
 
 	void FixedUpdate(){

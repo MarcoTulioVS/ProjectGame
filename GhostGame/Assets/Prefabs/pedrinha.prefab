@@ -166,9 +166,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insideBody: 0
+  jumpForce: 0
   isJumping: 0
+  withBomb: 0
   speed: 2
+  life: 0
+  inFormGosma: 0
   shine: {fileID: 1435877677795352}
+  colWall: 0
+  energyNeeded: 0
+  trRefSecondPortal: {fileID: 0}
+  trRefFirstPortal: {fileID: 0}
+  enemiesList: []
+  player: {fileID: 0}
 --- !u!212 &212613360464608316
 SpriteRenderer:
   m_ObjectHideFlags: 1

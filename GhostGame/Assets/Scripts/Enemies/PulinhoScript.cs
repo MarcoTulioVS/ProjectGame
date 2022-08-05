@@ -18,7 +18,7 @@ public class PulinhoScript : Enemies {
 
 	void Update () {
 		jump (rb, this.jumpForce, anim);
-		getOutBody (player);
+		//getOutBody (player);
 	}
 
 	void FixedUpdate(){

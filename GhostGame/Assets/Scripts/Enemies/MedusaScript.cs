@@ -22,7 +22,7 @@ public class MedusaScript : Enemies {
 	
 
 	void Update () {
-		getOutBody (player);
+		//getOutBody (player);
 	}
 
 	void FixedUpdate(){

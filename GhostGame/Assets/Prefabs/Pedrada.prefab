@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1743813407083218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.11, y: 1.13, z: 0}
+  m_LocalPosition: {x: -7.52, y: 1.13, z: 0}
   m_LocalScale: {x: 2.1365128, y: 2.1365125, z: 2.1365125}
   m_Children:
   - {fileID: 4895472901035654}
@@ -166,12 +166,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insideBody: 0
+  jumpForce: 0
   isJumping: 0
+  withBomb: 0
   speed: 1
   life: 0
   inFormGosma: 0
   shine: {fileID: 1348897306371712}
   colWall: 0
+  energyNeeded: 0
+  trRefSecondPortal: {fileID: 0}
+  trRefFirstPortal: {fileID: 0}
+  enemiesList: []
   player: {fileID: 0}
 --- !u!212 &212196998059304248
 SpriteRenderer:

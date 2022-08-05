@@ -30,7 +30,7 @@ public class MartinScript : Enemies {
 	
 
 	void Update () {
-		getOutBody (player);
+		//getOutBody (player);
 		jump (rb, this.jumpForce,anim);
 		HitUpDown ();
 		ChangeColor ();
