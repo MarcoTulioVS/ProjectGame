@@ -20,7 +20,7 @@ public class Block : ObjectsGame {
 
 	void FixedUpdate(){
 
-		//MainController (gameObject.name, rb, speed);
+		MainController (gameObject.name, rb, speed);
 		FreezeBlock ();
 
 	}

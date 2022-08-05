@@ -76,6 +76,11 @@ public class Enemies : MonoBehaviour {
 
 			}
 
+			if (t.phase == TouchPhase.Ended && !isJumping) {
+
+				rb.velocity = Vector2.zero;
+			}
+
 		}
 //			if (t.phase == TouchPhase.Moved) {
 //				

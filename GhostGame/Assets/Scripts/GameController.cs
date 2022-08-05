@@ -184,24 +184,5 @@ public class GameController : MonoBehaviour {
 		Application.Quit ();
 
 	}
-
-	public void MoveRight(){
-
-
-		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
-			Player.instance.rbCol.velocity = new Vector2 (speed, Player.instance.rbCol.velocity.y);
-		}
-
-	}
-
-	public void MoveLeft(){
-
-
-		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
-			Player.instance.rbCol.velocity = new Vector2 (-speed, Player.instance.rbCol.velocity.y);
-		}
-	}
-
-
 		
 }

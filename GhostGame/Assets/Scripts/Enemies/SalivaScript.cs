@@ -23,7 +23,6 @@ public class SalivaScript : Enemies {
 		//getOutBody (player);
 		jump (rb, this.jumpForce);
 		placeBomb ();
-		//showAnimation (anim,"move");
 		OnCollisionPortal (gameObject.transform, trRefSecondPortal);
 		OnCollisionPortal1 (gameObject.transform, trRefFirstPortal);
 
