@@ -26,7 +26,7 @@ public class ColoradoScript : Enemies {
 
 	void Update () {
 
-		getOutBody (player);
+		//getOutBody (player);
 		OnCollisionPortal (gameObject.transform, trRefSecondPortal);
 		OnCollisionPortal1 (gameObject.transform, trRefFirstPortal);
 		switchPower ();
@@ -43,8 +43,8 @@ public class ColoradoScript : Enemies {
 
 
 	void throwPower(){
-
-		if (Input.GetButtonDown ("Fire1") && Time.time > nextFire && isRed) {
+		//Input.GetButtonDown ("Fire1")
+		if (Input.GetButtonDown ("Jump") && Time.time > nextFire && isRed) {
 
 			if (insideBody && Player.instance.activeObject && Player.instance.nameObject == gameObject.name) {
 
@@ -53,7 +53,7 @@ public class ColoradoScript : Enemies {
 				Instantiate (prefabPowerRed, trRefPower.position, Quaternion.identity);
 			}
 		
-		} else if (Input.GetButtonDown ("Fire1") && Time.time > nextFire && !isRed) {
+		} else if (Input.GetButtonDown ("Jump") && Time.time > nextFire && !isRed) {
 
 			if (insideBody  && Player.instance.activeObject && Player.instance.nameObject == gameObject.name) {
 				

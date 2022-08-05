@@ -36,6 +36,8 @@ public class Enemies : MonoBehaviour {
 
 	public List<GameObject> enemiesList;
 
+	Touch t;
+
 
 	void Awake(){
 	
@@ -55,54 +57,116 @@ public class Enemies : MonoBehaviour {
 
 	protected virtual void moveControl(Rigidbody2D rb){
 
-		movement = Input.GetAxis ("Horizontal");
+		//movement = Input.GetAxis ("Horizontal");
 
-		if (movement > 0) {
+		if (Input.touchCount > 0) {
 		
-			transform.eulerAngles = new Vector2 (0, 0);
+			Touch t = Input.GetTouch (0);
 
-		} else if(movement<0) {
-		
-			transform.eulerAngles = new Vector2 (0, 180);
+			if (t.phase == TouchPhase.Stationary) {
+
+				if (t.position.x >= 400) {
+					transform.eulerAngles = new Vector2 (0, 0);
+					rb.velocity = new Vector2 (speed, rb.velocity.y);
+
+				} else if (t.position.x <= 80) {
+					transform.eulerAngles = new Vector2 (0, 180);
+					rb.velocity = new Vector2 (-speed, rb.velocity.y);
+				}
+
+			}
+
 		}
-
-		rb.velocity = new Vector2 (speed * movement, rb.velocity.y);
+//			if (t.phase == TouchPhase.Moved) {
+//				
+//				transform.position += (Vector3)t.deltaPosition / 300;
+//
+//				if (t.deltaPosition.x > 0) {
+//				
+//					transform.eulerAngles = new Vector2 (0, 0);
+//
+//				} else if (t.deltaPosition.x < 0) {
+//				
+//					transform.eulerAngles = new Vector2 (0, 180);
+//				
+//				}
+//			}
+		
+//		movement = Input.GetAxis ("Horizontal");
+//
+//		if (movement > 0) {
+//		
+//			transform.eulerAngles = new Vector2 (0, 0);
+//
+//		} else if(movement<0) {
+//		
+//			transform.eulerAngles = new Vector2 (0, 180);
+//		}
+//
+//		rb.velocity = new Vector2 (speed * movement, rb.velocity.y);
 	
 	}
 
 	protected virtual void moveControl(Rigidbody2D rb,Animator anim){
 
-		movement = Input.GetAxis ("Horizontal");
+		if (Input.touchCount > 0) {
 
-		if (movement > 0) {
+			t = Input.GetTouch (0);
 
-			transform.eulerAngles = new Vector2 (0, 0);
-		
-		} else if (movement < 0) {
-		
-			transform.eulerAngles = new Vector2 (0, 180);
-		
+			if (t.phase == TouchPhase.Stationary) {
+
+				if (t.position.x >= 400 && !isJumping) {
+					transform.eulerAngles = new Vector2 (0, 0);
+					rb.velocity = new Vector2 (speed, rb.velocity.y);
+					anim.SetInteger ("transition", 1);
+
+				} else if (t.position.x <= 80 && !isJumping) {
+					transform.eulerAngles = new Vector2 (0, 180);
+					rb.velocity = new Vector2 (-speed, rb.velocity.y);
+					anim.SetInteger ("transition", 1);
+				} 
+
+			}
+
+			if (t.phase == TouchPhase.Ended && !isJumping) {
+			
+				anim.SetInteger ("transition", 0);
+				rb.velocity = Vector2.zero;
+			}
+
 		}
+	}
+//		movement = Input.GetAxis ("Horizontal");
+//
+//		if (movement > 0) {
+//
+//			transform.eulerAngles = new Vector2 (0, 0);
+//		
+//		} else if (movement < 0) {
+//		
+//			transform.eulerAngles = new Vector2 (0, 180);
+//		
+//		}
 
 	
-		if (movement > 0 && !isJumping) {
+//		if (movement > 0 && !isJumping) {
+//
+//			transform.eulerAngles = new Vector2 (0, 0);
+//			anim.SetInteger ("transition",1);
+//
+//		} else if (movement < 0 && !isJumping) {
+//
+//			transform.eulerAngles = new Vector2 (0, 180);
+//			anim.SetInteger ("transition",1);
+//
+//		} else if(movement==0 && !isJumping) {
+//		
+//			anim.SetInteger ("transition", 0);
+//		}
+//			
+//		rb.velocity = new Vector2 (speed * movement, rb.velocity.y);
 
-			transform.eulerAngles = new Vector2 (0, 0);
-			anim.SetInteger ("transition",1);
-
-		} else if (movement < 0 && !isJumping) {
-
-			transform.eulerAngles = new Vector2 (0, 180);
-			anim.SetInteger ("transition",1);
-
-		} else if(movement==0 && !isJumping) {
-		
-			anim.SetInteger ("transition", 0);
-		}
-			
-		rb.velocity = new Vector2 (speed * movement, rb.velocity.y);
-
-	}
+	
 
 
 	protected void MainController(string nameObject,Rigidbody2D rb){
@@ -388,11 +452,11 @@ public class Enemies : MonoBehaviour {
 
 	protected void showAnimation(Animator anim,string name){
 
-		if (movement > 0) {
+		if (t.position.x > 400) {
 		
 			anim.SetBool (name, true);
 
-		} else if (movement < 0) {
+		} else if(t.position.x < 80) {
 		
 			anim.SetBool (name, true);
 		
