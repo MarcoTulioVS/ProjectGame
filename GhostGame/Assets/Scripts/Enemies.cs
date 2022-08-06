@@ -218,15 +218,15 @@ public class Enemies : MonoBehaviour {
 		
 		}
 
-		if (col.gameObject.tag == "bomb") {
-		
-			if (insideBody) {
-
-				StartCoroutine ("DealDamageExplodeBomb");
-
-			}
-		
-		}
+//		if (col.gameObject.tag == "bomb") {
+//		
+//			if (insideBody) {
+//
+//				StartCoroutine ("DealDamageExplodeBomb");
+//
+//			}
+//		
+//		}
 			
 	}
 
@@ -418,12 +418,12 @@ public class Enemies : MonoBehaviour {
 	
 	}
 
-	IEnumerator DealDamageExplodeBomb(){
-
-		yield return new WaitForSeconds (2.6f);
-		GameController.instance.DecrementLife ();
-
-	}
+//	IEnumerator DealDamageExplodeBomb(){
+//
+//		yield return new WaitForSeconds (2.6f);
+//		GameController.instance.DecrementLife ();
+//
+//	}
 
 
 
