@@ -14623,6 +14623,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxX: 13
   minX: -4.7
+  maxY: 61.6
+  minY: -1.2
   trObject: {fileID: 1182330277}
   player: {fileID: 167135682}
 --- !u!1 &1111198758

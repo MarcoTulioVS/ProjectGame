@@ -206,6 +206,7 @@ MonoBehaviour:
   energyNeeded: 10
   trRefSecondPortal: {fileID: 0}
   trRefFirstPortal: {fileID: 0}
+  colEnemy: {fileID: 0}
   player: {fileID: 0}
   prefabBomb: {fileID: 1101536687007092, guid: d71eff2d032609846a710f8f28ed33ea, type: 2}
   trRefBomb: {fileID: 4353369062857284}

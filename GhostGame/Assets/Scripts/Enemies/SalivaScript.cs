@@ -23,7 +23,6 @@ public class SalivaScript : Enemies {
 		getOutBody (player);
 		jump (rb, this.jumpForce);
 		placeBomb ();
-		showAnimation (anim,"move");
 		OnCollisionPortal (gameObject.transform, trRefSecondPortal);
 		OnCollisionPortal1 (gameObject.transform, trRefFirstPortal);
 
@@ -32,7 +31,7 @@ public class SalivaScript : Enemies {
 
 	void FixedUpdate(){
 
-		MainController (this.gameObject.name, rb);
+		MainController (this.gameObject.name, rb,anim);
 
 	}
 

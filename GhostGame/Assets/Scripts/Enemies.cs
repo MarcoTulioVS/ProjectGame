@@ -34,6 +34,7 @@ public class Enemies : MonoBehaviour {
 	public Transform trRefSecondPortal;//ref do portal com tag red1
 	public Transform trRefFirstPortal;//ref do portal com tag red
 
+	public GameObject colEnemy;
 
 	void Awake(){
 	
@@ -194,7 +195,8 @@ public class Enemies : MonoBehaviour {
 		}
 
 		if (col.gameObject.tag == "Player" && GameController.instance.quantEnergy >= Enemies.instance.energyNeeded) {
-		
+
+			colEnemy = gameObject;
 			StartCoroutine ("blinkShine");
 
 		}

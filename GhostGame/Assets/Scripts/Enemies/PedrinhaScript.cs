@@ -15,13 +15,12 @@ public class PedrinhaScript : Enemies {
 	
 
 	void Update () {
-		showAnimation (anim, "walk");
 		getOutBody (player);
 	}
 
 	void FixedUpdate(){
 
-		MainController (gameObject.name, rb);
+		MainController (gameObject.name, rb,anim);
 
 	}
 
