@@ -132,6 +132,7 @@ public class Enemies : MonoBehaviour {
 			lifeBarOnOff ();
 			CameraScript.instance.tr = null;
 			player.transform.position = PlayerVisible.instance.trObject.position;
+			colEnemy.GetComponent<Animator> ().SetInteger ("transition", 0);
 
 		}
 	
