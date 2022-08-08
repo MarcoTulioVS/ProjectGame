@@ -49,7 +49,7 @@ public class ObjectsGame : MonoBehaviour {
 
 	public void getOutBody(GameObject player){
 
-		if(Input.GetKeyDown(KeyCode.Mouse1) && insideObject){
+		if((Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.JoystickButton2)) && insideObject){
 
 			player.SetActive (true);
 			Player.instance.activeObject = false;
