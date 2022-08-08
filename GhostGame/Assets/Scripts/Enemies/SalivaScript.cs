@@ -37,7 +37,7 @@ public class SalivaScript : Enemies {
 
 	protected override void jump (Rigidbody2D rb, float jumpForce)
 	{
-		if (Input.GetButtonDown ("Jump") && insideBody) {
+		if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton1)) && insideBody) {
 
 			if (!isJumping) {
 

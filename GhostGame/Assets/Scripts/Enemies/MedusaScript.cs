@@ -34,7 +34,7 @@ public class MedusaScript : Enemies {
 
 	void Petrify(){
 
-		if (Input.GetKeyDown (KeyCode.F) && insideBody) {
+		if (Input.GetButtonDown("Fire1") && insideBody) {
 
 
 			anim.SetInteger ("transition", 2);

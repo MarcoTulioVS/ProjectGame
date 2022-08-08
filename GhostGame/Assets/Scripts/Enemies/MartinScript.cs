@@ -64,14 +64,14 @@ public class MartinScript : Enemies {
 
 	void ChangeColor(){
 
-		if (Input.GetKeyDown (KeyCode.Tab) && !changedColor && insideBody) {
+		if ((Input.GetKeyDown (KeyCode.Tab) || Input.GetKeyDown(KeyCode.JoystickButton5)) && !changedColor && insideBody) {
 
 			colorMartin = "g";
 			sp.color = Color.green;
 			changedColor = !changedColor;
 
 
-		} else if(Input.GetKeyDown (KeyCode.Tab) && changedColor && insideBody)  {
+		} else if((Input.GetKeyDown (KeyCode.Tab) || Input.GetKeyDown(KeyCode.JoystickButton5)) && changedColor && insideBody)  {
 
 			colorMartin = "w";
 			sp.color = Color.white;

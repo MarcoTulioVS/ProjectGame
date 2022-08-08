@@ -71,7 +71,7 @@ public class ColoradoScript : Enemies {
 
 	void switchPower(){
 
-		if (Input.GetKeyDown(KeyCode.Tab) && insideBody) {
+		if ((Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.JoystickButton5)) && insideBody) {
 		
 			isRed = !isRed;
 		

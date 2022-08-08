@@ -42,7 +42,7 @@ public class GosmaScript : Enemies {
 
 	protected override void jump (Rigidbody2D rb, float jumpForce)
 	{
-		if (Input.GetButtonDown ("Jump") && insideBody) {
+		if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton1)) && insideBody) {
 
 			if (!isJumping) {
 
@@ -65,7 +65,7 @@ public class GosmaScript : Enemies {
 
 	void GosmaForm(){
 
-		if (Input.GetKeyDown (KeyCode.F) && !isJumping) {
+		if (Input.GetButtonDown("Fire1") && !isJumping) {
 
 			if (insideBody && Player.instance.activeObject && Player.instance.nameObject == gameObject.name) {
 				inFormGosma = !inFormGosma;

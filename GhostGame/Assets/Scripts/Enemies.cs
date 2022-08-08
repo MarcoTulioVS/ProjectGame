@@ -148,7 +148,7 @@ public class Enemies : MonoBehaviour {
 
 	protected virtual void jump(Rigidbody2D rb,float jumpForce){
 
-		if (Input.GetButtonDown ("Jump") && !isJumping && insideBody) {
+		if ((Input.GetKeyDown (KeyCode.Space) ||Input.GetKeyDown (KeyCode.JoystickButton1)) && !isJumping && insideBody) {
 			
 			rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
 		
@@ -158,7 +158,7 @@ public class Enemies : MonoBehaviour {
 
 	protected virtual void jump(Rigidbody2D rb,float jumpForce,Animator anim){
 
-		if (Input.GetButtonDown ("Jump") && !isJumping && insideBody) {
+		if ((Input.GetKeyDown (KeyCode.Space) ||Input.GetKeyDown (KeyCode.JoystickButton1))&& !isJumping && insideBody) {
 
 			anim.SetInteger("transition",2);
 			rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
