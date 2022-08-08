@@ -34,7 +34,7 @@ public class Enemies : MonoBehaviour {
 	public Transform trRefSecondPortal;//ref do portal com tag red1
 	public Transform trRefFirstPortal;//ref do portal com tag red
 
-	public GameObject colEnemy;
+	public Animator colEnemy;
 
 	void Awake(){
 	
@@ -132,7 +132,8 @@ public class Enemies : MonoBehaviour {
 			lifeBarOnOff ();
 			CameraScript.instance.tr = null;
 			player.transform.position = PlayerVisible.instance.trObject.position;
-			colEnemy.GetComponent<Animator> ().SetInteger ("transition", 0);
+			colEnemy.SetInteger ("transition", 0);
+			
 
 		}
 	
@@ -197,7 +198,6 @@ public class Enemies : MonoBehaviour {
 
 		if (col.gameObject.tag == "Player" && GameController.instance.quantEnergy >= Enemies.instance.energyNeeded) {
 
-			colEnemy = gameObject;
 			StartCoroutine ("blinkShine");
 
 		}

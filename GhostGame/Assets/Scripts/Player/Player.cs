@@ -145,6 +145,7 @@ public class Player : MonoBehaviour {
 				CameraScript.instance.tr = col.gameObject.transform;
 				SoundController.instance.PlaySound (SoundController.instance.sfxPosses);
 				lifeBarOnOff ();
+				col.gameObject.GetComponent<Enemies> ().colEnemy = col.gameObject.GetComponent<Animator> ();
 			}
 
 
