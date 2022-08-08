@@ -54,7 +54,7 @@ public class ObjectsGame : MonoBehaviour {
 			player.SetActive (true);
 			Player.instance.activeObject = false;
 			insideObject = false;
-
+			player.transform.position = PlayerVisible.instance.trObject.position;
 		}
 
 	}
