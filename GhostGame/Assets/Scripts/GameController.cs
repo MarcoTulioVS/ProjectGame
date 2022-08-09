@@ -30,6 +30,8 @@ public class GameController : MonoBehaviour {
 	public Text ghostDialogText;
 	public GameObject dialogGhostPanel;
 
+	public List<string>dialogGhostList;
+
 	void Awake(){
 
 		instance = this;
@@ -189,17 +191,14 @@ public class GameController : MonoBehaviour {
 
 	IEnumerator DialogGhost(){
 
-		yield return new WaitForSeconds (5);
-		ghostDialogText.text = "Para pegar os monstros a gente vai precisar de <color=yellow>energia</color>.";
-		yield return new WaitForSeconds (5);
-		ghostDialogText.text = "Essas <color=blue>azuis</color> ai!";
-		yield return new WaitForSeconds (5);
-		ghostDialogText.text = "E para possuir um monstro basta <color=yellow>me levar ate ele</color>.";
-		yield return new WaitForSeconds (5);
-		ghostDialogText.text = "E se quiser sair de dentro dele....";
-		yield return new WaitForSeconds (5);
-		ghostDialogText.text = " <color=yellow>Botão direito do mouse ou Bola no joystick</color>";
-		yield return new WaitForSeconds (5);
+		for (int i = 0; i <= dialogGhostList.Count -1; i++) {
+
+			ghostDialogText.text = dialogGhostList [i];
+			yield return new WaitForSeconds (5);
+		
+		}
+
 		dialogGhostPanel.SetActive (false);
+
 	}
 }

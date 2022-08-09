@@ -3660,8 +3660,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' <color=yellow>W,A,S,D</color> anda caraio. Ou se ce preferir ce usa sua
-    manete. <color=yellow>Joystick(analogico)</color>.'
+  m_Text: 
 --- !u!222 &658258635
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9212,6 +9211,14 @@ MonoBehaviour:
   buttonMsg: {fileID: 1561164254}
   ghostDialogText: {fileID: 658258634}
   dialogGhostPanel: {fileID: 1577725866}
+  dialogGhostList:
+  - ' <color=yellow>W,A,S,D</color> anda caraio. Ou se ce preferir ce usa sua manete.
+    <color=yellow>Joystick(analogico)</color>.'
+  - Para pegar os monstros a gente vai precisar de <color=yellow>energia</color>.
+  - Essas <color=blue>azuis</color> ai!
+  - E para possuir um monstro basta <color=yellow>me levar ate ele</color>.
+  - E se quiser sair de dentro dele....
+  - "<color=yellow>Bot\xE3o direito do mouse ou Bola no joystick</color>"
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0
