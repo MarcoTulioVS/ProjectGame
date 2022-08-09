@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour {
 
+	public GameObject prefabAreaExplosion;
 
 	void Start () {
-		
+		StartCoroutine ("DestroyB");
 	}
 	
 
 	void Update () {
 		
-		DestroyBomb ();
+
 	}
+		
 
+	IEnumerator DestroyBomb(){
 
-
-
-
-	void DestroyBomb(){
-
-		Destroy (gameObject,2.6f);
+		yield return new WaitForSeconds (2.3f);
+		GameObject b = Instantiate (prefabAreaExplosion, transform.position, Quaternion.identity);
+		yield return new WaitForSeconds (0.3f);
+		Destroy (gameObject);
+		Destroy (b);
 
 	}
 

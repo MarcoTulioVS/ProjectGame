@@ -221,15 +221,15 @@ public class Enemies : MonoBehaviour {
 		
 		}
 
-//		if (col.gameObject.tag == "bomb") {
-//		
-//			if (insideBody) {
-//
-//				StartCoroutine ("DealDamageExplodeBomb");
-//
-//			}
-//		
-//		}
+		if (col.gameObject.name == "AreaBombExplosion(Clone)") {
+		
+			if (insideBody) {
+
+				GameController.instance.DecrementLife ();
+
+			}
+		
+		}
 			
 	}
 
@@ -420,14 +420,6 @@ public class Enemies : MonoBehaviour {
 		activeDamage = true;
 	
 	}
-
-//	IEnumerator DealDamageExplodeBomb(){
-//
-//		yield return new WaitForSeconds (2.6f);
-//		GameController.instance.DecrementLife ();
-//
-//	}
-
 
 
 }
