@@ -305,12 +305,6 @@ public class Enemies : MonoBehaviour {
 			isGround = false;
 			isJumping = true;
 		}
-
-		if (notCol.gameObject.tag == "block") {
-
-			isJumping = true;
-
-		}
 			
 	}
 

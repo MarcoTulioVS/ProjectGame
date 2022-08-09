@@ -19,11 +19,13 @@ public class Bomb : MonoBehaviour {
 
 	IEnumerator DestroyBomb(){
 
-		yield return new WaitForSeconds (2.3f);
+		yield return new WaitForSeconds (2.1f);
 		GameObject b = Instantiate (prefabAreaExplosion, transform.position, Quaternion.identity);
 		yield return new WaitForSeconds (0.3f);
-		Destroy (gameObject);
 		Destroy (b);
+		yield return new WaitForSeconds (0.2f);
+		Destroy (gameObject);
+
 
 	}
 
