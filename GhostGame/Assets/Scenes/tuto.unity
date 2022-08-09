@@ -1071,7 +1071,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Voltar
+  m_Text: VOLTAR
 --- !u!222 &75467976
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24952,7 +24952,7 @@ GameObject:
   - component: {fileID: 1000397254}
   - component: {fileID: 1000397253}
   m_Layer: 5
-  m_Name: Restart
+  m_Name: BackToMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25017,8 +25017,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1644355705}
-        m_MethodName: RestarGame
-        m_Mode: 1
+        m_MethodName: CallScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -25624,7 +25624,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sair do jogo
+  m_Text: SAIR DO JOGO
 --- !u!222 &1138425401
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26611,7 +26611,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Recome\xE7ar"
+  m_Text: TELA INICIAL
 --- !u!222 &1620620787
 CanvasRenderer:
   m_ObjectHideFlags: 0

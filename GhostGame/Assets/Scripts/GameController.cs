@@ -63,6 +63,9 @@ public class GameController : MonoBehaviour {
 
 	public void CallScene(int i){
 
+		//CASO OCORRA ALGUM PROBLEMA RETIRAR
+		GameObject g = GameObject.FindGameObjectWithTag ("Player");
+		Destroy (g);
 		SceneManager.LoadScene (i);
 	}
 
