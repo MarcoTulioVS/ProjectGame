@@ -7,7 +7,7 @@ public class Bomb : MonoBehaviour {
 	public GameObject prefabAreaExplosion;
 
 	void Start () {
-		StartCoroutine ("DestroyB");
+		StartCoroutine ("DestroyBomb");
 	}
 	
 

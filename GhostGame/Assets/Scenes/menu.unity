@@ -5584,14 +5584,17 @@ MonoBehaviour:
   - "Para colocar bomba pressione <color=yellow>QUADRADO</color> ou <color=yellow>BOT\xC3O
     ESQUERDO DO MOUSE</color>."
   - Colorado pode cuspir gosmas <color=red>VERMELHAS</color> e <color=green>VERDES</color>.
-  - Para cuspir pressione <color=yellow>QUADRADO</color>.
+  - Para cuspir pressione <color=yellow>QUADRADO</color> ou <color=yellow>BOTAO ESQUERDO
+    DO MOUSE</color>.
   - Gosma pode escalar paredes em sua forma <color=yellow>GOSMENTA</color>.
-  - Para ativar forma <color=yellow>GOSMENTA</color> pressione <color=yellow>QUADRADO</color>.
+  - Para ativar forma <color=yellow>GOSMENTA</color> pressione <color=yellow>QUADRADO</color>
+    ou <color=yellow>BOTAO ESQUERDO DO MOUSE</color>.
   - Martin pode <color=green>INVERTER</color> a gravidade e tirar gravidade.
   - Para inverter pressione <color=yellow>R1</color> ou <color=yellow>TAB</color>
     e pra tirar encoste em algum objeto.
   - Medusa pode <color=yellow>PETRIFICAR</color> os inimigos.
-  - Para petrificar pressione <color=yellow>QUADRADO</color>.
+  - Para petrificar pressione <color=yellow>QUADRADO</color> ou <color=yellow>BOTAO
+    ESQUERDO DO MOUSE</color>.
   - Pedrada pode dar <color=red>DANO</color> nos inimigos e <color=yellow>PESAR</color>
     objetos.
   - Para dar <color=red>DANO</color> e so cair em cima de um inimigo.
