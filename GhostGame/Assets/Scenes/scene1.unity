@@ -9219,6 +9219,9 @@ MonoBehaviour:
   - E para possuir um monstro basta <color=yellow>me levar ate ele</color>.
   - E se quiser sair de dentro dele....
   - "<color=yellow>Bot\xE3o direito do mouse ou Bola no joystick</color>"
+  - Ah ja ia me esquecendo. O <color=red>Portal vermelho</color> medonho.
+  - "Temos que levar <color=yellow>todos os monstros</color> at\xE9 la se quisermos
+    continuar em frente."
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0
