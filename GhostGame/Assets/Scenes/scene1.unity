@@ -3660,8 +3660,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' <color=yellow>W,A,S,D</color> anda caraio. Ou se voce preferir ce usa
-    sua manete. <color=yellow>Joystick(analogico)</color>.'
+  m_Text: ' <color=yellow>W,A,S,D</color> anda caraio. Ou se ce preferir ce usa sua
+    manete. <color=yellow>Joystick(analogico)</color>.'
 --- !u!222 &658258635
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9210,7 +9210,8 @@ MonoBehaviour:
   menuPause: {fileID: 1779929149}
   textMsg: {fileID: 238449590}
   buttonMsg: {fileID: 1561164254}
-  ghostDialogText: {fileID: 0}
+  ghostDialogText: {fileID: 658258634}
+  dialogGhostPanel: {fileID: 1577725866}
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0

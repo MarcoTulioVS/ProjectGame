@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour {
 	public Text buttonMsg;
 
 	public Text ghostDialogText;
+	public GameObject dialogGhostPanel;
 
 	void Awake(){
 
@@ -198,6 +199,7 @@ public class GameController : MonoBehaviour {
 		ghostDialogText.text = "E se quiser sair de dentro dele....";
 		yield return new WaitForSeconds (5);
 		ghostDialogText.text = " <color=yellow>Botão direito do mouse ou Bola no joystick</color>";
-
+		yield return new WaitForSeconds (5);
+		dialogGhostPanel.SetActive (false);
 	}
 }
