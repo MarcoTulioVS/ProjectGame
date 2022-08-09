@@ -86,7 +86,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba0d0310f7a8b944988c10966082fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabAreaExplosion: {fileID: 0}
+  prefabAreaExplosion: {fileID: 1713120728529090, guid: 75fee83243eac3346bc4d1087dda4472,
+    type: 2}
 --- !u!212 &212058454312358556
 SpriteRenderer:
   m_ObjectHideFlags: 1

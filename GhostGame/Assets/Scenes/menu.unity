@@ -5580,28 +5580,32 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6d91707b42b73284888c5e278b66da95, type: 3}
   - {fileID: 21300000, guid: 8a69e047911a22c43960de90659b55bc, type: 3}
   listDescriptionEnemies:
-  - Saliva pode grudar bombas nos blocos com X.
-  - "Para colocar bomba pressione o bot\xE3o de a\xE7\xE3o."
-  - Colorado pode cuspir gosmas vermelhas e verdes.
-  - "Para cuspir pressione o bot\xE3o de a\xE7\xE3o."
-  - Gosma pode escalar paredes em sua forma gosmenta.
-  - "Para ativar forma gosmenta pressione o bot\xE3o de a\xE7\xE3o."
-  - Martin pode inverter a gravidade e tirar gravidade.
-  - Para inverter pressione tal e pra tirar encoste em tal.
-  - Medusa pode petrificar os inimigos.
-  - "Para petrificar pressione o bot\xE3o de a\xE7\xE3o."
-  - Pedrada pode dar dano nos inimigos e pesar objetos.
-  - Para dar dano e so cair em cima de um inimigo.
-  - Pedrinha consegue pesar objetos leves.
-  - "Utilizado para pesar bot\xF5es."
-  - Pulinho consegue dar um super pulo.
-  - "Para pular pressione o bot\xE3o de a\xE7\xE3o."
-  - Rato consegue passar por lugares estreitos e pular.
-  - "Para pular pressione o bot\xE3o de a\xE7\xE3o."
-  - Gato pode ser assustado pelo fantasma.
-  - "Para assustar pressione o bot\xE3o de a\xE7\xE3o"
-  - Cachorro pode ser assustado pelo fantasma.
-  - "Para assustar pressione o bot\xE3o de a\xE7\xE3o."
+  - Saliva pode grudar bombas nos blocos com um <color=yellow>X</color>.
+  - "Para colocar bomba pressione <color=yellow>QUADRADO</color> ou <color=yellow>BOT\xC3O
+    ESQUERDO DO MOUSE</color>."
+  - Colorado pode cuspir gosmas <color=red>VERMELHAS</color> e <color=green>VERDES</color>.
+  - Para cuspir pressione <color=yellow>QUADRADO</color>.
+  - Gosma pode escalar paredes em sua forma <color=yellow>GOSMENTA</color>.
+  - Para ativar forma <color=yellow>GOSMENTA</color> pressione <color=yellow>QUADRADO</color>.
+  - Martin pode <color=green>INVERTER</color> a gravidade e tirar gravidade.
+  - Para inverter pressione <color=yellow>R1</color> ou <color=yellow>TAB</color>
+    e pra tirar encoste em algum objeto.
+  - Medusa pode <color=yellow>PETRIFICAR</color> os inimigos.
+  - Para petrificar pressione <color=yellow>QUADRADO</color>.
+  - Pedrada pode dar <color=red>DANO</color> nos inimigos e <color=yellow>PESAR</color>
+    objetos.
+  - Para dar <color=red>DANO</color> e so cair em cima de um inimigo.
+  - Pedrinha consegue <color=yellow>PESAR</color> objetos leves.
+  - "Pedrinha n\xE3o pode dar <color=red>DANO</color> ele e utilizado so para <color=yellow>PESAR</color>
+    bot\xF5es."
+  - Pulinho consegue dar um <color=yellow>SUPER PULO</color>.
+  - Para pular pressione <color=yellow>X</color>.
+  - Rato consegue passar por <color=yellow>LUGARES ESTREITOS</color> e <color=yellow>PULAR</color>.
+  - Para pular pressione <color=yellow>X</color>.
+  - Gato pode ser <color=yellow>ASSUSTADO</color> pelo FANTASMA.
+  - Para <color=yellow>ASSUSTAR</color> pressione <color=yellow>QUADRADO</color>.
+  - Cachorro pode ser <color=yellow>ASSUSTADO</color> pelo FANTASMA.
+  - Para <color=yellow>ASSUSTAR</color> pressione <color=yellow>QUADRADO</color>.
 --- !u!1 &2011646690
 GameObject:
   m_ObjectHideFlags: 0
