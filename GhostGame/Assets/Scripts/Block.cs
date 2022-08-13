@@ -21,7 +21,11 @@ public class Block : ObjectsGame {
 	void FixedUpdate(){
 
 		MainController (gameObject.name, rb, speed);
-		FreezeBlock ();
+
+		if (GameController.instance.GetActualScene () != "opening_1") {
+			FreezeBlock ();
+		}
+
 
 	}
 

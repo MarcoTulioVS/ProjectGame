@@ -201,4 +201,10 @@ public class GameController : MonoBehaviour {
 		dialogGhostPanel.SetActive (false);
 
 	}
+
+	public string GetActualScene(){
+	
+		return SceneManager.GetActiveScene ().name;
+	
+	}
 }
