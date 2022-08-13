@@ -31,6 +31,7 @@ public class ObjectsGame : MonoBehaviour {
 		}
 	}
 
+
 	protected void MainController(string nameObject,Rigidbody2D rb,float speed){
 
 		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {

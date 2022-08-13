@@ -16,7 +16,7 @@ public class ArrowTutorialScene : MonoBehaviour {
 	IEnumerator DisableArrows(){
 	
 		if (ObjectsGame.instance.insideObject) {
-			yield return new WaitForSeconds (7);
+			yield return new WaitForSeconds (3);
 			gameObject.SetActive (false);
 		}
 
