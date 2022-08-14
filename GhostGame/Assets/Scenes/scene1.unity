@@ -9456,6 +9456,7 @@ MonoBehaviour:
   - O Portal da <color=yellow>direita superior</color> vai te levar para o da <color=yellow>esquerda</color>.
   - E portais amarelos sempre deixam <color=yellow>bombas</color>.
   - So uma dica.
+  dialogOn: 1
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0

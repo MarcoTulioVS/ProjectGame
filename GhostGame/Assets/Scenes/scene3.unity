@@ -15939,6 +15939,7 @@ MonoBehaviour:
     DO MOUSE</color>"
   - "Ae, essas cavernas n\xE3o s\xE3o nada confiaveis. Precisamos ficar atentos e
     descobrir um jeito de passar por elas. "
+  dialogOn: 1
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0

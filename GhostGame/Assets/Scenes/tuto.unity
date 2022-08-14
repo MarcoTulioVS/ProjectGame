@@ -26939,6 +26939,7 @@ MonoBehaviour:
   - "Vai em frente \xE9 so andar por ai e garanto que rapidinho ce j\xE1 pegou tudo."
   - "E quando quiser sair \xE9 so ir no bot\xE3o de menu acima e voltar pra tela inicial."
   - "At\xE9 mais!"
+  dialogOn: 1
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0

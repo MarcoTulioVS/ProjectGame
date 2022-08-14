@@ -7,8 +7,8 @@ public class Player : MonoBehaviour {
 
 	Rigidbody2D rb;
 
-	[SerializeField]
-	private float speed;
+
+	public float speed;
 	Vector3 movement;
 	public bool activeObject;
 	public string nameObject;

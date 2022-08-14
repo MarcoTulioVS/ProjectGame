@@ -34,6 +34,8 @@ public class GameController : MonoBehaviour {
 
 	int indexDialog;
 
+	public bool dialogOn;
+
 	void Awake(){
 
 		instance = this;
@@ -44,6 +46,9 @@ public class GameController : MonoBehaviour {
 		ghostDialogText.text = dialogGhostList [indexDialog];
 		//StartCoroutine ("DialogGhost");
 
+		if (dialogOn) {
+			Player.instance.speed = 0;
+		}
 	}
 	
 
@@ -213,6 +218,7 @@ public class GameController : MonoBehaviour {
 		
 			indexDialog = dialogGhostList.Count - 1;
 			dialogGhostPanel.SetActive (false);
+			Player.instance.speed = 5;
 		}
 		ghostDialogText.text = dialogGhostList [indexDialog];
 

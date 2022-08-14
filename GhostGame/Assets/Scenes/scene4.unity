@@ -31185,6 +31185,7 @@ MonoBehaviour:
   - "Alguns com certeza poder\xE3o ser acionados e nos ajudar\xE3o."
   - Fica de <color=yellow>olho</color>.
   - Olha um <color=yellow>pedrinha!</color> talvez podemos usar ele.
+  dialogOn: 1
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0

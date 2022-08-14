@@ -9100,9 +9100,8 @@ MonoBehaviour:
     ESQUERDO DO MOUSE</color>"
   - Outra coisa. Alguns monstros parecem ter uma <color=yellow>habilidade especial</color>.
     Martin e um deles.
-  - <color=blue>Martin</color> consegue mexer na gravidade. Tanto <color=green>inverter</color>
-    quanto tirar a gravidade de alguns objetos.
   - "Pra usar sua habilidade \xE9 so pressionar <color=yellow>R1</color> ou <color=yellow>TAB</color>."
+  dialogOn: 1
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0
