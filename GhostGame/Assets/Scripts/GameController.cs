@@ -32,6 +32,7 @@ public class GameController : MonoBehaviour {
 
 	public List<string>dialogGhostList;
 
+	int indexDialog;
 
 	void Awake(){
 
@@ -40,7 +41,8 @@ public class GameController : MonoBehaviour {
 	}
 	void Start () {
 
-		StartCoroutine ("DialogGhost");
+		ghostDialogText.text = dialogGhostList [indexDialog];
+		//StartCoroutine ("DialogGhost");
 
 	}
 	
@@ -190,16 +192,29 @@ public class GameController : MonoBehaviour {
 
 	}
 
-	IEnumerator DialogGhost(){
+//	IEnumerator DialogGhost(){
+//
+//		for (int i = 0; i <= dialogGhostList.Count -1; i++) {
+//
+//			ghostDialogText.text = dialogGhostList [i];
+//			yield return new WaitForSeconds (5);
+//		
+//		}
+//
+//		dialogGhostPanel.SetActive (false);
+//
+//	}
 
-		for (int i = 0; i <= dialogGhostList.Count -1; i++) {
+	public void NextDialog(){
 
-			ghostDialogText.text = dialogGhostList [i];
-			yield return new WaitForSeconds (5);
+		indexDialog++;
+
+		if (indexDialog > dialogGhostList.Count - 1) {
 		
+			indexDialog = dialogGhostList.Count - 1;
+			dialogGhostPanel.SetActive (false);
 		}
-
-		dialogGhostPanel.SetActive (false);
+		ghostDialogText.text = dialogGhostList [indexDialog];
 
 	}
 
