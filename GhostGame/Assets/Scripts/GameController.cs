@@ -32,6 +32,7 @@ public class GameController : MonoBehaviour {
 
 	public List<string>dialogGhostList;
 
+
 	void Awake(){
 
 		instance = this;
@@ -174,7 +175,7 @@ public class GameController : MonoBehaviour {
 	public void ShowMenuPause(){
 
 		menuPause.SetActive (true);
-	
+
 	}
 
 	public void HideMenuPause(){
