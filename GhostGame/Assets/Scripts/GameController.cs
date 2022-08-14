@@ -58,6 +58,8 @@ public class GameController : MonoBehaviour {
 
 		GetCameraBackToPlayer ();
 
+		StartCoroutine ("DelayChangeDialogJoystick");
+
 	}
 
 	public void GoToNextScene(){
@@ -227,6 +229,18 @@ public class GameController : MonoBehaviour {
 	public string GetActualScene(){
 	
 		return SceneManager.GetActiveScene ().name;
+	
+	}
+
+	IEnumerator DelayChangeDialogJoystick(){
+	
+
+		if (Input.GetKeyDown (KeyCode.JoystickButton1)) {
+
+			NextDialog ();
+			
+		}
+		yield return new WaitForSeconds (1);
 	
 	}
 }
