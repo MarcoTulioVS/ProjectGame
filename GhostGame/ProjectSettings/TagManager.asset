@@ -24,6 +24,8 @@ TagManager:
   - boost
   - gosma
   - fallPlataform
+  - areaSpikeRight
+  - areaSpikeLeft
   layers:
   - Default
   - TransparentFX
