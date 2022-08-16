@@ -4451,10 +4451,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ce4c97424f2a646a369390e6db43d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxX: 2.48
-  minX: -9.35
-  maxY: 8.43
-  minY: -0.51
+  maxX: 4.33
+  minX: -11.31
+  maxY: 8.37
+  minY: 0.55
   trObject: {fileID: 2068476537}
   player: {fileID: 167135682}
 --- !u!1 &1138425398
@@ -5310,6 +5310,7 @@ MonoBehaviour:
   - Ah ja ia me esquecendo. O <color=red>Portal vermelho</color> medonho.
   - "Temos que levar <color=yellow>todos os monstros</color> at\xE9 la se quisermos
     continuar em frente."
+  dialogOn: 0
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0

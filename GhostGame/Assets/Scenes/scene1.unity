@@ -2636,7 +2636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912a0fc0b7237a849bee8d41ad59858d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 8
   activeObject: 0
   nameObject: 
   player: {fileID: 167135681}
@@ -8452,8 +8452,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxX: 10.56
   minX: -10.36
-  maxY: 15.69
-  minY: -2.25
+  maxY: 14.33
+  minY: -0.5
   trObject: {fileID: 2068476537}
   player: {fileID: 167135682}
 --- !u!1 &1138425398

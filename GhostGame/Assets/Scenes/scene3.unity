@@ -14912,9 +14912,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ce4c97424f2a646a369390e6db43d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxX: 13
+  maxX: 12.5
   minX: -4.7
-  maxY: 61.6
+  maxY: 61.3
   minY: -1.2
   trObject: {fileID: 1182330277}
   player: {fileID: 167135682}

@@ -1872,7 +1872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &49332626
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29630,8 +29630,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxX: 20.43
-  minX: -13.08
-  maxY: 71.3
+  minX: -13
+  maxY: 70.8
   minY: -1
   trObject: {fileID: 1864285171}
   player: {fileID: 167135682}

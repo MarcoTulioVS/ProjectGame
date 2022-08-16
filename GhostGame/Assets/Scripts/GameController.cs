@@ -220,7 +220,7 @@ public class GameController : MonoBehaviour {
 		
 			indexDialog = dialogGhostList.Count - 1;
 			dialogGhostPanel.SetActive (false);
-			Player.instance.speed = 5;
+			Player.instance.speed = 8;
 		}
 		ghostDialogText.text = dialogGhostList [indexDialog];
 
