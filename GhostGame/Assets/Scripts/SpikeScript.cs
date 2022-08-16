@@ -52,6 +52,12 @@ public class SpikeScript : MonoBehaviour {
 			isRight = false;
 
 		}
+
+		if (col.gameObject.layer == 8) {
+
+			GameController.instance.DecrementLife ();
+		
+		}
 	
 	}
 
