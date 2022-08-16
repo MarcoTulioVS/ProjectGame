@@ -65,7 +65,7 @@ public class GosmaScript : Enemies {
 
 	void GosmaForm(){
 
-		if (Input.GetButtonDown("Fire1") && !isJumping) {
+		if (Input.GetButtonDown("Fire1") && !isJumping && !colWall) {
 
 			if (insideBody && Player.instance.activeObject && Player.instance.nameObject == gameObject.name) {
 				inFormGosma = !inFormGosma;
@@ -126,7 +126,7 @@ public class GosmaScript : Enemies {
 		float moveX = Input.GetAxis ("Horizontal");
 		float moveY = Input.GetAxis ("Vertical");
 
-		if (colWall) {
+		if (colWall && inFormGosma) {
 			move = new Vector3 (moveX, moveY, 0);
 			rb.velocity = speed * move;
 		} else {
