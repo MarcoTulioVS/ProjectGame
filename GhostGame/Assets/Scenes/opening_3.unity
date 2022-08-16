@@ -2235,6 +2235,16 @@ Prefab:
       propertyPath: energyNeeded
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 58034557056016000, guid: a5bb444e4c23bc74d90065792a0b3116,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.075508334
+      objectReference: {fileID: 0}
+    - target: {fileID: 58034557056016000, guid: a5bb444e4c23bc74d90065792a0b3116,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.40860444
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5bb444e4c23bc74d90065792a0b3116, type: 2}
   m_IsPrefabParent: 0
