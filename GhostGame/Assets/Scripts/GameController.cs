@@ -10,6 +10,9 @@ public class GameController : MonoBehaviour {
 	public int quantMaxEnemies;
 	public int countEnemies;
 
+	[SerializeField]
+	int enemiesInScene;
+
 	public float quantEnergy;
 	public Image imageBar;
 	public Image imageMoldureBar;
@@ -42,6 +45,8 @@ public class GameController : MonoBehaviour {
 
 	public Text msgCheckpoint;
 
+	public Image imgSpecialSkill;
+
 	void Awake(){
 
 		instance = this;
@@ -65,6 +70,10 @@ public class GameController : MonoBehaviour {
 		GetCameraBackToPlayer ();
 
 		StartCoroutine ("DelayChangeDialogJoystick");
+
+		if (enemiesInScene > 0) {
+			ShowSpecialSkill ();
+		}
 
 	}
 
@@ -256,7 +265,18 @@ public class GameController : MonoBehaviour {
 
 	}
 
+	public void ShowSpecialSkill(){
 
+		if (Enemies.instance.specialSkill) {
+		
+			imgSpecialSkill.enabled = true;
+		
+		} else {
+		
+			imgSpecialSkill.enabled = false;
+		}
+
+	}
 
 
 		

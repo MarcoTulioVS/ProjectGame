@@ -35,8 +35,9 @@ public class Enemies : MonoBehaviour {
 	public Transform trRefFirstPortal;//ref do portal com tag red
 
 	public Animator colEnemy;
-
 	bool isRight;
+
+	public bool specialSkill;
 
 	void Awake(){
 	
