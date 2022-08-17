@@ -26,6 +26,8 @@ TagManager:
   - fallPlataform
   - areaSpikeRight
   - areaSpikeLeft
+  - left
+  - right
   layers:
   - Default
   - TransparentFX

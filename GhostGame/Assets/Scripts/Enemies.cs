@@ -36,11 +36,13 @@ public class Enemies : MonoBehaviour {
 
 	public Animator colEnemy;
 
+	bool isRight;
 
 	void Awake(){
 	
 		instance = this;
 		activeDamage = true;
+
 	}
 	void Start () {
 		
@@ -103,12 +105,51 @@ public class Enemies : MonoBehaviour {
 
 	}
 
+	public void MonsterMovement(Rigidbody2D rb){
+
+		if (isRight) {
+		
+			rb.velocity = new Vector2 (-speed, rb.velocity.y);
+			transform.eulerAngles = new Vector2 (0, 180);
+			
+		} else {
+			
+			rb.velocity = new Vector2 (speed, rb.velocity.y);
+			transform.eulerAngles = new Vector2 (0, 0);
+		}
+
+
+	}
+
+	public void MonsterMovement(Rigidbody2D rb,Animator anim){
+
+		if (isRight) {
+
+			rb.velocity = new Vector2 (-speed, rb.velocity.y);
+			transform.eulerAngles = new Vector2 (0, 180);
+			anim.SetInteger ("transition", 1);
+
+		} else {
+
+			rb.velocity = new Vector2 (speed, rb.velocity.y);
+			transform.eulerAngles = new Vector2 (0, 0);
+			anim.SetInteger ("transition", 1);
+		}
+	
+	
+	
+	}
+
 
 	protected void MainController(string nameObject,Rigidbody2D rb){
 
 		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
 
 			moveControl (rb);
+		} else {
+
+			MonsterMovement (rb);
+		
 		}
 
 	}
@@ -119,7 +160,12 @@ public class Enemies : MonoBehaviour {
 
 			moveControl (rb, anim);
 			
+		} else {
+		
+			MonsterMovement (rb, anim);
+		
 		}
+
 
 	}
 
@@ -239,6 +285,18 @@ public class Enemies : MonoBehaviour {
 			GameController.instance.checkPoint = true;
 			GameController.instance.trCheckPoint = col.transform;
 			StartCoroutine ("MessageCheckpoint");
+		}
+
+		if (col.gameObject.tag == "right") {
+		
+			isRight = true;
+		
+		}
+
+		if (col.gameObject.tag == "left") {
+
+			isRight = false;
+
 		}
 			
 	}
