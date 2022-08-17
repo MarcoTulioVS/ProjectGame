@@ -230,6 +230,14 @@ public class Enemies : MonoBehaviour {
 			}
 		
 		}
+
+		//Retirar caso nao de certo
+		//Verifica se o inimigo colidiu com um checkpoint
+		if (col.gameObject.layer == 17) {
+		
+			GameController.instance.checkPoint = true;
+			GameController.instance.trCheckPoint = col.transform;
+		}
 			
 	}
 
@@ -252,12 +260,16 @@ public class Enemies : MonoBehaviour {
 
 				float halfLife = GameController.instance.quantLife / 2;
 
-				if (halfLife < 25) {
+				if (halfLife < 25 && !GameController.instance.checkPoint) {
 				
 					GameController.instance.quantLife = 0;
 					GameController.instance.GameOver ();
 
-				} else {
+				} else if (halfLife < 25 && GameController.instance.checkPoint) {
+					GameController.instance.quantLife = 100;
+					GameController.instance.CheckPoint (transform);
+				
+				}else {
 					
 					GameController.instance.quantLife -= halfLife;
 				}

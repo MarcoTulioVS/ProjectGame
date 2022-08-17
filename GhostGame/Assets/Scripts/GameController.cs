@@ -36,6 +36,10 @@ public class GameController : MonoBehaviour {
 
 	public bool dialogOn;
 
+	public Transform trCheckPoint;
+
+	public bool checkPoint;
+
 	void Awake(){
 
 		instance = this;
@@ -241,6 +245,12 @@ public class GameController : MonoBehaviour {
 			
 		}
 		yield return new WaitForSeconds (1);
+	
+	}
+
+	public void CheckPoint(Transform tr){
+		
+		tr.position = trCheckPoint.position;
 	
 	}
 }
