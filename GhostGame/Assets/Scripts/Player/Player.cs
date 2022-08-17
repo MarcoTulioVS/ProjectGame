@@ -165,7 +165,7 @@ public class Player : MonoBehaviour {
 		if (col.gameObject.tag == "energy") {
 		
 			GameController.instance.quantEnergy += energyCollected;
-			Destroy (col.gameObject);
+			StartCoroutine ("DisableAndEnableEnergy",col);
 		
 		}
 
@@ -197,6 +197,14 @@ public class Player : MonoBehaviour {
 		GameController.instance.imageBar.color = c1;
 		GameController.instance.imageMoldureBar.color = c1;
 
+	}
+
+	IEnumerator DisableAndEnableEnergy(Collider2D col){
+	
+		col.gameObject.SetActive (false);
+		yield return new WaitForSeconds (5);
+		col.gameObject.SetActive (true);
+	
 	}
 
 }

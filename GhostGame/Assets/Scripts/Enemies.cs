@@ -36,6 +36,7 @@ public class Enemies : MonoBehaviour {
 
 	public Animator colEnemy;
 
+
 	void Awake(){
 	
 		instance = this;
@@ -237,6 +238,7 @@ public class Enemies : MonoBehaviour {
 		
 			GameController.instance.checkPoint = true;
 			GameController.instance.trCheckPoint = col.transform;
+			StartCoroutine ("MessageCheckpoint");
 		}
 			
 	}
@@ -425,6 +427,14 @@ public class Enemies : MonoBehaviour {
 		yield return new WaitForSeconds (2);
 		activeDamage = true;
 	
+	}
+
+	public IEnumerator MessageCheckpoint(){
+
+		GameController.instance.msgCheckpoint.enabled = true;
+		yield return new WaitForSeconds (3);
+		GameController.instance.msgCheckpoint.enabled = false;
+
 	}
 
 

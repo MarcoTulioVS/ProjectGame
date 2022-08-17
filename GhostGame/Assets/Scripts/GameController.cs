@@ -40,6 +40,8 @@ public class GameController : MonoBehaviour {
 
 	public bool checkPoint;
 
+	public Text msgCheckpoint;
+
 	void Awake(){
 
 		instance = this;
@@ -251,6 +253,11 @@ public class GameController : MonoBehaviour {
 	public void CheckPoint(Transform tr){
 		
 		tr.position = trCheckPoint.position;
-	
+
 	}
+
+
+
+
+		
 }
