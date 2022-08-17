@@ -109,12 +109,12 @@ public class Enemies : MonoBehaviour {
 
 		if (isRight) {
 		
-			rb.velocity = new Vector2 (-speed, rb.velocity.y);
+			rb.velocity = new Vector2 (-speed + 3, rb.velocity.y);
 			transform.eulerAngles = new Vector2 (0, 180);
 			
 		} else {
 			
-			rb.velocity = new Vector2 (speed, rb.velocity.y);
+			rb.velocity = new Vector2 (speed - 3, rb.velocity.y);
 			transform.eulerAngles = new Vector2 (0, 0);
 		}
 
@@ -125,13 +125,13 @@ public class Enemies : MonoBehaviour {
 
 		if (isRight) {
 
-			rb.velocity = new Vector2 (-speed, rb.velocity.y);
+			rb.velocity = new Vector2 (-speed + 1.5f, rb.velocity.y);
 			transform.eulerAngles = new Vector2 (0, 180);
 			anim.SetInteger ("transition", 1);
 
 		} else {
 
-			rb.velocity = new Vector2 (speed, rb.velocity.y);
+			rb.velocity = new Vector2 (speed - 1.5f, rb.velocity.y);
 			transform.eulerAngles = new Vector2 (0, 0);
 			anim.SetInteger ("transition", 1);
 		}
