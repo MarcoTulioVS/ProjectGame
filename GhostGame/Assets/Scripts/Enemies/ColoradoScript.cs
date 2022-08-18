@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ColoradoScript : Enemies {
 
+
 	Rigidbody2D rb;
+
 	public GameObject player;
 
 	public GameObject prefabPowerGreen;
@@ -13,9 +15,12 @@ public class ColoradoScript : Enemies {
 	public Transform trRefPower;
 	float fireRate = 0.5f;
 	float nextFire;
-	Animator anim;
+
+
+	private Animator anim;
+
 	bool isRed;
-	//public float jumpForce;
+
 
 
 	void Start () {

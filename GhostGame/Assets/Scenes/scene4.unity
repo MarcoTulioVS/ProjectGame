@@ -1779,9 +1779,29 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 6.6330714
       objectReference: {fileID: 0}
+    - target: {fileID: 114588042056818730, guid: 000b942a102dc344db4ae872493ecb01,
+        type: 2}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 20428704}
+    - target: {fileID: 114588042056818730, guid: 000b942a102dc344db4ae872493ecb01,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 20428705}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 000b942a102dc344db4ae872493ecb01, type: 2}
   m_IsPrefabParent: 0
+--- !u!50 &20428704 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50529731665276346, guid: 000b942a102dc344db4ae872493ecb01,
+    type: 2}
+  m_PrefabInternal: {fileID: 20428703}
+--- !u!95 &20428705 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95463839876163422, guid: 000b942a102dc344db4ae872493ecb01,
+    type: 2}
+  m_PrefabInternal: {fileID: 20428703}
 --- !u!1001 &24285226
 Prefab:
   m_ObjectHideFlags: 0
@@ -7096,12 +7116,32 @@ Prefab:
       propertyPath: m_GravityScale
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114972581265890366, guid: 246e8154cdd764a4e924a2d609156e34,
+        type: 2}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 610819363}
+    - target: {fileID: 114972581265890366, guid: 246e8154cdd764a4e924a2d609156e34,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 610819364}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 246e8154cdd764a4e924a2d609156e34, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &610819362 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4825805024769378, guid: 246e8154cdd764a4e924a2d609156e34,
+    type: 2}
+  m_PrefabInternal: {fileID: 610819361}
+--- !u!50 &610819363 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50229607599877952, guid: 246e8154cdd764a4e924a2d609156e34,
+    type: 2}
+  m_PrefabInternal: {fileID: 610819361}
+--- !u!95 &610819364 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95232456890330060, guid: 246e8154cdd764a4e924a2d609156e34,
     type: 2}
   m_PrefabInternal: {fileID: 610819361}
 --- !u!1 &620637825
@@ -29067,12 +29107,32 @@ Prefab:
       propertyPath: m_GravityScale
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114972581265890366, guid: 246e8154cdd764a4e924a2d609156e34,
+        type: 2}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 724760139}
+    - target: {fileID: 114972581265890366, guid: 246e8154cdd764a4e924a2d609156e34,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 724760140}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 246e8154cdd764a4e924a2d609156e34, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &724760138 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4825805024769378, guid: 246e8154cdd764a4e924a2d609156e34,
+    type: 2}
+  m_PrefabInternal: {fileID: 724760137}
+--- !u!50 &724760139 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50229607599877952, guid: 246e8154cdd764a4e924a2d609156e34,
+    type: 2}
+  m_PrefabInternal: {fileID: 724760137}
+--- !u!95 &724760140 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95232456890330060, guid: 246e8154cdd764a4e924a2d609156e34,
     type: 2}
   m_PrefabInternal: {fileID: 724760137}
 --- !u!1 &771393466
@@ -30360,9 +30420,29 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 6.3908424
       objectReference: {fileID: 0}
+    - target: {fileID: 114588042056818730, guid: 000b942a102dc344db4ae872493ecb01,
+        type: 2}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1157034426}
+    - target: {fileID: 114588042056818730, guid: 000b942a102dc344db4ae872493ecb01,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1157034427}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 000b942a102dc344db4ae872493ecb01, type: 2}
   m_IsPrefabParent: 0
+--- !u!50 &1157034426 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50529731665276346, guid: 000b942a102dc344db4ae872493ecb01,
+    type: 2}
+  m_PrefabInternal: {fileID: 1157034425}
+--- !u!95 &1157034427 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95463839876163422, guid: 000b942a102dc344db4ae872493ecb01,
+    type: 2}
+  m_PrefabInternal: {fileID: 1157034425}
 --- !u!1 &1161925769
 GameObject:
   m_ObjectHideFlags: 0
@@ -31657,9 +31737,29 @@ Prefab:
       propertyPath: specialSkill
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114668118001761444, guid: 527d41219de7a4f41b38f6a030d22c67,
+        type: 2}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1589200857}
+    - target: {fileID: 114668118001761444, guid: 527d41219de7a4f41b38f6a030d22c67,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1589200856}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
   m_IsPrefabParent: 0
+--- !u!95 &1589200856 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95688239440321224, guid: 527d41219de7a4f41b38f6a030d22c67,
+    type: 2}
+  m_PrefabInternal: {fileID: 1589200855}
+--- !u!50 &1589200857 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50177291777167640, guid: 527d41219de7a4f41b38f6a030d22c67,
+    type: 2}
+  m_PrefabInternal: {fileID: 1589200855}
 --- !u!1 &1589458188
 GameObject:
   m_ObjectHideFlags: 0
@@ -32063,12 +32163,32 @@ Prefab:
       propertyPath: m_GravityScale
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114972581265890366, guid: 246e8154cdd764a4e924a2d609156e34,
+        type: 2}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1659518730}
+    - target: {fileID: 114972581265890366, guid: 246e8154cdd764a4e924a2d609156e34,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1659518731}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 246e8154cdd764a4e924a2d609156e34, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1659518729 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4825805024769378, guid: 246e8154cdd764a4e924a2d609156e34,
+    type: 2}
+  m_PrefabInternal: {fileID: 1659518728}
+--- !u!50 &1659518730 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50229607599877952, guid: 246e8154cdd764a4e924a2d609156e34,
+    type: 2}
+  m_PrefabInternal: {fileID: 1659518728}
+--- !u!95 &1659518731 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95232456890330060, guid: 246e8154cdd764a4e924a2d609156e34,
     type: 2}
   m_PrefabInternal: {fileID: 1659518728}
 --- !u!1 &1663497556
@@ -33802,9 +33922,29 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0.002
       objectReference: {fileID: 0}
+    - target: {fileID: 114588042056818730, guid: 000b942a102dc344db4ae872493ecb01,
+        type: 2}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1990560199}
+    - target: {fileID: 114588042056818730, guid: 000b942a102dc344db4ae872493ecb01,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1990560200}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 000b942a102dc344db4ae872493ecb01, type: 2}
   m_IsPrefabParent: 0
+--- !u!50 &1990560199 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50529731665276346, guid: 000b942a102dc344db4ae872493ecb01,
+    type: 2}
+  m_PrefabInternal: {fileID: 1990560198}
+--- !u!95 &1990560200 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95463839876163422, guid: 000b942a102dc344db4ae872493ecb01,
+    type: 2}
+  m_PrefabInternal: {fileID: 1990560198}
 --- !u!1 &1995519635
 GameObject:
   m_ObjectHideFlags: 0
@@ -34194,12 +34334,22 @@ Prefab:
       propertyPath: endPotal
       value: 
       objectReference: {fileID: 864754322}
+    - target: {fileID: 114864094401483676, guid: b52747b09ec9a7743ba2e624a4fce3f2,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 2052028808}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b52747b09ec9a7743ba2e624a4fce3f2, type: 2}
   m_IsPrefabParent: 0
 --- !u!61 &2052028807 stripped
 BoxCollider2D:
   m_PrefabParentObject: {fileID: 61923920911393526, guid: b52747b09ec9a7743ba2e624a4fce3f2,
+    type: 2}
+  m_PrefabInternal: {fileID: 2052028806}
+--- !u!95 &2052028808 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95527068241699106, guid: b52747b09ec9a7743ba2e624a4fce3f2,
     type: 2}
   m_PrefabInternal: {fileID: 2052028806}
 --- !u!1 &2080712973

@@ -5,8 +5,10 @@ using UnityEngine;
 public class DogScript : MonoBehaviour {
 
 	Rigidbody2D rb;
+
 	public float speed;
 	Animator anim;
+
 	public Transform trPointEnergy;
 	public GameObject prefabEnergy;
 	GameObject en;

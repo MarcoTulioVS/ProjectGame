@@ -47,6 +47,8 @@ public class GameController : MonoBehaviour {
 
 	public Image imgSpecialSkill;
 
+	bool endDialog;
+
 	void Awake(){
 
 		instance = this;
@@ -55,7 +57,7 @@ public class GameController : MonoBehaviour {
 	void Start () {
 
 		ghostDialogText.text = dialogGhostList [indexDialog];
-		//StartCoroutine ("DialogGhost");
+
 
 		if (dialogOn) {
 			Player.instance.speed = 0;
@@ -69,7 +71,7 @@ public class GameController : MonoBehaviour {
 
 		GetCameraBackToPlayer ();
 
-		StartCoroutine ("DelayChangeDialogJoystick");
+		ChangeDialogJoystick ();
 
 		if (enemiesInScene > 0) {
 			ShowSpecialSkill ();
@@ -214,18 +216,7 @@ public class GameController : MonoBehaviour {
 
 	}
 
-//	IEnumerator DialogGhost(){
-//
-//		for (int i = 0; i <= dialogGhostList.Count -1; i++) {
-//
-//			ghostDialogText.text = dialogGhostList [i];
-//			yield return new WaitForSeconds (5);
-//		
-//		}
-//
-//		dialogGhostPanel.SetActive (false);
-//
-//	}
+
 
 	public void NextDialog(){
 
@@ -236,6 +227,7 @@ public class GameController : MonoBehaviour {
 			indexDialog = dialogGhostList.Count - 1;
 			dialogGhostPanel.SetActive (false);
 			Player.instance.speed = 8;
+			endDialog = true;
 		}
 		ghostDialogText.text = dialogGhostList [indexDialog];
 
@@ -247,16 +239,14 @@ public class GameController : MonoBehaviour {
 	
 	}
 
-	IEnumerator DelayChangeDialogJoystick(){
-	
+	void ChangeDialogJoystick(){
 
-		if (Input.GetKeyDown (KeyCode.JoystickButton1)) {
+		if (Input.GetButtonDown("Jump") && !endDialog) {
 
 			NextDialog ();
 			
 		}
-		yield return new WaitForSeconds (1);
-	
+			
 	}
 
 	public void CheckPoint(Transform tr){

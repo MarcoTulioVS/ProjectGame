@@ -106,7 +106,7 @@ public class Enemies : MonoBehaviour {
 
 	}
 
-	public void MonsterMovement(Rigidbody2D rb){
+	private void MonsterMovement(Rigidbody2D rb){
 
 		if (isRight) {
 		
@@ -122,7 +122,7 @@ public class Enemies : MonoBehaviour {
 
 	}
 
-	public void MonsterMovement(Rigidbody2D rb,Animator anim){
+	private void MonsterMovement(Rigidbody2D rb,Animator anim){
 
 		if (isRight) {
 
@@ -197,7 +197,7 @@ public class Enemies : MonoBehaviour {
 
 	protected virtual void jump(Rigidbody2D rb,float jumpForce){
 
-		if ((Input.GetKeyDown (KeyCode.Space) ||Input.GetKeyDown (KeyCode.JoystickButton1)) && !isJumping && insideBody) {
+		if (Input.GetButtonDown("Jump") && !isJumping && insideBody) {
 			
 			rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
 		
@@ -207,7 +207,7 @@ public class Enemies : MonoBehaviour {
 
 	protected virtual void jump(Rigidbody2D rb,float jumpForce,Animator anim){
 
-		if ((Input.GetKeyDown (KeyCode.Space) ||Input.GetKeyDown (KeyCode.JoystickButton1))&& !isJumping && insideBody) {
+		if (Input.GetButtonDown("Jump") && !isJumping && insideBody) {
 
 			anim.SetInteger("transition",2);
 			rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);

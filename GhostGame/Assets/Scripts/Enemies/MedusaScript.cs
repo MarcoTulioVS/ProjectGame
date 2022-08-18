@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class MedusaScript : Enemies {
 
+
 	Rigidbody2D rb;
 	Animator anim;
+
 	public GameObject player;
 	public Transform point;
 	public float radius;

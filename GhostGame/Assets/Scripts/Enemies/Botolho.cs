@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Botolho : MonoBehaviour {
 
+
 	Animator anim;
+
 	public GameObject endPotal;
 
 	void Start () {
-		anim = GetComponent<Animator> ();	
+		anim = GetComponent<Animator> ();
 	}
 	
 

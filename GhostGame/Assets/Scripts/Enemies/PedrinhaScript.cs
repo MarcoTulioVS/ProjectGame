@@ -6,6 +6,7 @@ public class PedrinhaScript : Enemies {
 
 	Rigidbody2D rb;
 	Animator anim;
+
 	public GameObject player;
 
 	void Start () {

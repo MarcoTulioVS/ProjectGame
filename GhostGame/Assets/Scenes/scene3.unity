@@ -19967,12 +19967,32 @@ Prefab:
       propertyPath: specialSkill
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114668118001761444, guid: 527d41219de7a4f41b38f6a030d22c67,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1777920514}
+    - target: {fileID: 114668118001761444, guid: 527d41219de7a4f41b38f6a030d22c67,
+        type: 2}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1777920515}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1777920513 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4840881171560542, guid: 527d41219de7a4f41b38f6a030d22c67,
+    type: 2}
+  m_PrefabInternal: {fileID: 1777920512}
+--- !u!95 &1777920514 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95688239440321224, guid: 527d41219de7a4f41b38f6a030d22c67,
+    type: 2}
+  m_PrefabInternal: {fileID: 1777920512}
+--- !u!50 &1777920515 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50177291777167640, guid: 527d41219de7a4f41b38f6a030d22c67,
     type: 2}
   m_PrefabInternal: {fileID: 1777920512}
 --- !u!1001 &1790254187
@@ -20952,12 +20972,32 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114763506195263350, guid: 44baa4bbbcdbcd34dbd1152592278894,
+        type: 2}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 2087380643}
+    - target: {fileID: 114763506195263350, guid: 44baa4bbbcdbcd34dbd1152592278894,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 2087380642}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44baa4bbbcdbcd34dbd1152592278894, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2087380641 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4931027952121136, guid: 44baa4bbbcdbcd34dbd1152592278894,
+    type: 2}
+  m_PrefabInternal: {fileID: 2087380640}
+--- !u!95 &2087380642 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95307698144943710, guid: 44baa4bbbcdbcd34dbd1152592278894,
+    type: 2}
+  m_PrefabInternal: {fileID: 2087380640}
+--- !u!50 &2087380643 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50610635700550032, guid: 44baa4bbbcdbcd34dbd1152592278894,
     type: 2}
   m_PrefabInternal: {fileID: 2087380640}
 --- !u!1001 &2090663159

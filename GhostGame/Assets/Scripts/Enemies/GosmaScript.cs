@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GosmaScript : Enemies {
 
+
 	Rigidbody2D rb;
 	Animator anim;
+
 	public GameObject player;
 	Vector3 move;
 

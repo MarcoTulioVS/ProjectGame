@@ -2635,9 +2635,29 @@ Prefab:
       propertyPath: m_Radius
       value: 0.42344758
       objectReference: {fileID: 0}
+    - target: {fileID: 114152481503104410, guid: a5bb444e4c23bc74d90065792a0b3116,
+        type: 2}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 630601001}
+    - target: {fileID: 114152481503104410, guid: a5bb444e4c23bc74d90065792a0b3116,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 630601000}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5bb444e4c23bc74d90065792a0b3116, type: 2}
   m_IsPrefabParent: 0
+--- !u!95 &630601000 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95993723124307664, guid: a5bb444e4c23bc74d90065792a0b3116,
+    type: 2}
+  m_PrefabInternal: {fileID: 630600999}
+--- !u!50 &630601001 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50490758632360830, guid: a5bb444e4c23bc74d90065792a0b3116,
+    type: 2}
+  m_PrefabInternal: {fileID: 630600999}
 --- !u!1 &658258632
 GameObject:
   m_ObjectHideFlags: 0

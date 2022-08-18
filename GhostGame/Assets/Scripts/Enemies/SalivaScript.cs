@@ -5,17 +5,18 @@ using UnityEngine;
 
 public class SalivaScript : Enemies {
 
+
 	Rigidbody2D rb;
+	Animator anim;
+
 	public GameObject player;
-	//public float jumpForce;
 	public GameObject prefabBomb;
 	public Transform trRefBomb;
-	Animator anim;
 
 
 	void Start () {
+		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
-		rb = GetComponent<Rigidbody2D> ();	
 	}
 	
 
@@ -30,14 +31,15 @@ public class SalivaScript : Enemies {
 	}
 
 	void FixedUpdate(){
-
+		
 		MainController (this.gameObject.name, rb,anim);
+
 
 	}
 
 	protected override void jump (Rigidbody2D rb, float jumpForce)
 	{
-		if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton1)) && insideBody) {
+		if (Input.GetButtonDown("Jump") && insideBody) {
 
 			if (!isJumping) {
 
@@ -55,6 +57,7 @@ public class SalivaScript : Enemies {
 			
 			}
 		}
+			
 	}
 
 	void placeBomb(){
@@ -66,7 +69,8 @@ public class SalivaScript : Enemies {
 		}
 
 	}
-		
+
+
 
 
 }

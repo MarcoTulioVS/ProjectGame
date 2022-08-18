@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class RatScript : Enemies {
 
+
 	Rigidbody2D rb;
 	Animator anim;
+
 	public GameObject player;
 
 

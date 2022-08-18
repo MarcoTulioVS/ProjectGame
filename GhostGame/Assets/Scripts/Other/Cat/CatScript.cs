@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class CatScript : MonoBehaviour {
 
+
 	Rigidbody2D rb;
 	public float speed;
+
 	Animator anim;
+
 	public Transform trPointEnergy;
 	public GameObject prefabEnergy;
 	GameObject en;

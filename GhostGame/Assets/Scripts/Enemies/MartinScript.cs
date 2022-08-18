@@ -7,8 +7,9 @@ public class MartinScript : Enemies {
 	Rigidbody2D rb;
 	Animator anim;
 	SpriteRenderer sp;
-	public GameObject player;
-	//public float jumpForce;
+
+	private GameObject player;
+
 
 	public Transform pointUp;
 	public float radius;
@@ -21,10 +22,11 @@ public class MartinScript : Enemies {
 
 
 	void Start () {
-		
+
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 		sp = GetComponent<SpriteRenderer> ();
+
 		colorMartin = "w";
 	}
 	
