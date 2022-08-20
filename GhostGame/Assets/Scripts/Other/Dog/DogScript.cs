@@ -36,6 +36,7 @@ public class DogScript : MonoBehaviour {
 		
 		rb.velocity = new Vector2 (speed, rb.velocity.y);
 		anim.SetBool ("walking", true);
+		SoundController.instance.PlaySound (SoundController.instance.audios [11]);
 
 		if (en == null && !energySpawned) {
 		

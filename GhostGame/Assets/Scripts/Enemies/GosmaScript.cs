@@ -51,6 +51,7 @@ public class GosmaScript : Enemies {
 				rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
 				isJumping = true;
 				doubleJump = true;
+				SoundController.instance.PlaySound (SoundController.instance.audios [5]);
 
 			} else {
 
@@ -58,6 +59,7 @@ public class GosmaScript : Enemies {
 
 					rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
 					doubleJump = false;
+					SoundController.instance.PlaySound (SoundController.instance.audios [5]);
 
 				}
 
@@ -72,6 +74,7 @@ public class GosmaScript : Enemies {
 			if (insideBody && Player.instance.activeObject && Player.instance.nameObject == gameObject.name) {
 				inFormGosma = !inFormGosma;
 				StartCoroutine ("transitionForm");
+				SoundController.instance.PlaySound (SoundController.instance.audios [12]);
 			}
 
 		} 
