@@ -28,6 +28,7 @@ TagManager:
   - areaSpikeLeft
   - left
   - right
+  - bossfight
   layers:
   - Default
   - TransparentFX

@@ -301,6 +301,12 @@ public class Enemies : MonoBehaviour {
 			isRight = false;
 
 		}
+
+		if (col.gameObject.tag == "bossfight") {
+		
+			SoundController.instance.PlaySound(SoundController.instance.audios[13]);
+		
+		}
 			
 	}
 
