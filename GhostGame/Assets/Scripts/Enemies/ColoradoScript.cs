@@ -56,6 +56,7 @@ public class ColoradoScript : Enemies {
 				anim.SetBool ("throw", true);
 				nextFire = Time.time + fireRate;
 				Instantiate (prefabPowerRed, trRefPower.position, Quaternion.identity);
+				SoundController.instance.PlaySound (SoundController.instance.audios [9]);
 			}
 		
 		} else if (Input.GetButtonDown ("Fire1") && Time.time > nextFire && !isRed) {
@@ -65,6 +66,7 @@ public class ColoradoScript : Enemies {
 				anim.SetBool ("throw", true);
 				nextFire = Time.time + fireRate;
 				Instantiate (prefabPowerGreen, trRefPower.position, Quaternion.identity);
+				SoundController.instance.PlaySound (SoundController.instance.audios [9]);
 			}
 
 		} else {

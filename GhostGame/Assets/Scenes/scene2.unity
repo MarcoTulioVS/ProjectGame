@@ -10469,11 +10469,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3093ed67d77c1bb4da8c913f58878bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxPosses: {fileID: 8300000, guid: 7769ce73dfc571444b3237409e1b8831, type: 3}
-  sfxFinalPortal: {fileID: 8300000, guid: 7a96afac95440cc4eac238750d9d63c8, type: 3}
-  sfxStartBossLevel: {fileID: 8300000, guid: a442d91ff7818764fab3c680d3f5a6bd, type: 3}
-  sfxFirstLevel: {fileID: 8300000, guid: 68399dd190592954ea8b5d43533ded63, type: 3}
-  sfxThirdLevel: {fileID: 8300000, guid: fa79e8ef4d2c5374484599c4a24d3792, type: 3}
+  audios:
+  - {fileID: 8300000, guid: 7769ce73dfc571444b3237409e1b8831, type: 3}
+  - {fileID: 8300000, guid: 7a96afac95440cc4eac238750d9d63c8, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: b101c4e60a8d363478132657f8071584, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: e32084c123256e443b53cbb35a0039c8, type: 3}
+  - {fileID: 8300000, guid: 7b9fe45522f5f5b4194fbb07d5774fd1, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 61f0b0c7d466677488958d91fdd43763, type: 3}
+  - {fileID: 8300000, guid: 3dd24f86ba2fee74fb16ddd97fef13c6, type: 3}
 --- !u!114 &1956736068
 MonoBehaviour:
   m_ObjectHideFlags: 0
