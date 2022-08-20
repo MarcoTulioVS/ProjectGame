@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114120967649929042}
   m_Layer: 15
   m_Name: cat
-  m_TagString: Untagged
+  m_TagString: cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1258193326889204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.42, y: 1.24, z: 0}
+  m_LocalPosition: {x: -0.36, y: 1.24, z: 0}
   m_LocalScale: {x: 0.8155034, y: 0.8155034, z: 0.8155034}
   m_Children:
   - {fileID: 4672658215593404}
@@ -186,7 +186,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6d91707b42b73284888c5e278b66da95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3, y: 3}

@@ -29,6 +29,8 @@ TagManager:
   - left
   - right
   - bossfight
+  - cat
+  - dog
   layers:
   - Default
   - TransparentFX

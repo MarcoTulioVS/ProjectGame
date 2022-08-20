@@ -111,12 +111,25 @@ public class Player : MonoBehaviour {
 			if (hit != null) {
 			
 				scared = true;
+
+				if (hit.tag == "cat") {
+
+					SoundController.instance.PlaySound (SoundController.instance.audios [10]);
+
+				}
+
+				if (hit.tag == "dog") {
+					
+					SoundController.instance.PlaySound (SoundController.instance.audios [11]);
+
+				}
 			
 			} else {
 			
 				scared = false;
 			
 			}
+
 
 			StartCoroutine ("resetScare");
 		}

@@ -39,7 +39,6 @@ public class CatScript : MonoBehaviour {
 
 		rb.velocity = new Vector2 (-speed, rb.velocity.y);
 		anim.SetBool ("walking", true);
-		SoundController.instance.PlaySound (SoundController.instance.audios [10]);
 
 		if (en == null && !energySpawned) {
 
@@ -53,4 +52,6 @@ public class CatScript : MonoBehaviour {
 		Destroy (gameObject);
 
 	}
+
+
 }

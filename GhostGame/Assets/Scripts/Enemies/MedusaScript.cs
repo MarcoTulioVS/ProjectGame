@@ -38,7 +38,7 @@ public class MedusaScript : Enemies {
 
 		if (Input.GetButtonDown("Fire1") && insideBody) {
 
-
+			SoundController.instance.PlaySound (SoundController.instance.audios [14]);
 			anim.SetInteger ("transition", 2);
 			StartCoroutine ("timeAttack");
 

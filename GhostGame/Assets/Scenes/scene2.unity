@@ -2814,34 +2814,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 212461265845125216, guid: 025d0f215f76f574c93bb81b83927b83,
-        type: 2}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114120967649929042, guid: 025d0f215f76f574c93bb81b83927b83,
-        type: 2}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 270043546}
-    - target: {fileID: 114120967649929042, guid: 025d0f215f76f574c93bb81b83927b83,
-        type: 2}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 270043545}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 025d0f215f76f574c93bb81b83927b83, type: 2}
   m_IsPrefabParent: 0
---- !u!95 &270043545 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95392375943263006, guid: 025d0f215f76f574c93bb81b83927b83,
-    type: 2}
-  m_PrefabInternal: {fileID: 270043544}
---- !u!50 &270043546 stripped
-Rigidbody2D:
-  m_PrefabParentObject: {fileID: 50111959377275902, guid: 025d0f215f76f574c93bb81b83927b83,
-    type: 2}
-  m_PrefabInternal: {fileID: 270043544}
 --- !u!1 &312202643
 GameObject:
   m_ObjectHideFlags: 0
@@ -8914,29 +8889,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114915285671118096, guid: 201ec9ccfdd624c4abf020918096c21f,
-        type: 2}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 1360431229}
-    - target: {fileID: 114915285671118096, guid: 201ec9ccfdd624c4abf020918096c21f,
-        type: 2}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 1360431230}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 201ec9ccfdd624c4abf020918096c21f, type: 2}
   m_IsPrefabParent: 0
---- !u!50 &1360431229 stripped
-Rigidbody2D:
-  m_PrefabParentObject: {fileID: 50050986685891860, guid: 201ec9ccfdd624c4abf020918096c21f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1360431228}
---- !u!95 &1360431230 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95670502293635040, guid: 201ec9ccfdd624c4abf020918096c21f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1360431228}
 --- !u!1 &1376365811
 GameObject:
   m_ObjectHideFlags: 0
@@ -10389,7 +10344,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 68399dd190592954ea8b5d43533ded63, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.579
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -10481,7 +10436,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7b9fe45522f5f5b4194fbb07d5774fd1, type: 3}
   - {fileID: 0}
   - {fileID: 8300000, guid: 61f0b0c7d466677488958d91fdd43763, type: 3}
-  - {fileID: 8300000, guid: 3dd24f86ba2fee74fb16ddd97fef13c6, type: 3}
+  - {fileID: 8300000, guid: a7b4635ceb277434baaf606e338b3c2e, type: 3}
 --- !u!114 &1956736068
 MonoBehaviour:
   m_ObjectHideFlags: 0
