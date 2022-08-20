@@ -39,6 +39,8 @@ public class Enemies : MonoBehaviour {
 
 	public bool specialSkill;
 
+	bool stopNormalMove;
+
 	void Awake(){
 	
 		instance = this;
@@ -146,8 +148,10 @@ public class Enemies : MonoBehaviour {
 
 		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
 
+			stopNormalMove = true;
 			moveControl (rb);
-		} else {
+
+		} else if(!stopNormalMove) {
 
 			MonsterMovement (rb);
 		
@@ -159,9 +163,10 @@ public class Enemies : MonoBehaviour {
 
 		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
 
+			stopNormalMove = true;
 			moveControl (rb, anim);
 			
-		} else {
+		} else if(!stopNormalMove) {
 		
 			MonsterMovement (rb, anim);
 		
