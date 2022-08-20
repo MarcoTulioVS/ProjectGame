@@ -1343,7 +1343,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4840881171560542, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 4840881171560542, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1369,51 +1369,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 4840881171560542, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.94522816
-      objectReference: {fileID: 0}
-    - target: {fileID: 4840881171560542, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.9452281
-      objectReference: {fileID: 0}
-    - target: {fileID: 4840881171560542, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.9452281
-      objectReference: {fileID: 0}
     - target: {fileID: 114668118001761444, guid: 527d41219de7a4f41b38f6a030d22c67,
         type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 167135681}
-    - target: {fileID: 114668118001761444, guid: 527d41219de7a4f41b38f6a030d22c67,
-        type: 2}
-      propertyPath: specialSkill
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114668118001761444, guid: 527d41219de7a4f41b38f6a030d22c67,
-        type: 2}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 157216109}
-    - target: {fileID: 114668118001761444, guid: 527d41219de7a4f41b38f6a030d22c67,
-        type: 2}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 157216110}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
   m_IsPrefabParent: 0
---- !u!95 &157216109 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95688239440321224, guid: 527d41219de7a4f41b38f6a030d22c67,
-    type: 2}
-  m_PrefabInternal: {fileID: 157216108}
---- !u!50 &157216110 stripped
-Rigidbody2D:
-  m_PrefabParentObject: {fileID: 50177291777167640, guid: 527d41219de7a4f41b38f6a030d22c67,
-    type: 2}
-  m_PrefabInternal: {fileID: 157216108}
 --- !u!1 &167135681
 GameObject:
   m_ObjectHideFlags: 0

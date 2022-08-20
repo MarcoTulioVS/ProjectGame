@@ -57,22 +57,7 @@ public class Enemies : MonoBehaviour {
 	}
 		
 
-	protected virtual void moveControl(Rigidbody2D rb){
 
-		movement = Input.GetAxis ("Horizontal");
-
-		if (movement > 0) {
-		
-			transform.eulerAngles = new Vector2 (0, 0);
-
-		} else if(movement<0) {
-		
-			transform.eulerAngles = new Vector2 (0, 180);
-		}
-
-		rb.velocity = new Vector2 (speed * movement, rb.velocity.y);
-	
-	}
 
 	protected virtual void moveControl(Rigidbody2D rb,Animator anim){
 
@@ -108,21 +93,7 @@ public class Enemies : MonoBehaviour {
 
 	}
 
-	private void MonsterMovement(Rigidbody2D rb){
 
-		if (isRight) {
-		
-			rb.velocity = new Vector2 (-speed + 3, rb.velocity.y);
-			transform.eulerAngles = new Vector2 (0, 180);
-			
-		} else {
-			
-			rb.velocity = new Vector2 (speed - 3, rb.velocity.y);
-			transform.eulerAngles = new Vector2 (0, 0);
-		}
-
-
-	}
 
 	private void MonsterMovement(Rigidbody2D rb,Animator anim){
 
@@ -144,20 +115,6 @@ public class Enemies : MonoBehaviour {
 	}
 
 
-	protected void MainController(string nameObject,Rigidbody2D rb){
-
-		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
-
-			stopNormalMove = true;
-			moveControl (rb);
-
-		} else if(!stopNormalMove) {
-
-			MonsterMovement (rb);
-		
-		}
-
-	}
 
 	protected void MainController(string nameObject,Rigidbody2D rb,Animator anim){
 
