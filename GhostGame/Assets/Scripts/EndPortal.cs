@@ -30,7 +30,8 @@ public class EndPortal : MonoBehaviour {
 			Destroy (col.gameObject, 2f);
 
 
-			SoundController.instance.PlaySound (SoundController.instance.sfxFinalPortal);
+			SoundController.instance.PlaySound (SoundController.instance.audios[1]);
+
 			//Verifica se a variavel countEnemies do GameController é igual ao valor da variavel quantMaxEnemies
 			//Caso seja vai pra próxima fase
 			StartCoroutine("NextLevel");

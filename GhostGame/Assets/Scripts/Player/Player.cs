@@ -103,6 +103,7 @@ public class Player : MonoBehaviour {
 
 		if (Input.GetButtonDown ("Fire1")) {
 
+			SoundController.instance.PlaySound (SoundController.instance.audios [8]);
 			isScaring = true;
 			anim.SetInteger ("transition", 2);
 			hit = Physics2D.OverlapCircle (pointCollider.position, radius,animalLayer);
@@ -143,7 +144,7 @@ public class Player : MonoBehaviour {
 				col.gameObject.GetComponent<Enemies>().insideBody=true;
 				GameController.instance.quantEnergy -= col.gameObject.GetComponent<Enemies>().energyNeeded;
 				CameraScript.instance.tr = col.gameObject.transform;
-				SoundController.instance.PlaySound (SoundController.instance.sfxPosses);
+				SoundController.instance.PlaySound (SoundController.instance.audios[0]);
 				lifeBarOnOff ();
 				col.gameObject.GetComponent<Enemies> ().colEnemy = col.gameObject.GetComponent<Animator> ();
 
@@ -165,6 +166,7 @@ public class Player : MonoBehaviour {
 
 		if (col.gameObject.tag == "energy") {
 		
+			SoundController.instance.PlaySound (SoundController.instance.audios [7]);
 			GameController.instance.quantEnergy += energyCollected;
 			StartCoroutine ("DisableAndEnableEnergy",col);
 		

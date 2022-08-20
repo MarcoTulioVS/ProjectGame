@@ -8,7 +8,7 @@ public class MartinScript : Enemies {
 	Animator anim;
 	SpriteRenderer sp;
 
-	private GameObject player;
+	public GameObject player;
 
 
 	public Transform pointUp;

@@ -22,6 +22,7 @@ public class Bomb : MonoBehaviour {
 		yield return new WaitForSeconds (2.1f);
 		GameObject b = Instantiate (prefabAreaExplosion, transform.position, Quaternion.identity);
 		yield return new WaitForSeconds (0.3f);
+		SoundController.instance.PlaySound (SoundController.instance.audios [6]);
 		Destroy (b);
 		yield return new WaitForSeconds (0.2f);
 		Destroy (gameObject);

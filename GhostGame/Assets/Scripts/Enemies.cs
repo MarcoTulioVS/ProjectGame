@@ -200,6 +200,7 @@ public class Enemies : MonoBehaviour {
 		if (Input.GetButtonDown("Jump") && !isJumping && insideBody) {
 			
 			rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
+			SoundController.instance.PlaySound (SoundController.instance.audios [5]);
 		
 		}
 	
@@ -211,6 +212,7 @@ public class Enemies : MonoBehaviour {
 
 			anim.SetInteger("transition",2);
 			rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
+			SoundController.instance.PlaySound (SoundController.instance.audios [5]);
 		
 		} 
 		

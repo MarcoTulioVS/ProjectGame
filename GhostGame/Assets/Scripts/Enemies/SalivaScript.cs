@@ -45,6 +45,7 @@ public class SalivaScript : Enemies {
 
 				rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
 				doubleJump = true;
+				SoundController.instance.PlaySound (SoundController.instance.audios [5]);
 
 			} else {
 
@@ -52,7 +53,7 @@ public class SalivaScript : Enemies {
 
 					rb.AddForce (new Vector2 (0, jumpForce), ForceMode2D.Impulse);
 					doubleJump = false;
-
+					SoundController.instance.PlaySound (SoundController.instance.audios [5]);
 				}
 			
 			}
@@ -66,6 +67,7 @@ public class SalivaScript : Enemies {
 		
 			Instantiate (prefabBomb, trRefBomb.position, Quaternion.identity);
 			withBomb = false;
+
 		}
 
 	}
