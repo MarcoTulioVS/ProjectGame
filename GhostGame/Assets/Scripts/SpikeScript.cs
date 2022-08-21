@@ -55,7 +55,7 @@ public class SpikeScript : MonoBehaviour {
 
 		if (col.gameObject.layer == 8) {
 
-			GameController.instance.DecrementLife ();
+			GameController.instance.DecrementLife (col.transform);
 		
 		}
 	

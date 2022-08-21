@@ -34,7 +34,7 @@ public class SkullObstacle : MonoBehaviour {
 		//Ao colidir com inimigo
 		if (col.gameObject.layer == 8) {
 
-			GameController.instance.DecrementLife ();
+			GameController.instance.DecrementLife (col.transform);
 		
 		}
 	

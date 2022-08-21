@@ -127,7 +127,7 @@ public class Gart : MonoBehaviour {
 
 					if (Time.time>nextHit) {
 
-						GameController.instance.DecrementLife ();
+						GameController.instance.DecrementLife (hit.transform);
 						nextHit = Time.time + hitRate;
 
 					}

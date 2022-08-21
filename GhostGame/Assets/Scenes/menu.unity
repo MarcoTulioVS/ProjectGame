@@ -5753,7 +5753,7 @@ MonoBehaviour:
   descriptionEnemy: {fileID: 1050295940}
   listNameEnemies:
   - SALIVA
-  - COLORADO
+  - ZUMBIRA
   - GOSMA
   - MARTIN
   - MEDUSA
@@ -5765,7 +5765,7 @@ MonoBehaviour:
   - CACHORRO
   listImagesEnemies:
   - {fileID: 21300000, guid: c30aae76536bfd6458cf6b4da5d0bf61, type: 3}
-  - {fileID: 21300000, guid: a6b022dd0ad629a4292c477d139ad428, type: 3}
+  - {fileID: 21300000, guid: d34ed190c9370c142b1af3e0b579d9a0, type: 3}
   - {fileID: 21300006, guid: 3eea5b58b914b1b4ca80eac7ce8d5feb, type: 3}
   - {fileID: 21300000, guid: 1597db9b98983304c9dc207f7e682830, type: 3}
   - {fileID: 21300000, guid: 8302d0733c4bda94b9f4306cd1a5510b, type: 3}
@@ -5779,7 +5779,7 @@ MonoBehaviour:
   - Saliva pode grudar bombas nos blocos com um <color=yellow>X</color>.
   - "Para colocar bomba pressione <color=yellow>QUADRADO</color> ou <color=yellow>BOT\xC3O
     ESQUERDO DO MOUSE</color>."
-  - Colorado pode cuspir gosmas <color=red>VERMELHAS</color> e <color=green>VERDES</color>.
+  - Zumbira pode cuspir gosmas <color=red>VERMELHAS</color> e <color=green>VERDES</color>.
   - Para cuspir pressione <color=yellow>QUADRADO</color> ou <color=yellow>BOTAO ESQUERDO
     DO MOUSE</color>.
   - Gosma pode escalar paredes em sua forma <color=yellow>GOSMENTA</color>.

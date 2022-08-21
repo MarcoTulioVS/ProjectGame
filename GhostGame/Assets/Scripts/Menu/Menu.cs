@@ -100,7 +100,7 @@ public class Menu : MonoBehaviour {
 			minCountDescription = 0;
 			indexImage = 0;
 			break;
-		case "COLORADO":
+		case "ZUMBIRA":
 			maxCountDescription = 3;
 			minCountDescription = 2;
 			indexImage = 1;

@@ -29,6 +29,10 @@ public class SoundController : MonoBehaviour {
 	public void PlaySound(AudioClip audio){
 
 		a.PlayOneShot (audio);
-	
+
 	}
+
+
+
+
 }

@@ -19923,7 +19923,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4840881171560542, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -18.558102
+      value: -18.51
       objectReference: {fileID: 0}
     - target: {fileID: 4840881171560542, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
       propertyPath: m_LocalPosition.z
@@ -19977,6 +19977,38 @@ Prefab:
       propertyPath: rb
       value: 
       objectReference: {fileID: 1777920515}
+    - target: {fileID: 4840881171560542, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.7484242
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840881171560542, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.7484245
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840881171560542, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.7484245
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451677522141042, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.042
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451677522141042, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 5.1901116
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451677522141042, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 4.9568644
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451677522141042, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 4.665277
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451677522141042, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.081
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 527d41219de7a4f41b38f6a030d22c67, type: 2}
   m_IsPrefabParent: 0
@@ -20371,7 +20403,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fa79e8ef4d2c5374484599c4a24d3792, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 95eb869ff8969f04b8fc7549d05609d7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.579
   m_Pitch: 1

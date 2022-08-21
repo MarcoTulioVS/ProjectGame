@@ -110,14 +110,19 @@ public class GameController : MonoBehaviour {
 	
 	}
 
-	public void DecrementLife(){
+	public void DecrementLife(Transform tr){
 
 		float halfLife = quantLife / 2;
 
-		if (halfLife < 25) {
+		if (halfLife < 25 && !checkPoint) {
 			
 			quantLife = 0;
 			GameOver ();
+		} else if (halfLife < 25 && checkPoint) {
+		
+			quantLife = 100;
+			CheckPoint (tr);
+		
 		} else {
 				
 			quantLife -= halfLife;

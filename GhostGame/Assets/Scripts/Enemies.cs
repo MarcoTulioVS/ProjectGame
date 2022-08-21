@@ -237,7 +237,7 @@ public class Enemies : MonoBehaviour {
 		
 			if (insideBody) {
 
-				GameController.instance.DecrementLife ();
+				GameController.instance.DecrementLife (transform);
 
 			}
 		
@@ -265,8 +265,11 @@ public class Enemies : MonoBehaviour {
 		}
 
 		if (col.gameObject.tag == "bossfight") {
-		
-			SoundController.instance.PlaySound(SoundController.instance.audios[13]);
+
+			Camera.main.GetComponent<AudioSource> ().clip = SoundController.instance.audios[13];
+			Camera.main.GetComponent<AudioSource> ().Play ();
+			//SoundController.instance.PlaySound();
+			col.gameObject.SetActive (false);
 		
 		}
 			
