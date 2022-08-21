@@ -5,8 +5,7 @@ using UnityEngine;
 public class RedButton : MonoBehaviour {
 
 	Animator anim;
-	public GameObject blockMove;
-
+	public GameObject blockMove; 
 
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -23,6 +22,8 @@ public class RedButton : MonoBehaviour {
 
 			anim.SetBool ("pressed",true);
 			blockMove.SetActive (false);
+			BoxBlocked.instance.countActiveButton++;
+			gameObject.GetComponent<Collider2D> ().enabled = false;
 
 		}
 
@@ -33,7 +34,17 @@ public class RedButton : MonoBehaviour {
 		if (notCol.gameObject.tag == "pedrinha") {
 		
 			anim.SetBool ("pressed",false);
+			BoxBlocked.instance.countActiveButton--;
+			gameObject.GetComponent<Collider2D> ().enabled = false;
+
+			if (BoxBlocked.instance.countActiveButton < 0) {
+			
+				BoxBlocked.instance.countActiveButton = 0;
+			
+			}
 
 		}
 	}
+
+
 }

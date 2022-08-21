@@ -49,6 +49,7 @@ public class GameController : MonoBehaviour {
 
 	bool endDialog;
 
+
 	void Awake(){
 
 		instance = this;

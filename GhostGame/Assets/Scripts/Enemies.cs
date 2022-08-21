@@ -120,11 +120,13 @@ public class Enemies : MonoBehaviour {
 
 		if (Player.instance.activeObject && Player.instance.nameObject == nameObject) {
 
+			rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 			stopNormalMove = true;
 			moveControl (rb, anim);
 			
 		} else if(!stopNormalMove) {
-		
+
+
 			MonsterMovement (rb, anim);
 		
 		}
@@ -143,7 +145,7 @@ public class Enemies : MonoBehaviour {
 			CameraScript.instance.tr = null;
 			player.transform.position = PlayerVisible.instance.trObject.position;
 			colEnemy.SetInteger ("transition", 0);
-			
+			colEnemy.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
 
 		}
 	
