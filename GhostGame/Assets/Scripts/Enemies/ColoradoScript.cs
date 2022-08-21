@@ -49,7 +49,7 @@ public class ColoradoScript : Enemies {
 
 	void throwPower(){
 
-		if (Input.GetButtonDown ("Fire1") && Time.time > nextFire && isRed && !isJumping) {
+		if (Input.GetButtonDown ("Fire1") && Time.time > nextFire && isRed) {
 
 			if (insideBody && Player.instance.activeObject && Player.instance.nameObject == gameObject.name) {
 				isAttacking = true;
@@ -61,7 +61,7 @@ public class ColoradoScript : Enemies {
 
 			StartCoroutine ("AttackFinish");
 		
-		} else if (Input.GetButtonDown ("Fire1") && Time.time > nextFire && !isRed && !isJumping) {
+		} else if (Input.GetButtonDown ("Fire1") && Time.time > nextFire && !isRed) {
 
 			if (insideBody && Player.instance.activeObject && Player.instance.nameObject == gameObject.name) {
 				isAttacking = true;
