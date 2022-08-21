@@ -10,6 +10,9 @@ public class DisableArrowGreenRed : MonoBehaviour {
 	public GameObject controllerOutMouse;
 	public GameObject controllerOutJoystick;
 
+	public GameObject tutoMoveMonster;
+	public GameObject tutoMoveGhost;
+
 	void Start () {
 		
 	}
@@ -17,17 +20,18 @@ public class DisableArrowGreenRed : MonoBehaviour {
 
 	void Update () {
 		StartCoroutine ("DisableArrowRed");
+		ShowTutorialMove ();
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
 
-		if (col.gameObject.tag == "Player") {
+		if (col.gameObject.tag == "Player" && GameController.instance.quantEnergy>0) {
 
 			arrowGreen.SetActive (false);
 			arrowRed.SetActive (true);
 			controllerOutMouse.SetActive (true);
 			controllerOutJoystick.SetActive (true);
-		
+
 		}
 
 	}
@@ -43,6 +47,23 @@ public class DisableArrowGreenRed : MonoBehaviour {
 
 		
 		}
+
+	}
+
+	void ShowTutorialMove(){
+
+		if (Enemies.instance.insideBody) {
+
+			tutoMoveGhost.SetActive (false);
+			tutoMoveMonster.SetActive (true);
+
+		} else {
+		
+			tutoMoveGhost.SetActive (true);
+			tutoMoveMonster.SetActive (false);
+		
+		}
+
 
 	}
 }
