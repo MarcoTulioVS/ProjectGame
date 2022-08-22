@@ -17,6 +17,8 @@ public class PedrinhaScript : Enemies {
 
 	void Update () {
 		getOutBody (player);
+		OnCollisionPortal (gameObject.transform, trRefSecondPortal);
+		OnCollisionPortal1 (gameObject.transform, trRefFirstPortal);
 	}
 
 	void FixedUpdate(){

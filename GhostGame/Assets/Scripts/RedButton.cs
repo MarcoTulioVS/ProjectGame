@@ -23,6 +23,7 @@ public class RedButton : MonoBehaviour {
 			anim.SetBool ("pressed",true);
 			blockMove.SetActive (false);
 			BoxBlocked.instance.countActiveButton++;
+			//Arrancar porque não executa a animação de volta
 			gameObject.GetComponent<Collider2D> ().enabled = false;
 
 		}
@@ -35,7 +36,8 @@ public class RedButton : MonoBehaviour {
 		
 			anim.SetBool ("pressed",false);
 			BoxBlocked.instance.countActiveButton--;
-			gameObject.GetComponent<Collider2D> ().enabled = false;
+			//Arrancar porque não executa a animação de volta
+			gameObject.GetComponent<Collider2D> ().enabled = true;
 
 			if (BoxBlocked.instance.countActiveButton < 0) {
 			
