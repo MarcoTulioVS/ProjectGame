@@ -18761,7 +18761,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12.8, y: 197.99997}
+  m_AnchoredPosition: {x: -6.6, y: 197.99997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1490207377
@@ -19415,7 +19415,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quantMaxEnemies: 2
   countEnemies: 0
-  enemiesInScene: 1
   quantEnergy: 0
   imageBar: {fileID: 312202645}
   imageMoldureBar: {fileID: 2017499309}
@@ -19445,6 +19444,7 @@ MonoBehaviour:
   checkPoint: 0
   msgCheckpoint: {fileID: 0}
   imgSpecialSkill: {fileID: 1490207377}
+  specialSkill: 1
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0

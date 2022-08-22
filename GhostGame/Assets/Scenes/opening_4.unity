@@ -2145,6 +2145,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5486f15add470184f89fbb443a51b5dc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &525974040 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1329122044724814, guid: 5486f15add470184f89fbb443a51b5dc,
+    type: 2}
+  m_PrefabInternal: {fileID: 525974039}
+--- !u!114 &525974041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525974040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 786262e7cda7c85499f5f102aa1ec914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &630600999
 Prefab:
   m_ObjectHideFlags: 0
@@ -5704,10 +5720,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf03775a44db9364b8b61c3d0a544b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minX: -3.73
-  minY: 4.74
-  maxX: -3.73
-  maxY: 4.74
+  minX: -3.61
+  minY: 5.05
+  maxX: -3.61
+  maxY: 5.05
   tr: {fileID: 167135682}
 --- !u!82 &1956736067
 AudioSource:

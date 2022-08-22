@@ -10,9 +10,6 @@ public class GameController : MonoBehaviour {
 	public int quantMaxEnemies;
 	public int countEnemies;
 
-	[SerializeField]
-	int enemiesInScene;
-
 	public float quantEnergy;
 	public Image imageBar;
 	public Image imageMoldureBar;
@@ -49,6 +46,7 @@ public class GameController : MonoBehaviour {
 
 	bool endDialog;
 
+	public bool specialSkill;
 
 	void Awake(){
 
@@ -74,9 +72,7 @@ public class GameController : MonoBehaviour {
 
 		ChangeDialogJoystick ();
 
-		if (enemiesInScene > 0) {
-			ShowSpecialSkill ();
-		}
+		ShowSpecialSkill ();
 
 	}
 
@@ -263,13 +259,14 @@ public class GameController : MonoBehaviour {
 
 	public void ShowSpecialSkill(){
 
-		if (Enemies.instance.specialSkill) {
+		if (specialSkill) {
 		
 			imgSpecialSkill.enabled = true;
 		
 		} else {
 		
 			imgSpecialSkill.enabled = false;
+
 		}
 
 	}

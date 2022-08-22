@@ -181,7 +181,6 @@ public class Player : MonoBehaviour {
 		
 			SoundController.instance.PlaySound (SoundController.instance.audios [7]);
 			GameController.instance.quantEnergy += energyCollected;
-			StartCoroutine ("DisableAndEnableEnergy",col);
 		
 		}
 
@@ -215,12 +214,5 @@ public class Player : MonoBehaviour {
 
 	}
 
-	IEnumerator DisableAndEnableEnergy(Collider2D col){
-	
-		col.gameObject.SetActive (false);
-		yield return new WaitForSeconds (5);
-		col.gameObject.SetActive (true);
-	
-	}
 
 }

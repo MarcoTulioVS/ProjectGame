@@ -37,8 +37,6 @@ public class Enemies : MonoBehaviour {
 	public Animator colEnemy;
 	bool isRight;
 
-	public bool specialSkill;
-
 	bool stopNormalMove;
 
 	void Awake(){
@@ -270,7 +268,6 @@ public class Enemies : MonoBehaviour {
 
 			Camera.main.GetComponent<AudioSource> ().clip = SoundController.instance.audios[13];
 			Camera.main.GetComponent<AudioSource> ().Play ();
-			//SoundController.instance.PlaySound();
 			col.gameObject.SetActive (false);
 		
 		}

@@ -1124,7 +1124,7 @@ Transform:
   - {fileID: 1104422827}
   - {fileID: 416556490}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &167135683
 Rigidbody2D:
@@ -1979,7 +1979,7 @@ Transform:
   - {fileID: 712474669}
   - {fileID: 18393342}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &684683956
 Tilemap:
@@ -4380,7 +4380,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quantMaxEnemies: 1
   countEnemies: 0
-  enemiesInScene: 0
   quantEnergy: 0
   imageBar: {fileID: 312202645}
   imageMoldureBar: {fileID: 2017499309}
@@ -4411,6 +4410,7 @@ MonoBehaviour:
   checkPoint: 0
   msgCheckpoint: {fileID: 0}
   imgSpecialSkill: {fileID: 1470143279}
+  specialSkill: 0
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0
@@ -4422,7 +4422,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1779929149
 GameObject:
@@ -4613,7 +4613,7 @@ Transform:
   m_Children:
   - {fileID: 2068476537}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1956736066
 MonoBehaviour:

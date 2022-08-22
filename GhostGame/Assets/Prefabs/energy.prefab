@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212323072396810970}
   - component: {fileID: 95014658364425122}
   - component: {fileID: 58761289468733682}
+  - component: {fileID: 114111802665662114}
   m_Layer: 0
   m_Name: energy
   m_TagString: energy
@@ -74,6 +75,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114111802665662114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1329122044724814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 786262e7cda7c85499f5f102aa1ec914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212323072396810970
 SpriteRenderer:
   m_ObjectHideFlags: 1
