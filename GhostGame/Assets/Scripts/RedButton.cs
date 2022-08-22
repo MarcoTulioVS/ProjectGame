@@ -6,6 +6,7 @@ public class RedButton : MonoBehaviour {
 
 	Animator anim;
 	public GameObject blockMove; 
+	bool active;
 
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -22,9 +23,12 @@ public class RedButton : MonoBehaviour {
 
 			anim.SetBool ("pressed",true);
 			blockMove.SetActive (false);
-			BoxBlocked.instance.countActiveButton++;
-			//Arrancar porque não executa a animação de volta
-			gameObject.GetComponent<Collider2D> ().enabled = false;
+		
+			if (!active) {
+				
+				BoxBlocked.instance.countActiveButton++;
+				active = true;
+			}
 
 		}
 
@@ -33,11 +37,10 @@ public class RedButton : MonoBehaviour {
 	void OnCollisionExit2D(Collision2D notCol){
 	
 		if (notCol.gameObject.tag == "pedrinha") {
-		
+
+			active = false;
 			anim.SetBool ("pressed",false);
 			BoxBlocked.instance.countActiveButton--;
-			//Arrancar porque não executa a animação de volta
-			gameObject.GetComponent<Collider2D> ().enabled = true;
 
 			if (BoxBlocked.instance.countActiveButton < 0) {
 			
@@ -47,6 +50,8 @@ public class RedButton : MonoBehaviour {
 
 		}
 	}
+
+
 
 
 }
