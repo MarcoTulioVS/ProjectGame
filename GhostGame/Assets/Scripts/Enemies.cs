@@ -269,7 +269,7 @@ public class Enemies : MonoBehaviour {
 			Camera.main.GetComponent<AudioSource> ().clip = SoundController.instance.audios[13];
 			Camera.main.GetComponent<AudioSource> ().Play ();
 			col.gameObject.SetActive (false);
-		
+			LifeNameBoss.instance.ShowNameAndLife ();
 		}
 			
 	}
