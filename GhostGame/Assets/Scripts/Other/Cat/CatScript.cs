@@ -15,9 +15,11 @@ public class CatScript : MonoBehaviour {
 	GameObject en;
 	bool energySpawned;
 
+
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
+
 	}
 	
 

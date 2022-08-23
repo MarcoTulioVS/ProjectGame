@@ -181,7 +181,14 @@ public class Player : MonoBehaviour {
 		
 			SoundController.instance.PlaySound (SoundController.instance.audios [7]);
 			GameController.instance.quantEnergy += energyCollected;
+
+		}
+
+		if (col.gameObject.tag == "energyAnimal") {
 		
+			SoundController.instance.PlaySound (SoundController.instance.audios [7]);
+			GameController.instance.quantEnergy += energyCollected;
+			Destroy (col.gameObject);
 		}
 
 	}

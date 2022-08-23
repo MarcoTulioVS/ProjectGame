@@ -89,7 +89,7 @@ public class MartinScript : Enemies {
 		if (colorMartin == "g" && !turnUptoDown && insideBody) {
 
 			gameObject.GetComponent<Transform> ().eulerAngles = new Vector3 (0, 0, 180);
-			gameObject.GetComponent<Rigidbody2D> ().gravityScale = -4;
+			gameObject.GetComponent<Rigidbody2D> ().gravityScale = -3;
 			turnUptoDown = true;
 		
 		}
@@ -98,7 +98,7 @@ public class MartinScript : Enemies {
 		if (colorMartin == "w" && turnUptoDown && insideBody) {
 		
 			gameObject.GetComponent<Transform> ().eulerAngles = new Vector3 (0, 0, 0);
-			gameObject.GetComponent<Rigidbody2D> ().gravityScale = 4;
+			gameObject.GetComponent<Rigidbody2D> ().gravityScale = 3;
 			turnUptoDown = false;
 		
 		}

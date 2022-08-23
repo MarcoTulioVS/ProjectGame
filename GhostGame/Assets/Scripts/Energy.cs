@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Energy : MonoBehaviour {
 
-	Collider2D c;
 	SpriteRenderer sp;
+	Collider2D col;
+
 
 	void Start () {
-		c = GetComponent<Collider2D> ();
+		col = GetComponent<Collider2D> ();
 		sp = GetComponent<SpriteRenderer> ();
 	}
 	
@@ -20,7 +21,7 @@ public class Energy : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 	
 		if (col.gameObject.tag == "Player") {
-		
+
 			StartCoroutine ("DisableAndEnableEnergy");
 		
 		}
@@ -30,11 +31,12 @@ public class Energy : MonoBehaviour {
 
 	IEnumerator DisableAndEnableEnergy(){
 			
-		c.enabled = false;
+
 		sp.enabled = false;
+		col.enabled = false;
 		yield return new WaitForSeconds (5);
-		c.enabled = true;
 		sp.enabled = true;
-			
+		col.enabled = true;
+
 	}
 }
