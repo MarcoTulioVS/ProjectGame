@@ -246,6 +246,7 @@ public class Gart : MonoBehaviour {
 
 			Camera.main.GetComponent<AudioSource> ().clip = SoundController.instance.audios[2];
 			Camera.main.GetComponent<AudioSource> ().Play ();
+			LifeNameBoss.instance.nameBoss.SetActive (false);
 			isDead = true;
 			life = 0;
 			anim.SetTrigger ("death");
