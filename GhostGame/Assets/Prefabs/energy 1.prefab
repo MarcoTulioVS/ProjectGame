@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 95119357457985134}
   - component: {fileID: 58814821982595330}
   m_Layer: 0
-  m_Name: energyAnimal
+  m_Name: energy 1
   m_TagString: energyAnimal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
