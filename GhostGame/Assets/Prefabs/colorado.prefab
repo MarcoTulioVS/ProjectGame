@@ -140,7 +140,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.6}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -207,7 +207,6 @@ MonoBehaviour:
   trRefSecondPortal: {fileID: 0}
   trRefFirstPortal: {fileID: 0}
   colEnemy: {fileID: 0}
-  specialSkill: 1
   player: {fileID: 0}
   prefabPowerGreen: {fileID: 1065668346372424, guid: 655b0ea4bb9faeb43b015b04d4d8f48a,
     type: 2}
@@ -248,7 +247,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d34ed190c9370c142b1af3e0b579d9a0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60360dc6b769de641aab5097a322325d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
