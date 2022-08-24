@@ -5028,7 +5028,7 @@ MonoBehaviour:
   checkPoint: 0
   msgCheckpoint: {fileID: 0}
   imgSpecialSkill: {fileID: 344627004}
-  specialSkill: 0
+  specialSkill: 1
 --- !u!4 &1644355706
 Transform:
   m_ObjectHideFlags: 0
