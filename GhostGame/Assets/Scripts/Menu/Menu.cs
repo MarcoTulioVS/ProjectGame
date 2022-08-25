@@ -210,7 +210,7 @@ public class Menu : MonoBehaviour {
 
 	public void CallTutorialScene(){
 
-		SceneManager.LoadScene (1);
+		SceneManager.LoadScene (2);
 
 	}
 
