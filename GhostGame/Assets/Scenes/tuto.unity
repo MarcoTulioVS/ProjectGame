@@ -6041,7 +6041,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d69005ffa7537a84c9577e40a992c48f, type: 3}
     m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
@@ -28386,6 +28386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644355706}
   - component: {fileID: 1644355705}
+  - component: {fileID: 1644355707}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -28445,6 +28446,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1644355707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1644355704}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0d1f8340a1ae6f4cbafd4806967468e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogMonsterPanel: {fileID: 0}
+  dialogMonsterList: []
+  monsterDialogText: {fileID: 0}
+  activeMonsterDialog: 0
 --- !u!1 &1707620290
 GameObject:
   m_ObjectHideFlags: 0
