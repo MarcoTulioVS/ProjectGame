@@ -48,6 +48,8 @@ public class GameController : MonoBehaviour {
 
 	public bool specialSkill;
 
+
+
 	void Awake(){
 
 		instance = this;
@@ -74,6 +76,7 @@ public class GameController : MonoBehaviour {
 
 		ShowSpecialSkill ();
 
+		DisablePanelDialog ();
 	}
 
 	public void GoToNextScene(){
@@ -224,14 +227,19 @@ public class GameController : MonoBehaviour {
 
 		indexDialog++;
 
-		if (indexDialog > dialogGhostList.Count - 1) {
+		if (!DialogMonster.instance.activeMonsterDialog) {
+
+			if (indexDialog > dialogGhostList.Count - 1) {
+
+				indexDialog = dialogGhostList.Count - 1;
+				dialogGhostPanel.SetActive (false);
+				Player.instance.speed = 8;
+				endDialog = true;
+			}
 		
-			indexDialog = dialogGhostList.Count - 1;
-			dialogGhostPanel.SetActive (false);
-			Player.instance.speed = 8;
-			endDialog = true;
+			ghostDialogText.text = dialogGhostList [indexDialog];
+
 		}
-		ghostDialogText.text = dialogGhostList [indexDialog];
 
 	}
 
@@ -243,10 +251,13 @@ public class GameController : MonoBehaviour {
 
 	void ChangeDialogJoystick(){
 
-		if (Input.GetButtonDown("Jump") && !endDialog) {
+		if (!DialogMonster.instance.activeMonsterDialog) {
 
-			NextDialog ();
+			if (Input.GetButtonDown ("Jump") && !endDialog) {
+
+				NextDialog ();
 			
+			}
 		}
 			
 	}
@@ -271,6 +282,12 @@ public class GameController : MonoBehaviour {
 
 	}
 
-
+	void DisablePanelDialog(){
+	
+		if (DialogMonster.instance.activeMonsterDialog) {
+			dialogGhostPanel.SetActive (false);
+		} 
+			
+	}
 		
 }
