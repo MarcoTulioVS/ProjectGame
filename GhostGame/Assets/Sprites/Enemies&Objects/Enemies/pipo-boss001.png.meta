@@ -1,11 +1,7 @@
 fileFormatVersion: 2
-guid: 3cd2b5d037d307a4887f06ed69dc8148
+guid: 6ed28961faf374f4c854229b3c04b84a
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: zombiehead (1)_0
-    21300002: zombiehead (1)_1
-    21300004: zombiehead (1)_2
-    21300006: zombiehead (1)_3
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -42,7 +38,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -101,63 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: zombiehead (1)_0
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 160
-        width: 64
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: zombiehead (1)_1
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 160
-        width: 64
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: zombiehead (1)_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 64
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: zombiehead (1)_3
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 32
-        width: 64
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
     physicsShape: []
   spritePackingTag: 

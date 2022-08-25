@@ -2820,6 +2820,21 @@ Prefab:
       value: 
       objectReference: {fileID: 1414453269995986, guid: 9f37a685989a7964f9190954717e629b,
         type: 2}
+    - target: {fileID: 212461265845125216, guid: 025d0f215f76f574c93bb81b83927b83,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212461265845125216, guid: 025d0f215f76f574c93bb81b83927b83,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212461265845125216, guid: 025d0f215f76f574c93bb81b83927b83,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 025d0f215f76f574c93bb81b83927b83, type: 2}
   m_IsPrefabParent: 0
@@ -3588,7 +3603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &669852716
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9092,6 +9107,21 @@ Prefab:
       value: 
       objectReference: {fileID: 1414453269995986, guid: 9f37a685989a7964f9190954717e629b,
         type: 2}
+    - target: {fileID: 212652624560486562, guid: 201ec9ccfdd624c4abf020918096c21f,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212652624560486562, guid: 201ec9ccfdd624c4abf020918096c21f,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212652624560486562, guid: 201ec9ccfdd624c4abf020918096c21f,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 201ec9ccfdd624c4abf020918096c21f, type: 2}
   m_IsPrefabParent: 0
