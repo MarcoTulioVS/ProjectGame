@@ -2413,7 +2413,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d69005ffa7537a84c9577e40a992c48f, type: 3}
     m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
@@ -2423,7 +2423,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &658258635
@@ -4841,7 +4841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1577725867
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4978,6 +4978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644355706}
   - component: {fileID: 1644355705}
+  - component: {fileID: 1644355707}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -5013,17 +5014,12 @@ MonoBehaviour:
   ghostDialogText: {fileID: 658258634}
   dialogGhostPanel: {fileID: 1577725866}
   dialogGhostList:
-  - ' <color=yellow>W,A,S,D</color> anda caraio. Ou se ce preferir ce usa sua manete.
-    <color=yellow>Joystick(analogico)</color>.'
-  - Para pegar os monstros a gente vai precisar de <color=yellow>energia</color>.
-  - Essas <color=blue>azuis</color> ai!
-  - E para possuir um monstro basta <color=yellow>me levar ate ele</color>.
-  - E se quiser sair de dentro dele....
-  - "<color=yellow>Bot\xE3o direito do mouse ou Bola no joystick</color>"
-  - Ah ja ia me esquecendo. O <color=red>Portal vermelho</color> medonho.
-  - "Temos que levar <color=yellow>todos os monstros</color> at\xE9 la se quisermos
-    continuar em frente."
-  dialogOn: 0
+  - "Ah n\xE3o! E o <color=yellow>Martin</color>. Pelo visto varios monstros foram
+    teleportados pra ca."
+  - Cara demonios sao um saco. Acham que podem sair abrindo portais e sugando todo
+    mundo.
+  - Que seja, vou tirar todos daqui.
+  dialogOn: 1
   trCheckPoint: {fileID: 0}
   checkPoint: 0
   msgCheckpoint: {fileID: 0}
@@ -5042,6 +5038,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1644355707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1644355704}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0d1f8340a1ae6f4cbafd4806967468e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogMonsterPanel: {fileID: 0}
+  dialogMonsterList: []
+  monsterDialogText: {fileID: 0}
+  activeMonsterDialog: 0
 --- !u!1 &1718355715
 GameObject:
   m_ObjectHideFlags: 0
